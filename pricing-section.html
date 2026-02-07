@@ -790,7 +790,7 @@
     // CTA button
     ctaButton.addEventListener('click', function() {
       const tier = customTiers[selectedTierIndex];
-      const url = 'subscribe.html?tier=' + selectedTierIndex + 
+      const url = 'http://localhost:8081/subscribe?tier=' + selectedTierIndex + 
                   '&files=' + tier.files + 
                   '&price=' + tier.price + 
                   '&annual=' + isAnnual;
