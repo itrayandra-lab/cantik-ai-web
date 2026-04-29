@@ -1131,30 +1131,12 @@ div.header-transparent > div.header {
 </a>
             <div class="navbar__positioner">
               <div class="navbar__menu">
-                <div class="navbar__navigation">
-                  <!-- Simple Navigation Menu -->
-                  <a href="#hero-video" class="navbar__link w-inline-block">
-                    <div class="text-size-base">Home</div>
-                  </a>
-                  <a href="#features-section" class="navbar__link w-inline-block">
-                    <div class="text-size-base">Team</div>
-                  </a>
-                  <a href="#fitur" class="navbar__link w-inline-block">
-                    <div class="text-size-base">Fitur</div>
-                  </a>
-                  <a href="#pricing" class="navbar__link w-inline-block">
-                    <div class="text-size-base">Harga</div>
-                  </a>
-                  <a href="#faq" class="navbar__link w-inline-block">
-                    <div class="text-size-base">FAQ</div>
-                  </a>
+                <div class="navbar__navigation" id="nav-menu-primary">
+                  <!-- Menu dimuat dari database via API -->
                 </div>
                 <div class="header__navigation">
-                  <a href="https://autofile.raymaizing.com/login" class="navbar__link w-inline-block">
-                    <div class="text-size-base">Log in</div>
-                  </a>
-                  <a href="#pricing" class="navbar__link cta w-inline-block">
-                    <div class="text-size-base text-weight-medium">Get Started</div>
+                  <a href="https://app.raymaizing.com/" class="navbar__link cta w-inline-block" id="nav-cta-btn">
+                    <div class="text-size-base text-weight-medium">Login</div>
                   </a>
                 </div>
               </div>
@@ -1406,88 +1388,13 @@ html{
                       </div>
                     </div>
                   </div>
-                  <div class="navbar__drawer desktop">
-                    <div class="navbar__drawer_trigger">
-                      <div class="text-size-base">
-                        Features
-                      </div>
-                      <div class="icon-1x1-xsmall w-embed">
-                        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5303 13.0303C15.2374 13.3232 14.7626 13.3232 14.4697 13.0303L11.7324 10.2931C11.3276 9.8883 11.0555 9.61703 10.8292 9.42491C10.6096 9.23847 10.4829 9.17101 10.3863 9.13961C10.1352 9.05803 9.86478 9.05803 9.61373 9.13961C9.51706 9.17101 9.39038 9.23847 9.17076 9.42491C8.94445 9.61704 8.67236 9.8883 8.26759 10.2931L5.53033 13.0303C5.23744 13.3232 4.76256 13.3232 4.46967 13.0303C4.17678 12.7374 4.17678 12.2626 4.46967 11.9697L7.20693 9.23241L7.22846 9.21088C7.60615 8.83317 7.9214 8.51791 8.2 8.2814C8.49056 8.03473 8.79021 7.82999 9.1502 7.71302C9.70252 7.53356 10.2975 7.53356 10.8498 7.71302C11.2098 7.82999 11.5094 8.03473 11.8 8.2814C12.0786 8.51791 12.3939 8.83318 12.7715 9.21089L12.7931 9.23241L15.5303 11.9697C15.8232 12.2626 15.8232 12.7374 15.5303 13.0303Z" fill="currentColor">
-                          </path>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="navbar__drawer_dropdown">
-                      <div class="navbar__drawer_dropdown__wrapper">
-                        <div class="navbar__drawer_card">
-                          <a data-wf-native-id-path="ad349e1a-c0c9-dbab-04c7-fdcb238e51b3:e2416028-500d-bf8a-6e18-4f44f2fa2a97:7b2f814a-4b1c-cb85-3dee-1c4c47272960" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="7b2f814a-4b1c-cb85-3dee-1c4c47272960" data-wf-component-context="%5B%7B%22componentId%22%3A%22e2416028-500d-bf8a-6e18-4f44f2fa2a96%22%2C%22instanceId%22%3A%22ad349e1a-c0c9-dbab-04c7-fdcb238e51b3%22%7D%2C%7B%22componentId%22%3A%22be705a7d-700d-b241-82ef-27f996ec8cf1%22%2C%22instanceId%22%3A%22e2416028-500d-bf8a-6e18-4f44f2fa2a97%22%7D%5D" href="/features/brain-ai" class="navbar__link w-inline-block">                          <div class="text-size-base">
-                            Brain AI
-                          </div>
-</a>
-                          <a data-wf-native-id-path="ad349e1a-c0c9-dbab-04c7-fdcb238e51b3:e2416028-500d-bf8a-6e18-4f44f2fa2a97:7b2f814a-4b1c-cb85-3dee-1c4c47272963" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="7b2f814a-4b1c-cb85-3dee-1c4c47272963" data-wf-component-context="%5B%7B%22componentId%22%3A%22e2416028-500d-bf8a-6e18-4f44f2fa2a96%22%2C%22instanceId%22%3A%22ad349e1a-c0c9-dbab-04c7-fdcb238e51b3%22%7D%2C%7B%22componentId%22%3A%22be705a7d-700d-b241-82ef-27f996ec8cf1%22%2C%22instanceId%22%3A%22e2416028-500d-bf8a-6e18-4f44f2fa2a97%22%7D%5D" href="/integrations" class="navbar__link w-inline-block">                          <div class="text-size-base">
-                            Integrations
-                          </div>
-</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <a data-wf-native-id-path="ad349e1a-c0c9-dbab-04c7-fdcb238e51b3:e2416028-500d-bf8a-6e18-4f44f2fa2a97:be705a7d-700d-b241-82ef-27f996ec8d10" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="be705a7d-700d-b241-82ef-27f996ec8d10" data-wf-component-context="%5B%7B%22componentId%22%3A%22e2416028-500d-bf8a-6e18-4f44f2fa2a96%22%2C%22instanceId%22%3A%22ad349e1a-c0c9-dbab-04c7-fdcb238e51b3%22%7D%2C%7B%22componentId%22%3A%22be705a7d-700d-b241-82ef-27f996ec8cf1%22%2C%22instanceId%22%3A%22e2416028-500d-bf8a-6e18-4f44f2fa2a97%22%7D%5D" href="/pricing" class="navbar__link desktop w-inline-block">                  <div class="text-size-base">
-                    Pricing
-                  </div>
-</a>
-                  <div class="navbar__drawer">
-                    <div class="navbar__drawer_trigger">
-                      <div class="text-size-medium">
-                        Resources
-                      </div>
-                      <div class="icon-1x1-xsmall w-embed">
-                        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5303 13.0303C15.2374 13.3232 14.7626 13.3232 14.4697 13.0303L11.7324 10.2931C11.3276 9.8883 11.0555 9.61703 10.8292 9.42491C10.6096 9.23847 10.4829 9.17101 10.3863 9.13961C10.1352 9.05803 9.86478 9.05803 9.61373 9.13961C9.51706 9.17101 9.39038 9.23847 9.17076 9.42491C8.94445 9.61704 8.67236 9.8883 8.26759 10.2931L5.53033 13.0303C5.23744 13.3232 4.76256 13.3232 4.46967 13.0303C4.17678 12.7374 4.17678 12.2626 4.46967 11.9697L7.20693 9.23241L7.22846 9.21088C7.60615 8.83317 7.9214 8.51791 8.2 8.2814C8.49056 8.03473 8.79021 7.82999 9.1502 7.71302C9.70252 7.53356 10.2975 7.53356 10.8498 7.71302C11.2098 7.82999 11.5094 8.03473 11.8 8.2814C12.0786 8.51791 12.3939 8.83318 12.7715 9.21089L12.7931 9.23241L15.5303 11.9697C15.8232 12.2626 15.8232 12.7374 15.5303 13.0303Z" fill="currentColor">
-                          </path>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="navbar__drawer_dropdown">
-                      <div class="navbar__drawer_dropdown__wrapper">
-                        <div class="navbar__drawer_card">
-                          <a data-wf-native-id-path="ad349e1a-c0c9-dbab-04c7-fdcb238e51b3:e2416028-500d-bf8a-6e18-4f44f2fa2a97:7ab1c33d-a9b7-1092-1379-04bc6c4a7da7" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="7ab1c33d-a9b7-1092-1379-04bc6c4a7da7" data-wf-component-context="%5B%7B%22componentId%22%3A%22e2416028-500d-bf8a-6e18-4f44f2fa2a96%22%2C%22instanceId%22%3A%22ad349e1a-c0c9-dbab-04c7-fdcb238e51b3%22%7D%2C%7B%22componentId%22%3A%22be705a7d-700d-b241-82ef-27f996ec8cf1%22%2C%22instanceId%22%3A%22e2416028-500d-bf8a-6e18-4f44f2fa2a97%22%7D%5D" href="/blog" class="navbar__link w-inline-block">                          <div class="text-size-base">
-                            Blog
-                          </div>
-</a>
-                          <a data-wf-native-id-path="ad349e1a-c0c9-dbab-04c7-fdcb238e51b3:e2416028-500d-bf8a-6e18-4f44f2fa2a97:7ab1c33d-a9b7-1092-1379-04bc6c4a7daa" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="7ab1c33d-a9b7-1092-1379-04bc6c4a7daa" data-wf-component-context="%5B%7B%22componentId%22%3A%22e2416028-500d-bf8a-6e18-4f44f2fa2a96%22%2C%22instanceId%22%3A%22ad349e1a-c0c9-dbab-04c7-fdcb238e51b3%22%7D%2C%7B%22componentId%22%3A%22be705a7d-700d-b241-82ef-27f996ec8cf1%22%2C%22instanceId%22%3A%22e2416028-500d-bf8a-6e18-4f44f2fa2a97%22%7D%5D" href="/case-studies" class="navbar__link w-inline-block">                          <div class="text-size-base">
-                            Case studies
-                          </div>
-</a>
-                          <a data-scroll-to="faq" data-scoll-to-page="" data-wf-native-id-path="ad349e1a-c0c9-dbab-04c7-fdcb238e51b3:e2416028-500d-bf8a-6e18-4f44f2fa2a97:7ab1c33d-a9b7-1092-1379-04bc6c4a7dad" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="7ab1c33d-a9b7-1092-1379-04bc6c4a7dad" data-wf-component-context="%5B%7B%22componentId%22%3A%22e2416028-500d-bf8a-6e18-4f44f2fa2a96%22%2C%22instanceId%22%3A%22ad349e1a-c0c9-dbab-04c7-fdcb238e51b3%22%7D%2C%7B%22componentId%22%3A%22be705a7d-700d-b241-82ef-27f996ec8cf1%22%2C%22instanceId%22%3A%22e2416028-500d-bf8a-6e18-4f44f2fa2a97%22%7D%5D" href="#" class="navbar__link w-inline-block">                          <div class="text-size-base">
-                            FAQ
-                          </div>
-</a>
-                          <a data-wf-native-id-path="ad349e1a-c0c9-dbab-04c7-fdcb238e51b3:e2416028-500d-bf8a-6e18-4f44f2fa2a97:7ab1c33d-a9b7-1092-1379-04bc6c4a7db0" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="7ab1c33d-a9b7-1092-1379-04bc6c4a7db0" data-wf-component-context="%5B%7B%22componentId%22%3A%22e2416028-500d-bf8a-6e18-4f44f2fa2a96%22%2C%22instanceId%22%3A%22ad349e1a-c0c9-dbab-04c7-fdcb238e51b3%22%7D%2C%7B%22componentId%22%3A%22be705a7d-700d-b241-82ef-27f996ec8cf1%22%2C%22instanceId%22%3A%22e2416028-500d-bf8a-6e18-4f44f2fa2a97%22%7D%5D" href="/help" class="navbar__link w-inline-block">                          <div class="text-size-base">
-                            Help center
-                          </div>
-</a>
-                          <a data-wf-native-id-path="ad349e1a-c0c9-dbab-04c7-fdcb238e51b3:e2416028-500d-bf8a-6e18-4f44f2fa2a97:30e1648f-16c2-ca16-eed5-2a894236c5e5" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="30e1648f-16c2-ca16-eed5-2a894236c5e5" data-wf-component-context="%5B%7B%22componentId%22%3A%22e2416028-500d-bf8a-6e18-4f44f2fa2a96%22%2C%22instanceId%22%3A%22ad349e1a-c0c9-dbab-04c7-fdcb238e51b3%22%7D%2C%7B%22componentId%22%3A%22be705a7d-700d-b241-82ef-27f996ec8cf1%22%2C%22instanceId%22%3A%22e2416028-500d-bf8a-6e18-4f44f2fa2a97%22%7D%5D" href="/ai-helpers" class="navbar__link w-inline-block">                          <div class="text-size-base">
-                            What is an AI Helper
-                          </div>
-</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <a data-wf-native-id-path="ad349e1a-c0c9-dbab-04c7-fdcb238e51b3:e2416028-500d-bf8a-6e18-4f44f2fa2a97:b133c423-065d-6370-9095-8a5fc6c8c9e7" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="b133c423-065d-6370-9095-8a5fc6c8c9e7" data-wf-component-context="%5B%7B%22componentId%22%3A%22e2416028-500d-bf8a-6e18-4f44f2fa2a96%22%2C%22instanceId%22%3A%22ad349e1a-c0c9-dbab-04c7-fdcb238e51b3%22%7D%2C%7B%22componentId%22%3A%22be705a7d-700d-b241-82ef-27f996ec8cf1%22%2C%22instanceId%22%3A%22e2416028-500d-bf8a-6e18-4f44f2fa2a97%22%7D%5D" href="/careers" class="navbar__link desktop w-inline-block">                  <div class="text-size-base">
-                    Careers
-                  </div>
-</a>
+                <div class="navbar__navigation" id="nav-menu-secondary">
+                  <!-- Menu dimuat dari database via API -->
                 </div>
                 <div class="header__navigation">
-                  <a data-wf-native-id-path="ad349e1a-c0c9-dbab-04c7-fdcb238e51b3:e2416028-500d-bf8a-6e18-4f44f2fa2a97:be705a7d-700d-b241-82ef-27f996ec8d39" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="be705a7d-700d-b241-82ef-27f996ec8d39" data-wf-component-context="%5B%7B%22componentId%22%3A%22e2416028-500d-bf8a-6e18-4f44f2fa2a96%22%2C%22instanceId%22%3A%22ad349e1a-c0c9-dbab-04c7-fdcb238e51b3%22%7D%2C%7B%22componentId%22%3A%22be705a7d-700d-b241-82ef-27f996ec8cf1%22%2C%22instanceId%22%3A%22e2416028-500d-bf8a-6e18-4f44f2fa2a97%22%7D%5D" href="https://autofile.raymaizing.com/login" class="navbar__link w-inline-block">                  <div class="text-size-base">
-                    Log in
-                  </div>
-</a>
-                  <a data-wf-native-id-path="ad349e1a-c0c9-dbab-04c7-fdcb238e51b3:e2416028-500d-bf8a-6e18-4f44f2fa2a97:53cf563d-c56d-68bd-194c-7f2731dc23c8" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="53cf563d-c56d-68bd-194c-7f2731dc23c8" data-wf-component-context="%5B%7B%22componentId%22%3A%22e2416028-500d-bf8a-6e18-4f44f2fa2a96%22%2C%22instanceId%22%3A%22ad349e1a-c0c9-dbab-04c7-fdcb238e51b3%22%7D%2C%7B%22componentId%22%3A%22be705a7d-700d-b241-82ef-27f996ec8cf1%22%2C%22instanceId%22%3A%22e2416028-500d-bf8a-6e18-4f44f2fa2a97%22%7D%5D" href="/pricing" class="navbar__link cta w-inline-block">                  <div class="text-size-base text-weight-medium">
-                    Get Started
+                  <a href="https://app.raymaizing.com/" class="navbar__link cta w-inline-block" id="nav-cta-btn-2">
+                  <div class="text-size-base text-weight-medium">
+                    Login
                   </div>
 </a>
                 </div>
@@ -2012,19 +1919,19 @@ margin: 0rem !important;
                   <div class="max-width-large">
                     <div class="home-hero_title">
                       <h1 class="text-size-7xl text-weight-medium text-size-8xl--tablet max-width-medium">
-                        ai siap membantu pekerjaan komdigi
+                        Delegasikan Tugas ke Tim AI Raymaizing.
                       </h1>
                     </div>
                     <div class="spacer-small">
                     </div>
                     <p class="text-size-2xl text-style-muted text-weight-normal">
-                      Otomatisasi tugas repetitif. Tim fokus pada keputusan strategis <br/> yang berdampak, asisten digital yang siap membantu rutinitas kamu.
+                      Otomatisasi alur kerja, tingkatkan produktivitas tim, dan fokus pada ekspansi bisnis. Rekrut asisten digital yang siap bekerja 24/7 untuk rutinitas bisnis Anda.
                     </p>
                     <div class="spacer-medium">
                     </div>
                     <div class="button-group">
-                      <a data-wf-native-id-path="95604ea5-4543-a536-dd19-9140f496fdde" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="95604ea5-4543-a536-dd19-9140f496fdde" href="/pricing" class="button w-inline-block">                      <div>
-                        Mulai Sekarang
+                      <a data-wf-native-id-path="95604ea5-4543-a536-dd19-9140f496fdde" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="95604ea5-4543-a536-dd19-9140f496fdde" href="https://app.raymaizing.com/" class="button w-inline-block">                      <div>
+                        Mulai Rekrut Tim AI Sekarang
                       </div>
 </a>
                     </div>
@@ -2775,8 +2682,8 @@ margin: 0rem !important;
     <div class="glass-slider-content">
       <!-- Header -->
       <div class="glass-slider-header">
-        <h2>Tim AI Employee Anda</h2>
-        <p>kami karyawan digital AI komdigi yang siap membantu <br/> pekerjaan harian tim Anda</p>
+        <h2>Katalog Tim Spesialis Raymaizing.</h2>
+        <p>Kami menyediakan grup karyawan digital AI yang dirancang khusus untuk memenuhi kebutuhan departemen bisnis Anda</p>
       </div>
       
       <!-- Swiper Container -->
@@ -3016,7 +2923,7 @@ margin: 0rem !important;
                   <div class="spacer-medium">
                   </div>
                   <p class="text-size-2xl text-style-muted align-center">
-                    Bot AI mengambil alih tugas manual yang memakan waktu rapikan arsip, susun draft rilis, rangkum kegiatan, siapkan bahan laporan sehingga aparatur tidak lagi terjebak rutinitas administratif. Energi dan waktu tersimpan untuk analisis mendalam, koordinasi strategis, dan pengambilan keputusan yang membutuhkan pertimbangan manusiawi. Ini bukan tentang mengganti peran, tapi membebaskan potensi penuh tim Anda.
+                    Bot AI mengambil alih tugas manual yang memakan waktu—seperti menyusun draft konten, mengelola katalog, atau merangkum data—sehingga tim Anda tidak lagi terjebak rutinitas administratif. Energi dan waktu tersimpan untuk inovasi, koordinasi strategis, dan eksekusi yang membutuhkan sentuhan manusia. Ini bukan tentang mengganti peran, tapi membebaskan potensi penuh bisnis Anda.
                   </p>
                 </div>
               </div>
@@ -3025,11 +2932,11 @@ margin: 0rem !important;
                   <div class="home-automations_card-content">
                     <div class="margin-bottom margin-small">
                       <h3 class="text-size-3xl--mobile">
-                        Bot, susunkan press release kegiatan hari ini
+                        "Bot, buatkan draft konten untuk campaign skincare bulan ini."
                       </h3>
                     </div>
                     <p class="text-size-xl">
-                      <span class="text-style-muted">Bot menyusun draft awal press release berdasarkan data kegiatan, menggunakan template dan gaya bahasa resmi yang konsisten. Tim Humas tidak lagi menulis rilis dari nol berulang kali waktu digunakan untuk menyempurnakan narasi dan memastikan pesan komunikasi publik tepat sasaran.</span>
+                      <span class="text-style-muted">Bot langsung menyusun draf konten (caption, ide visual, hingga strategi posting) berdasarkan gaya bahasa (brand voice) yang telah dipelajari. Tim Kreatif tidak lagi menulis dari nol; waktu Anda digunakan untuk mengkurasi narasi agar pesan komunikasi tepat sasaran dan berkonversi tinggi.</span>
                     </p>
                   </div>
                   <img src="assets/img/67477e8395c6fe6685369d24_automation-soshie.png" loading="lazy" sizes="100vw" srcset="assets/img/67477e8395c6fe6685369d24_automation-soshie-p-500.png 500w, assets/img/67477e8395c6fe6685369d24_automation-soshie.png 830w" alt="" class="home-automations_card-image" />
@@ -3038,11 +2945,11 @@ margin: 0rem !important;
                   <div class="home-automations_card-content">
                     <div class="margin-bottom margin-small">
                       <h3 class="text-size-3xl--mobile">
-                        Bot, rapikan arsip dokumentasi liputan kemarin
+                        "Bot, carikan data formulasi bahan aktif untuk produk acne control."
                       </h3>
                     </div>
                     <p class="text-size-xl">
-                      <span class="text-style-muted">Bot menata file foto dan video pasca liputan, melakukan batch renaming otomatis sesuai standar, dan auto tagging berdasarkan tanggal, kegiatan, lokasi. Tim tidak perlu lagi bingung cari file dengan nama acak arsip rapi sejak hari pertama dan mudah ditemukan kapan pun dibutuhkan.</span>
+                      <span class="text-style-muted">Bot melakukan query ke basis pengetahuan internal Anda untuk mencari referensi atau data spesifik. Tim R&D atau admin tidak perlu lagi membongkar tumpukan dokumen atau mencari file di folder yang berantakan. Data tersaji rapi langsung di kolom chat, akurat, dan mudah ditemukan kapan pun dibutuhkan.</span>
                     </p>
                   </div>
                   <img src="assets/img/67477e835d7ac382c6ebb990_automation-cassie.png" loading="lazy" alt="" class="home-automations_card-image" />
@@ -3051,11 +2958,11 @@ margin: 0rem !important;
                   <div class="home-automations_card-content">
                     <div class="margin-bottom margin-small">
                       <h3 class="text-size-3xl--mobile">
-                        Bot, siapkan bahan laporan untuk pimpinan
+                        "Bot, siapkan poin-poin ringkasan performa penjualan minggu ini."
                       </h3>
                     </div>
                     <p class="text-size-xl">
-                      <span class="text-style-muted">Bot menarik data kegiatan dari arsip, menyusun poin-poin ringkas, dan membuat bahan laporan periodik secara otomatis. Aparatur tidak perlu panik saat ada permintaan mendadak dari pimpinan respon cepat dengan data lengkap dan tersaji rapi dalam hitungan menit.</span>
+                      <span class="text-style-muted">Bot menarik data dari sistem atau arsip, menganalisis angka, dan menyusun poin-poin laporan secara otomatis. Anda tidak perlu panik saat diminta laporan mendadak oleh manajemen; respons tersaji dalam format teks yang rapi dan profesional dalam hitungan menit, siap untuk bahan presentasi atau pengambilan keputusan.</span>
                     </p>
                   </div>
                   <img src="assets/img/67477e83b8cd1c76d0434bef_automation-vizzy.png" loading="lazy" sizes="100vw" srcset="assets/img/67477e83b8cd1c76d0434bef_automation-vizzy-p-500.png 500w, assets/img/67477e83b8cd1c76d0434bef_automation-vizzy.png 948w" alt="" class="home-automations_card-image" />
@@ -3072,20 +2979,20 @@ margin: 0rem !important;
             <div class="padding-global padding-section-large">
               <div class="margin-bottom margin-large">
                 <h2 class="text-size-7xl text-size-4xl--mobile">
-                  Asisten Digital Yang Belajar Dari Dokumen Anda.
+                  Raymaizing. Tim AI Spesialis untuk akselerasi bisnis, analisis strategi, dan eksekusi kreatif.
                 </h2>
               </div>
               <div>
                 <div class="margin-bottom margin-medium">
                   <p class="text-size-xl">
-                    Belajar dari kebiasaan penggunanya.
-                    <span class="text-style-muted">Bot AI mempelajari template, gaya bahasa, dan standar komunikasi resmi instansi Anda. Semakin banyak dokumen yang dipelajari, semakin konsisten dan akurat output yang dihasilkan. Semua aktivitas tercatat dengan audit trail lengkap untuk transparansi dan akuntabilitas.</span>
+                    Mempermudah rutinitas operasional tanpa menggantikan peran kreatif manusia.
+                    <span class="text-style-muted">Agar tim Anda bisa fokus pada pengambilan keputusan skala besar. Bot dirancang untuk melengkapi kemampuan tim Anda dengan menangani tugas rutin, membebaskan Anda untuk pekerjaan yang membutuhkan analisis mendalam dan strategi jangka panjang.</span>
                   </p>
                 </div>
               </div>
               <p class="text-size-lg">
                 Tidak mengambil keputusan sendiri.
-                <span class="text-style-muted">Bot hanya menyiapkan draft dan rekomendasi. Semua output tetap direview dan disetujui oleh manusia. Ini memastikan setiap komunikasi publik, laporan, dan keputusan tetap berada di bawah kendali penuh aparatur yang berwenang.</span>
+                <span class="text-style-muted">Bot hanya menyiapkan draft dan rekomendasi. Semua output tetap direview dan disetujui oleh manusia. Ini memastikan setiap keputusan tetap berada di bawah kendali penuh tim yang berwenang.</span>
               </p>
             </div>
           </div>
@@ -3097,12 +3004,12 @@ margin: 0rem !important;
                 <div class="text-align-center">
                   <div class="max-width-large align-center">
                     <h2 class="text-size-7xl text-align-center">
-                      Bot Belajar Dari Dokumen & Data Anda. Makin Lama Makin Pintar.
+                      Makin Lama Makin Pintar.
                     </h2>
                     <div class="spacer-small">
                     </div>
                     <p class="text-size-2xl text-style-muted align-center">
-                      Latih bot dengan dokumen resmi, template komunikasi, dan standar operasional instansi Anda. Bot akan mempelajari gaya bahasa, format laporan, dan prosedur kerja yang berlaku. Semakin banyak informasi yang diberikan, semakin presisi hasilnya. Bot dirancang untuk melengkapi kemampuan manusia dengan menangani tugas rutin, membebaskan Anda untuk pekerjaan yang membutuhkan analisis mendalam dan pertimbangan strategis.
+                      Latih bot dengan SOP perusahaan, database produk, dan standar operasional bisnis Anda. Bot akan mempelajari gaya bahasa, format laporan, dan prosedur kerja yang berlaku di perusahaan. Semakin banyak informasi yang diberikan, semakin presisi hasilnya. Bot dirancang untuk melengkapi kemampuan tim Anda dengan menangani tugas rutin, membebaskan Anda untuk pekerjaan yang membutuhkan analisis mendalam dan strategi jangka panjang.
                     </p>
                   </div>
                 </div>
@@ -3125,19 +3032,19 @@ margin: 0rem !important;
                 <div id="w-node-_0d62e851-b652-6d84-71b7-c63593e41ea7-a0cabc6e" class="home-integrations_content">
                   <div class="margin-bottom margin-medium">
                     <h2 class="text-size-7xl">
-                      Deteksi Isu Lebih Awal. Temukan Arsip Lebih Cepat.
+                      Fitur Unggulan.
                     </h2>
                   </div>
                   <div class="margin-bottom margin-large">
                     <p class="text-size-xl">
-                      Bot Alert Isu & Rekomendasi Tindakan.
-                      <span class="text-style-muted">Bot memantau perkembangan isu terkait instansi di dunia maya, memberikan early warning kepada Humas, dan menyajikan ringkasan situasi dengan opsi respons awal. Humas lebih siap menghadapi isu respon lebih terukur, tidak panik, dan pimpinan mendapat gambaran situasi lebih awal.</span>
+                      Bot Alert Tren & Rekomendasi.
+                      <span class="text-style-muted">Bot memantau pergerakan pasar, tren skincare terbaru, atau langkah kompetitor secara real-time, memberikan early warning kepada tim marketing, dan menyajikan ringkasan situasi dengan opsi respons cepat. Tim Anda lebih siap, lebih sigap, dan tidak tertinggal.</span>
                     </p>
                   </div>
                   <div class="margin-bottom margin-large">
                     <p class="text-size-xl">
-                      Bot Pencari Arsip Cerdas.
-                      <span class="text-style-muted">Cari arsip dengan bahasa sehari-hari seperti "Dokumentasi Menteri tentang X tahun lalu" bot menghubungkan file lintas folder dan tahun. Arsip ada tapi tidak ketemu? Masalah selesai. Akses arsip cepat dan akurat, pengetahuan tidak hilang saat pegawai berganti.</span>
+                      Bot Pencari Aset Cerdas.
+                      <span class="text-style-muted">Cari file atau data dengan bahasa sehari-hari seperti "Cari riset bahan aktif produk X tahun lalu." Bot menghubungkan data lintas folder dan proyek. Masalah aset hilang atau sulit dicari? Masalah selesai. Pengetahuan perusahaan tersimpan rapi selamanya.</span>
                     </p>
                   </div>
                   <div class="margin-bottom margin-xlarge">
@@ -3166,28 +3073,28 @@ margin: 0rem !important;
               <div class="max-width-large breathing-space">
                 <div class="margin-bottom margin-large">
                   <h2 class="text-size-7xl max-width-medium">
-                    Satu Platform, Banyak Unit Kerja. Kelola Semua Bot di Satu Tempat.
+                    Satu Platform, Banyak Tim Kerja.
                   </h2>
                 </div>
                 <div class="home-workspaces_grid">
                   <div>
                     <h3 class="text-size-xl">
-                      Workspace untuk setiap unit
+                      Workspace untuk setiap grup
                     </h3>
                     <div class="spacer-xsmall">
                     </div>
                     <p class="text-size-lg">
-                      <span class="text-style-muted">Buat workspace terpisah untuk Humas, Sekretariat, atau unit lain. Setiap workspace memiliki bot dan dokumen sendiri, disesuaikan dengan kebutuhan spesifik masing-masing unit kerja.</span>
+                      <span class="text-style-muted">Buat workspace terpisah untuk R&D, Marketing, Branding, atau operasional. Setiap workspace memiliki bot dan basis pengetahuan sendiri, disesuaikan dengan kebutuhan spesifik masing-masing tim.</span>
                     </p>
                   </div>
                   <div>
                     <h3 class="text-size-xl">
-                      Kolaborasi antar tim
+                      Kolaborasi antar departemen
                     </h3>
                     <div class="spacer-xsmall">
                     </div>
                     <p class="text-size-lg">
-                      <span class="text-style-muted">Bagikan workspace dengan anggota tim untuk kolaborasi real-time. Semua orang dapat mengakses bot, arsip, dan output yang sama memastikan konsistensi dan efisiensi kerja di seluruh organisasi.</span>
+                      <span class="text-style-muted">Bagikan workspace dengan anggota tim untuk kolaborasi real-time. Semua orang dapat mengakses bot, arsip, dan output yang sama, memastikan konsistensi brand voice dan efisiensi kerja di seluruh organisasi.</span>
                     </p>
                   </div>
                 </div>
@@ -3585,12 +3492,11 @@ margin: 0rem !important;
         <!-- ============================================ -->
         <!-- PRICING SECTION - Pilih Paket Sesuai Kebutuhan Anda -->
         <!-- ============================================ -->
-        <div id="pricing-section-container"></div>
-        <div id="pricing-section" style="position: absolute; top: -80px;"></div>
+        <div id="pricing-section-container" style="display: none;"></div>
+        <div id="pricing-section" style="position: absolute; top: -80px; display: none;"></div>
         <script>
-          // Load pricing section dynamically with comprehensive error handling
-          (function() {
-            console.log('🔄 Loading pricing section...');
+          // Pricing section hidden - skip loading
+          // (function() {
             
             // Try multiple paths in case of different server configurations
             var paths = [
@@ -3658,9 +3564,7 @@ margin: 0rem !important;
                 });
             }
             
-            // Start loading
-            tryLoadPricing(0);
-          })();
+          // })(); — pricing section disabled
         </script>
         <!-- ============================================ -->
         <!-- END PRICING SECTION -->
@@ -3676,17 +3580,17 @@ margin: 0rem !important;
                       <div class="text-color-alternate">
                         <div class="home-cta_content-wrap">
                           <h2 class="text-size-7xl max-width-medium">
-                            Saatnya Bekerja Lebih Cerdas, Lebih Efektif.
+                            Saatnya Membangun Tim yang Lebih Cerdas, Lebih Efektif.
                           </h2>
                           <div class="spacer-small">
                           </div>
                           <p class="text-size-2xl text-style-muted align-center text-size-lg--mobile">
-                            Mulai dengan satu bot untuk satu unit kerja. Lihat hasilnya. Rasakan dampaknya. Kemudian kembangkan ke seluruh organisasi. Kami mendampingi setiap tahap dari pelatihan tim, kustomisasi bot, hingga implementasi penuh dengan pendekatan yang praktis dan terukur.
+                            Mulai dengan satu grup bot untuk satu departemen. Lihat hasilnya. Rasakan dampaknya pada efisiensi operasional. Kemudian kembangkan ke seluruh struktur perusahaan. Kami mendampingi setiap tahap—dari pelatihan tim, kustomisasi bot, hingga implementasi penuh dengan pendekatan praktis dan terukur.
                           </p>
                           <div class="spacer-medium">
                           </div>
                           <div class="button-group">
-                            <a data-wf-native-id-path="98c04889-8a65-9d21-5077-a09cd3a8e9b6" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="98c04889-8a65-9d21-5077-a09cd3a8e9b6" href="/pricing" class="button w-inline-block">                            <div>
+                            <a data-wf-native-id-path="98c04889-8a65-9d21-5077-a09cd3a8e9b6" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="98c04889-8a65-9d21-5077-a09cd3a8e9b6" href="https://app.raymaizing.com/" class="button w-inline-block">                            <div>
                               Mulai Dengan Raymaizing
                             </div>
 </a>
@@ -4137,6 +4041,128 @@ window.requestAnimationFrame(scrollPlay);
   <!-- STICKY NAVBAR & SMOOTH SCROLL SCRIPT -->
   <!-- ============================================ -->
   <script src="assets/js/sticky-navbar.js"></script>
+
+  <!-- ============================================ -->
+  <!-- DYNAMIC MENU FROM DATABASE (main-nav) -->
+  <!-- ============================================ -->
+  <script>
+  (function() {
+    var API_URL = '/admin/api/menu.php?slug=main-nav';
+
+    // CSS untuk dropdown submenu dinamis
+    var style = document.createElement('style');
+    style.textContent = [
+      '.dyn-menu-item { position: relative; }',
+      '.dyn-menu-item > a { display: inline-flex; align-items: center; gap: 6px; }',
+      '.dyn-menu-item .dyn-arrow { font-size: 10px; transition: transform .2s; display: inline-block; }',
+      '.dyn-menu-item:hover .dyn-arrow { transform: rotate(180deg); }',
+      /* Pseudo-element bridge: mengisi gap antara trigger dan dropdown agar hover tidak putus */
+      '.dyn-menu-item::after {',
+      '  content: ""; position: absolute; top: 100%; left: 0;',
+      '  width: 100%; height: 8px; background: transparent;',
+      '}',
+      '.dyn-submenu {',
+      '  display: none; position: absolute; top: calc(100% + 2px); left: 50%;',
+      '  transform: translateX(-50%); min-width: 200px;',
+      '  background: rgba(15,23,42,.97); border: 1px solid rgba(51,65,85,.8);',
+      '  border-radius: 10px; padding: 6px; z-index: 999;',
+      '  box-shadow: 0 16px 40px rgba(0,0,0,.5);',
+      '  backdrop-filter: blur(12px);',
+      /* Padding-top agar area hover overlap dengan bridge */
+      '  padding-top: 8px;',
+      '}',
+      '.dyn-menu-item:hover .dyn-submenu { display: block; }',
+      '.dyn-submenu a {',
+      '  display: flex; align-items: center; gap: 8px;',
+      '  padding: 8px 12px; border-radius: 7px;',
+      '  color: #cbd5e1; font-size: 14px; text-decoration: none;',
+      '  transition: background .15s, color .15s; white-space: nowrap;',
+      '}',
+      '.dyn-submenu a:hover { background: rgba(6,182,212,.12); color: #22d3ee; }',
+      '.dyn-submenu a img { width: 18px; height: 18px; object-fit: contain; border-radius: 3px; flex-shrink: 0; }',
+      '.dyn-menu-icon { width: 20px; height: 20px; object-fit: contain; border-radius: 4px; flex-shrink: 0; }',
+    ].join('');
+    document.head.appendChild(style);
+
+    function buildMenuHTML(items) {
+      return items.map(function(item) {
+        var iconHTML = item.icon_image
+          ? '<img src="/' + item.icon_image + '" alt="' + (item.icon_alt || '') + '" class="dyn-menu-icon">'
+          : '';
+        var hasChildren = item.children && item.children.length > 0;
+        var arrowHTML = hasChildren ? '<span class="dyn-arrow">▾</span>' : '';
+        var cls = 'navbar__link w-inline-block' + (item.css_class ? ' ' + item.css_class : '');
+
+        var submenuHTML = '';
+        if (hasChildren) {
+          submenuHTML = '<div class="dyn-submenu">' +
+            item.children.map(function(child) {
+              var childIcon = child.icon_image
+                ? '<img src="/' + child.icon_image + '" alt="' + (child.icon_alt || '') + '">'
+                : '';
+              return '<a href="' + child.url + '" target="' + child.target + '">' +
+                childIcon + '<span>' + child.title + '</span></a>';
+            }).join('') +
+          '</div>';
+        }
+
+        return '<div class="dyn-menu-item">' +
+          '<a href="' + item.url + '" target="' + item.target + '" class="' + cls + '">' +
+            iconHTML +
+            '<div class="text-size-base">' + item.title + '</div>' +
+            arrowHTML +
+          '</a>' +
+          submenuHTML +
+        '</div>';
+      }).join('');
+    }
+
+    function renderMenus(items) {
+      var targets = ['nav-menu-primary', 'nav-menu-secondary'];
+      targets.forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) {
+          el.innerHTML = buildMenuHTML(items);
+        }
+      });
+    }
+
+    // Fetch dari API
+    fetch(API_URL)
+      .then(function(res) { return res.json(); })
+      .then(function(data) {
+        if (data && data.items) {
+          renderMenus(data.items);
+        }
+      })
+      .catch(function(err) {
+        console.warn('[Raymaizing] Gagal memuat menu dari database:', err);
+      });
+
+    // Hover dengan delay agar tidak langsung hilang saat mouse melintas gap
+    document.addEventListener('mouseover', function(e) {
+      var item = e.target.closest('.dyn-menu-item');
+      if (item) {
+        clearTimeout(item._hideTimer);
+        var sub = item.querySelector('.dyn-submenu');
+        if (sub) sub.style.display = 'block';
+      }
+    });
+    document.addEventListener('mouseout', function(e) {
+      var item = e.target.closest('.dyn-menu-item');
+      if (item) {
+        var related = e.relatedTarget;
+        // Jika mouse masih di dalam item yang sama, jangan sembunyikan
+        if (related && item.contains(related)) return;
+        clearTimeout(item._hideTimer);
+        item._hideTimer = setTimeout(function() {
+          var sub = item.querySelector('.dyn-submenu');
+          if (sub) sub.style.display = 'none';
+        }, 120); // 120ms delay — cukup untuk melintas gap kecil
+      }
+    });
+  })();
+  </script>
 
   </body>
 </html>

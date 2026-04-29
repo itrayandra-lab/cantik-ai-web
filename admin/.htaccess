@@ -1,0 +1,14 @@
+# Raymaizing Admin Panel - Security Rules
+Options -Indexes
+
+# Protect config files
+<FilesMatch "^(database|auth|helpers)\.php$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+# Allow access to admin PHP files
+<FilesMatch "\.php$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
