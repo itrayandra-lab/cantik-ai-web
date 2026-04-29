@@ -39,8 +39,8 @@ function login($username, $password) {
     require_once __DIR__ . '/database.php';
     $pdo = getDB();
     
-    $stmt = $pdo->prepare("SELECT * FROM admin_users WHERE username = ? AND is_active = 1");
-    $stmt->execute([$username]);
+    $stmt = $pdo->prepare("SELECT * FROM admin_users WHERE (username = ? OR email = ?) AND is_active = 1");
+    $stmt->execute([$username, $username]);
     $user = $stmt->fetch();
     
     if ($user && password_verify($password, $user['password'])) {

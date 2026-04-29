@@ -1,13 +1,13 @@
 -- ============================================================
--- Raymaizing Database Setup
--- Database: raymaizing_db
+-- Cantik AI Database Setup
+-- Database: cantikai-db
 -- ============================================================
 
-CREATE DATABASE IF NOT EXISTS `raymaizing_db`
+CREATE DATABASE IF NOT EXISTS `cantikai-db`
   CHARACTER SET utf8mb4
   COLLATE utf8mb4_unicode_ci;
 
-USE `raymaizing_db`;
+USE `cantikai-db`;
 
 -- ============================================================
 -- Table: admin_users
@@ -28,8 +28,8 @@ CREATE TABLE IF NOT EXISTS `admin_users` (
 
 -- Default admin user: admin / password
 INSERT INTO `admin_users` (`username`, `email`, `password`, `full_name`, `role`) VALUES
-('admin', 'admin@raymaizing.com', '$2y$12$O3kjNiD7KocmjP7ekI.QoOrFJ5r83seGFaRto2r8OrQ43ZmAg76N6', 'Super Admin', 'superadmin');
--- Password hash above = 'password' (bcrypt). Change after first login!
+('it.rayandra@gmail.com', 'it.rayandra@gmail.com', '$2y$12$vPXFuYHeIDTjpBX0DzniteZmCTYrbvpwIsyNlwAoq5Udv0u5ta02.', 'Super Admin', 'superadmin');
+-- Password hash above = '123' (bcrypt). Change after first login!
 
 -- ============================================================
 -- Table: nav_menus  (header menu groups)
