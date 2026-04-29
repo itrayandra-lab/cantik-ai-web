@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - Raymaizing</title>
+  <title>Login - Cantik.AI</title>
   <link rel="icon" href="assets/img/favicon.png">
   
   <!-- Tailwind CSS CDN -->
@@ -24,7 +24,7 @@
     }
 
     .gradient-bg {
-      background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0a0a0f 100%);
+      background: linear-gradient(135deg, #0a0a0f 0%, #1a0a2e 50%, #0a0a0f 100%);
     }
 
     .file-card {
@@ -36,12 +36,12 @@
     }
 
     .file-card:hover {
-      border-color: rgba(59, 130, 246, 0.3);
-      box-shadow: 0 0 20px rgba(59, 130, 246, 0.1);
+      border-color: rgba(184, 77, 122, 0.35);
+      box-shadow: 0 0 20px rgba(184, 77, 122, 0.12);
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+      background: linear-gradient(135deg, #e8a0bf 0%, #b84d7a 100%);
       border: none;
       color: white;
       padding: 12px 24px;
@@ -49,11 +49,12 @@
       font-weight: 600;
       cursor: pointer;
       transition: all 0.3s ease;
+      box-shadow: 0 4px 14px rgba(184, 77, 122, 0.35);
     }
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+      box-shadow: 0 10px 30px rgba(184, 77, 122, 0.5);
     }
 
     .btn-primary:disabled {
@@ -74,13 +75,13 @@
     }
 
     .btn-outline:hover {
-      border-color: rgba(59, 130, 246, 0.5);
-      background: rgba(59, 130, 246, 0.1);
+      border-color: rgba(184, 77, 122, 0.5);
+      background: rgba(184, 77, 122, 0.1);
     }
 
     .input-field {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(253, 248, 251, 0.05);
+      border: 1px solid rgba(184, 77, 122, 0.2);
       border-radius: 8px;
       padding: 12px 16px;
       color: white;
@@ -90,8 +91,9 @@
 
     .input-field:focus {
       outline: none;
-      border-color: #3b82f6;
-      background: rgba(255, 255, 255, 0.08);
+      border-color: #b84d7a;
+      background: rgba(253, 248, 251, 0.08);
+      box-shadow: 0 0 0 3px rgba(184, 77, 122, 0.15);
     }
 
     .input-field::placeholder {
@@ -99,18 +101,19 @@
     }
 
     .gradient-text {
-      background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+      background: linear-gradient(135deg, #e8a0bf 0%, #b84d7a 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
     .logo-badge {
-      background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+      background: linear-gradient(135deg, #e8a0bf 0%, #b84d7a 100%);
       padding: 4px 12px;
       border-radius: 6px;
       font-weight: 700;
       color: white;
+      box-shadow: 0 2px 8px rgba(184, 77, 122, 0.3);
     }
   </style>
 </head>
@@ -118,10 +121,10 @@
   <div class="min-h-screen flex items-center justify-center p-4">
     <!-- Background Pattern -->
     <div class="absolute inset-0 opacity-5">
-      <div class="absolute top-10 left-10 w-20 h-20 bg-blue-500 rounded-full blur-xl"></div>
-      <div class="absolute top-40 right-20 w-32 h-32 bg-purple-500 rounded-full blur-xl"></div>
-      <div class="absolute bottom-20 left-1/4 w-24 h-24 bg-blue-400 rounded-full blur-xl"></div>
-      <div class="absolute bottom-40 right-10 w-28 h-28 bg-cyan-500 rounded-full blur-xl"></div>
+      <div class="absolute top-10 left-10 w-20 h-20 bg-pink-500 rounded-full blur-xl"></div>
+      <div class="absolute top-40 right-20 w-32 h-32 bg-pink-700 rounded-full blur-xl"></div>
+      <div class="absolute bottom-20 left-1/4 w-24 h-24 bg-pink-400 rounded-full blur-xl"></div>
+      <div class="absolute bottom-40 right-10 w-28 h-28 bg-pink-600 rounded-full blur-xl"></div>
     </div>
 
     <div class="w-full max-w-md relative z-10">
@@ -271,7 +274,8 @@
             </div>
             <button
               type="button"
-              class="text-sm text-blue-400 hover:underline"
+              class="text-sm hover:underline"
+              style="color: #e8a0bf;"
               onclick="alert('Fitur reset password akan diimplementasikan!')"
             >
               Lupa password?
@@ -282,9 +286,9 @@
             <input type="checkbox" id="terms" class="w-4 h-4 rounded border-gray-600 bg-gray-800 mt-1">
             <label for="terms" class="text-sm leading-relaxed">
               Saya setuju dengan{' '}
-              <a href="#" class="text-blue-400 hover:underline">Syarat & Ketentuan</a>
+              <a href="#" style="color: #e8a0bf;" class="hover:underline">Syarat & Ketentuan</a>
               {' '}dan{' '}
-              <a href="#" class="text-blue-400 hover:underline">Kebijakan Privasi</a>
+              <a href="#" style="color: #e8a0bf;" class="hover:underline">Kebijakan Privasi</a>
             </label>
           </div>
 
@@ -309,7 +313,8 @@
             <button
               type="button"
               onclick="toggleMode()"
-              class="text-blue-400 hover:underline font-medium"
+              style="color: #e8a0bf;"
+              class="hover:underline font-medium"
               id="switchBtn"
             >
               Daftar sekarang
@@ -325,7 +330,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
           </svg>
           <div class="text-sm">
-            <p class="font-medium text-green-400 mb-1">Keamanan Terjamin</p>
+            <p class="font-medium mb-1" style="color: #e8a0bf;">Keamanan Terjamin</p>
             <p class="text-gray-400">
               Data Anda dienkripsi dengan standar industri SSL 256-bit. 
               Kami tidak pernah menyimpan atau membagikan informasi pribadi Anda.
