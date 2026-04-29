@@ -1,0 +1,540 @@
+/* ============================================================
+   CANTIK.AI — LIGHT FEMININE THEME
+   Background: #fdf8fb (warm white) | #f5eef5 (soft lavender-pink)
+   Text: #2d1b2e (deep plum) | #6b4c5e (muted plum)
+   Pink Palette: #b84d7a | #e8a0bf | #9d5a76
+   ============================================================ */
+
+/* ── Root & Body ─────────────────────────────────────────── */
+html, body {
+  background: #fdf8fb !important;
+  color: #2d1b2e !important;
+}
+
+/* ── background-color-alternate override ─────────────────── */
+.background-color-alternate {
+  background-color: #fdf8fb !important;
+  color: #2d1b2e !important;
+}
+
+/* Alternating section tint */
+.section_home-lore.background-color-alternate,
+.section_home-helpers.background-color-alternate,
+.section_home-brain.background-color-alternate,
+.section_home-integrations.background-color-alternate,
+.section_home-testimonials.background-color-alternate,
+.section_home-faq.background-color-alternate {
+  background-color: #fdf8fb !important;
+}
+
+.section_home-automations.background-color-alternate,
+.section_home-present.background-color-alternate,
+.section_home-workspaces.background-color-alternate,
+.section_home-cta.background-color-alternate {
+  background-color: #f5eef5 !important;
+}
+
+/* ── Text colors ─────────────────────────────────────────── */
+/* All white text → dark plum */
+.text-color-alternate,
+.text-color-alternate * {
+  color: #2d1b2e !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2d1b2e !important;
+}
+
+p, span, div, li, a {
+  color: #2d1b2e;
+}
+
+/* Muted text */
+.text-style-muted {
+  color: #6b4c5e !important;
+  opacity: 1 !important;
+}
+
+/* ── Navbar ──────────────────────────────────────────────── */
+.header-transparent {
+  background: rgba(253, 248, 251, 0.92) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid rgba(184, 77, 122, 0.12) !important;
+  box-shadow: 0 2px 20px rgba(184, 77, 122, 0.08) !important;
+}
+
+.header-transparent .header {
+  background: transparent !important;
+}
+
+.header-transparent.scrolled {
+  background: rgba(253, 248, 251, 0.96) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(184, 77, 122, 0.2) !important;
+  box-shadow: 0 4px 24px rgba(184, 77, 122, 0.12) !important;
+}
+
+.header-transparent.scrolled .header {
+  background: transparent !important;
+}
+
+/* Navbar links */
+.header .navbar__link,
+.header .navbar__drawer,
+.header-transparent .navbar__link,
+.header-transparent .navbar__drawer {
+  color: #2d1b2e !important;
+}
+
+.header .navbar__link:hover,
+.header .navbar__drawer:hover {
+  color: #b84d7a !important;
+}
+
+/* Burger lines */
+.navbar__burger .burger-line {
+  background: #2d1b2e !important;
+}
+
+/* Mobile menu */
+.navbar__menu {
+  background: #fdf8fb !important;
+}
+
+.navbar .navbar__positioner::after {
+  background: linear-gradient(0deg, rgba(253, 248, 251, 0) 0%, rgba(253, 248, 251, 1) 25%) !important;
+}
+
+.navbar__drawer_card .navbar__link {
+  color: #2d1b2e !important;
+}
+
+/* ── Hero Section ────────────────────────────────────────── */
+.home-hero_background {
+  background-color: #f5eef5 !important;
+}
+
+/* Soften the dark overlay to light pink tones */
+.home-hero_background-overlay {
+  background:
+    linear-gradient(to top,
+      rgba(253, 248, 251, 0.97) 0%,
+      rgba(253, 248, 251, 0.9) 8%,
+      rgba(253, 248, 251, 0.75) 18%,
+      rgba(253, 248, 251, 0.5) 32%,
+      rgba(253, 248, 251, 0.25) 50%,
+      rgba(253, 248, 251, 0.1) 68%,
+      transparent 85%
+    ),
+    linear-gradient(to right,
+      rgba(253, 248, 251, 0.9) 0%,
+      rgba(253, 248, 251, 0.7) 12%,
+      rgba(253, 248, 251, 0.45) 25%,
+      rgba(253, 248, 251, 0.2) 40%,
+      transparent 55%
+    ) !important;
+}
+
+/* Hero video bottom fade */
+.home-hero_background-video::after {
+  background: linear-gradient(180deg, rgba(253, 248, 251, 0) 0%, rgba(253, 248, 251, 1) 100%) !important;
+}
+
+/* Hero text */
+.section_home-hero h1,
+.section_home-hero p {
+  color: #2d1b2e !important;
+  text-shadow: 0 1px 8px rgba(253, 248, 251, 0.6);
+}
+
+/* ── Glass Slider Cards ──────────────────────────────────── */
+.glass-slider-section {
+  background: #fdf8fb !important;
+}
+
+.glass-slider-section::before {
+  background: linear-gradient(180deg, #fdf8fb 0%, #f5eef5 50%, #fdf8fb 100%) !important;
+}
+
+.glass-slider-section::after {
+  background: radial-gradient(circle, rgba(184, 77, 122, 0.08) 0%, transparent 70%) !important;
+}
+
+.glass-slider-header h2 {
+  color: #2d1b2e !important;
+}
+
+.glass-slider-header p {
+  color: #6b4c5e !important;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7) !important;
+  border: 1px solid rgba(184, 77, 122, 0.15) !important;
+  box-shadow: 0 4px 24px rgba(184, 77, 122, 0.08) !important;
+}
+
+.swiper-slide-active .glass-card {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(184, 77, 122, 0.4) !important;
+  box-shadow:
+    0 8px 40px rgba(184, 77, 122, 0.18),
+    0 0 60px rgba(232, 160, 191, 0.15) !important;
+}
+
+.glass-card-title {
+  color: #2d1b2e !important;
+}
+
+.glass-card-description {
+  color: #6b4c5e !important;
+}
+
+.swiper-slide-active .glass-card-description {
+  color: #2d1b2e !important;
+}
+
+/* ── Lore / Video Section ────────────────────────────────── */
+.section_home-lore {
+  background: #fdf8fb !important;
+}
+
+.home-lore_image-wrapper::before {
+  background:
+    linear-gradient(to right,
+      rgba(253, 248, 251, 1) 0%,
+      rgba(253, 248, 251, 0.8) 5%,
+      transparent 15%,
+      transparent 85%,
+      rgba(253, 248, 251, 0.8) 95%,
+      rgba(253, 248, 251, 1) 100%),
+    linear-gradient(to bottom,
+      rgba(253, 248, 251, 0.9) 0%,
+      rgba(253, 248, 251, 0.6) 5%,
+      transparent 20%,
+      transparent 100%) !important;
+}
+
+/* ── Automations Cards ───────────────────────────────────── */
+.home-automations_card {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid rgba(184, 77, 122, 0.12) !important;
+  box-shadow: 0 4px 20px rgba(184, 77, 122, 0.06) !important;
+}
+
+.home-automations_card h3 {
+  color: #2d1b2e !important;
+}
+
+/* ── Present Section ─────────────────────────────────────── */
+.section_home-present {
+  background: #f5eef5 !important;
+}
+
+.home-present_content {
+  background: transparent !important;
+}
+
+/* ── Brain Section ───────────────────────────────────────── */
+.section_home-brain {
+  background: #fdf8fb !important;
+}
+
+/* ── Integrations Section ────────────────────────────────── */
+.section_home-integrations {
+  background: #fdf8fb !important;
+}
+
+/* ── Workspaces Section ──────────────────────────────────── */
+.section_home-workspaces {
+  background: #f5eef5 !important;
+}
+
+/* ── Testimonials ────────────────────────────────────────── */
+.section_home-testimonials {
+  background: #fdf8fb !important;
+}
+
+.home-testimonials_card {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border: 1px solid rgba(184, 77, 122, 0.12) !important;
+  box-shadow: 0 2px 16px rgba(184, 77, 122, 0.06) !important;
+}
+
+.home-testimonials_card p {
+  color: #6b4c5e !important;
+}
+
+.home-testimonials_card .text-weight-medium {
+  color: #2d1b2e !important;
+}
+
+.home-testimonials_card .text-color-tertiary {
+  color: #9d5a76 !important;
+}
+
+/* Floater widget */
+.floater_component {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(184, 77, 122, 0.2) !important;
+  box-shadow: 0 4px 20px rgba(184, 77, 122, 0.1) !important;
+}
+
+.floater_content .text-weight-medium {
+  color: #2d1b2e !important;
+}
+
+.floater_divider {
+  background: rgba(184, 77, 122, 0.15) !important;
+}
+
+/* ── CTA Section ─────────────────────────────────────────── */
+.section_home-cta {
+  background: #f5eef5 !important;
+}
+
+.home-cta_background {
+  background: linear-gradient(135deg, rgba(232, 160, 191, 0.2) 0%, rgba(184, 77, 122, 0.15) 100%) !important;
+}
+
+.home-cta_content-container {
+  background: linear-gradient(135deg, #b84d7a 0%, #9d5a76 100%) !important;
+  border-radius: 24px !important;
+}
+
+.home-cta_content-container h2,
+.home-cta_content-container p {
+  color: #fff !important;
+}
+
+/* ── FAQ Section ─────────────────────────────────────────── */
+.section_home-faq {
+  background: #fdf8fb !important;
+}
+
+.home-faq_accordion {
+  border-bottom: 1px solid rgba(184, 77, 122, 0.15) !important;
+}
+
+.home-faq_question h3 {
+  color: #2d1b2e !important;
+}
+
+.home-faq_question:hover h3 {
+  color: #b84d7a !important;
+}
+
+.home-faq_answer p {
+  color: #6b4c5e !important;
+}
+
+.home-faq_icon-wrapper {
+  color: #b84d7a !important;
+}
+
+/* ── Pricing Section ─────────────────────────────────────── */
+.section_pricing {
+  background: linear-gradient(180deg, #fdf8fb 0%, #f5eef5 50%, #fdf8fb 100%) !important;
+}
+
+.pricing_card {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-color: rgba(184, 77, 122, 0.15) !important;
+  box-shadow: 0 4px 24px rgba(184, 77, 122, 0.08) !important;
+}
+
+.pricing_card:hover {
+  background: rgba(255, 255, 255, 0.98) !important;
+  border-color: rgba(184, 77, 122, 0.4) !important;
+  box-shadow: 0 16px 48px rgba(184, 77, 122, 0.18) !important;
+}
+
+.pricing_card-featured {
+  background: linear-gradient(135deg, rgba(232, 160, 191, 0.12) 0%, rgba(184, 77, 122, 0.08) 100%) !important;
+}
+
+.pricing_main-card {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-color: rgba(184, 77, 122, 0.15) !important;
+}
+
+.pricing_toggle {
+  background: rgba(255, 255, 255, 0.7) !important;
+  border-color: rgba(184, 77, 122, 0.2) !important;
+}
+
+.pricing_toggle-btn {
+  color: #6b4c5e !important;
+}
+
+.pricing_toggle-btn:hover {
+  color: #2d1b2e !important;
+}
+
+.pricing_package-header,
+.pricing_features-section {
+  background: rgba(255, 255, 255, 0.7) !important;
+  border-color: rgba(184, 77, 122, 0.12) !important;
+}
+
+.pricing_price-display {
+  background: rgba(245, 238, 245, 0.6) !important;
+}
+
+.pricing_feature-item {
+  background: rgba(255, 255, 255, 0.5) !important;
+  border-color: rgba(184, 77, 122, 0.08) !important;
+}
+
+.pricing_tier-label-top {
+  background: rgba(255, 255, 255, 0.5) !important;
+  border-color: rgba(184, 77, 122, 0.1) !important;
+}
+
+.pricing_trust-item {
+  background: rgba(255, 255, 255, 0.6) !important;
+}
+
+.pricing_trust-section {
+  border-top-color: rgba(184, 77, 122, 0.15) !important;
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+.footer,
+section.footer,
+[class*="footer"] {
+  background: #f0e8f0 !important;
+}
+
+.footer .container-large > div {
+  border-top-color: rgba(184, 77, 122, 0.2) !important;
+}
+
+.footer .container-large a,
+.footer .container-large div {
+  color: #6b4c5e !important;
+}
+
+.footer .container-large a:hover {
+  color: #b84d7a !important;
+}
+
+/* Footer inline styles override */
+[style*="background: #000000"],
+[style*="background:#000000"] {
+  background: #f0e8f0 !important;
+}
+
+/* ── Generic dark overrides ──────────────────────────────── */
+/* Any element with black/dark background */
+[style*="background: #000"],
+[style*="background:#000"],
+[style*="background-color: #000"],
+[style*="background-color:#000"] {
+  background: #fdf8fb !important;
+  background-color: #fdf8fb !important;
+}
+
+[style*="background: rgb(0, 0, 0)"],
+[style*="background-color: rgb(0, 0, 0)"] {
+  background: #fdf8fb !important;
+  background-color: #fdf8fb !important;
+}
+
+/* White text on dark → dark text */
+[style*="color: #fff"],
+[style*="color: white"],
+[style*="color: rgb(255, 255, 255)"] {
+  color: #2d1b2e !important;
+}
+
+/* rgba white text → dark */
+[style*="color: rgba(255, 255, 255, 0.7)"],
+[style*="color: rgba(255,255,255,0.7)"] {
+  color: #6b4c5e !important;
+}
+
+/* ── Slider track fill ───────────────────────────────────── */
+.pricing_slider {
+  background: rgba(184, 77, 122, 0.15) !important;
+}
+
+/* ── Scrollbar ───────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+  background: #f5eef5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #e8a0bf, #b84d7a) !important;
+  border-radius: 4px;
+}
+
+/* ── Selection ───────────────────────────────────────────── */
+::selection {
+  background: rgba(184, 77, 122, 0.2) !important;
+  color: #2d1b2e !important;
+}
+
+/* ── Focus ring ──────────────────────────────────────────── */
+*:focus {
+  outline-color: #b84d7a !important;
+  box-shadow: 0 0 0 3px rgba(184, 77, 122, 0.2) !important;
+}
+
+/* ── Input fields ────────────────────────────────────────── */
+.input-field {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border-color: rgba(184, 77, 122, 0.25) !important;
+  color: #2d1b2e !important;
+}
+
+.input-field::placeholder {
+  color: #9d5a76 !important;
+  opacity: 0.7 !important;
+}
+
+.input-field:focus {
+  background: #fff !important;
+  border-color: #b84d7a !important;
+}
+
+/* ── Testimonials floater ────────────────────────────────── */
+.floater_cta .text-weight-medium {
+  color: #2d1b2e !important;
+}
+
+/* ── Brain section overlay ───────────────────────────────── */
+.home-brain_soshie-overlay {
+  background: linear-gradient(to top, rgba(253, 248, 251, 0.9) 0%, transparent 60%) !important;
+}
+
+/* ── Workspaces background overlay ──────────────────────── */
+.home-workspace_background-overlay {
+  background: linear-gradient(to right, rgba(245, 238, 245, 0.85) 0%, transparent 60%) !important;
+}
+
+/* ── Automations background overlay ─────────────────────── */
+.home-automations_background-overlay {
+  background: linear-gradient(to bottom, rgba(245, 238, 245, 0.7) 0%, rgba(245, 238, 245, 0.9) 100%) !important;
+}
+
+/* ── Gradient text stays pink ────────────────────────────── */
+.gradient-text,
+.text-color-gradient--purple {
+  background: linear-gradient(135deg, #b84d7a 0%, #e8a0bf 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* ── Decorative ambient orbs ─────────────────────────────── */
+.hero-ambient-orb-1 {
+  background: radial-gradient(circle, rgba(232, 160, 191, 0.25) 0%, transparent 70%) !important;
+}
+
+.hero-ambient-orb-2 {
+  background: radial-gradient(circle, rgba(184, 77, 122, 0.15) 0%, transparent 70%) !important;
+}
