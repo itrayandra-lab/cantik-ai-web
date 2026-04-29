@@ -519,10 +519,10 @@
   <body>
     <div class="page-styles w-embed">
       <style>
-        /* Override purple colors with hi-tech blue/cyan */
+        /* Override purple colors with Cantik.AI Pink Palette */
         :root {
-          --base-color--purple-200: #9AFFFB !important; /* Cyan terang */
-          --base-color--purple-500: #2E9CBE !important; /* Biru teknologi */
+          --base-color--purple-200: #e8a0bf !important; /* Light pink */
+          --base-color--purple-500: #b84d7a !important; /* Primary pink */
         }
         
         body, html{
@@ -852,7 +852,7 @@
 }
 
 .navbar__logo:hover .logo {
-  filter: drop-shadow(0 0 12px rgba(79, 70, 229, 0.4));
+  filter: drop-shadow(0 0 12px rgba(184, 77, 122, 0.4));
   transform: scale(1.05);
 }
 
@@ -864,7 +864,7 @@
   }
   50% {
     transform: scale(1.08);
-    filter: drop-shadow(0 0 16px rgba(79, 70, 229, 0.6));
+    filter: drop-shadow(0 0 16px rgba(184, 77, 122, 0.6));
   }
   100% {
     transform: scale(1);
@@ -1948,7 +1948,7 @@ margin: 0rem !important;
         <!-- Hero Video Initialization Script -->
         <script>
         (function() {
-          // REPLACE ALL PURPLE COLORS WITH CYAN/BLUE
+          // REPLACE ALL PURPLE COLORS WITH CANTIK.AI PINK
           function replacePurpleColors() {
             // Purple hex colors to replace
             var purpleColors = [
@@ -1957,16 +1957,21 @@ margin: 0rem !important;
               '#e9d5ff', '#E9D5FF',
               '#a78bfa', '#A78BFA',
               '#c4b5fd', '#C4B5FD',
+              '#2E9CBE', '#2e9cbe',
+              '#9AFFFB', '#9afffb',
+              '#1E7A9A', '#1e7a9a',
               'rgb(139, 92, 246)',
               'rgb(141, 91, 255)',
               'rgb(233, 213, 255)',
               'rgb(167, 139, 250)',
-              'rgb(196, 181, 253)'
+              'rgb(196, 181, 253)',
+              'rgb(46, 156, 190)',
+              'rgb(154, 255, 251)'
             ];
             
-            // Replacement colors
-            var cyanColor = '#9AFFFB'; // Cyan terang
-            var blueColor = '#2E9CBE'; // Biru teknologi
+            // Replacement colors - Cantik.AI Pink Palette
+            var pinkColor  = '#b84d7a'; // Primary pink
+            var lightPink  = '#e8a0bf'; // Light pink
             
             // Get all elements
             var allElements = document.querySelectorAll('*');
@@ -1977,8 +1982,7 @@ margin: 0rem !important;
                 var modified = false;
                 purpleColors.forEach(function(purple) {
                   if (style.includes(purple)) {
-                    // Replace with blue for most cases
-                    style = style.replace(new RegExp(purple, 'gi'), blueColor);
+                    style = style.replace(new RegExp(purple.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'), pinkColor);
                     modified = true;
                   }
                 });
@@ -1992,17 +1996,19 @@ margin: 0rem !important;
               var computedStyle = window.getComputedStyle(element);
               var bgColor = computedStyle.backgroundColor;
               
-              // Replace purple backgrounds
+              // Replace old purple/cyan backgrounds
               if (bgColor && (
                 bgColor.includes('139, 92, 246') ||
                 bgColor.includes('141, 91, 255') ||
-                bgColor.includes('233, 213, 255')
+                bgColor.includes('233, 213, 255') ||
+                bgColor.includes('46, 156, 190') ||
+                bgColor.includes('154, 255, 251')
               )) {
-                element.style.backgroundColor = blueColor;
+                element.style.backgroundColor = pinkColor;
               }
             });
             
-            console.log('✅ Purple colors replaced with cyan/blue');
+            console.log('✅ Colors replaced with Cantik.AI pink palette');
           }
           
           // Run color replacement
@@ -2248,7 +2254,7 @@ margin: 0rem !important;
   right: -10%;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(79, 70, 229, 0.12) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(184, 77, 122, 0.12) 0%, transparent 70%);
   border-radius: 50%;
   filter: blur(60px); /* Reduced from 80px */
   z-index: 1;
@@ -2345,8 +2351,8 @@ margin: 0rem !important;
   border-radius: 32px;
   padding: 1px;
   background: linear-gradient(135deg, 
-    rgba(46, 156, 190, 0.6) 0%,  /* Changed from purple to blue */
-    rgba(154, 255, 251, 0.6) 100% /* Changed from purple to cyan */
+    rgba(232, 160, 191, 0.6) 0%,  /* Light pink */
+    rgba(184, 77, 122, 0.6) 100%  /* Primary pink */
   );
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -2356,15 +2362,15 @@ margin: 0rem !important;
 /* Active card enhancement */
 .swiper-slide-active .glass-card {
   background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(46, 156, 190, 0.6); /* Changed from purple to cyan */
+  border-color: rgba(184, 77, 122, 0.6);
   box-shadow: 
     0 8px 32px rgba(0, 0, 0, 0.3),
-    0 0 40px rgba(154, 255, 251, 0.3), /* Cyan glow */
-    0 0 80px rgba(46, 156, 190, 0.2); /* Blue glow */
+    0 0 40px rgba(232, 160, 191, 0.25), /* Light pink glow */
+    0 0 80px rgba(184, 77, 122, 0.18);  /* Primary pink glow */
 }
   box-shadow: 
-    0 20px 60px rgba(79, 70, 229, 0.3),
-    0 0 40px rgba(124, 58, 237, 0.2);
+    0 20px 60px rgba(184, 77, 122, 0.3),
+    0 0 40px rgba(157, 90, 118, 0.2);
 }
 
 /* Video Container - OPTIMIZED */
@@ -2398,23 +2404,23 @@ margin: 0rem !important;
 .glass-role-badge {
   display: inline-block;
   padding: 10px 20px;
-  background: rgba(79, 70, 229, 0.2);
-  border: 1px solid rgba(79, 70, 229, 0.4);
+  background: rgba(184, 77, 122, 0.15);
+  border: 1px solid rgba(184, 77, 122, 0.35);
   border-radius: 24px;
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #a5b4fc;
+  color: #e8a0bf;
   margin: 0 auto 20px;
   transition: all 0.3s ease;
 }
 
 .swiper-slide-active .glass-role-badge {
-  background: rgba(46, 156, 190, 0.3); /* Changed from purple to blue */
-  border-color: rgba(154, 255, 251, 0.5); /* Changed from purple to cyan */
+  background: rgba(184, 77, 122, 0.25);
+  border-color: rgba(232, 160, 191, 0.5);
 }
-  color: #c4b5fd;
+  color: #e8a0bf;
 }
 
 /* Bot Name */
@@ -2430,7 +2436,7 @@ margin: 0rem !important;
 
 .swiper-slide-active .glass-card-title {
   font-size: 2.75rem;
-  background: linear-gradient(135deg, #ffffff 0%, #9AFFFB 100%); /* Changed from purple to cyan */
+  background: linear-gradient(135deg, #ffffff 0%, #e8a0bf 100%); /* Pink gradient */
 }
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2471,8 +2477,8 @@ margin: 0rem !important;
 }
 
 .glass-nav-button:hover {
-  background: rgba(79, 70, 229, 0.3);
-  border-color: rgba(124, 58, 237, 0.5);
+  background: rgba(184, 77, 122, 0.25);
+  border-color: rgba(184, 77, 122, 0.5);
   transform: translateY(-50%) scale(1.1);
 }
 
@@ -2508,9 +2514,9 @@ margin: 0rem !important;
 .glass-pagination .swiper-pagination-bullet-active {
   width: 32px;
   border-radius: 4px;
-  background: linear-gradient(135deg, #2E9CBE 0%, #9AFFFB 100%); /* Changed from purple to cyan/blue */
-  border-color: rgba(154, 255, 251, 0.5); /* Changed from purple to cyan */
-  box-shadow: 0 0 16px rgba(154, 255, 251, 0.6); /* Changed from purple to cyan glow */
+  background: linear-gradient(135deg, #b84d7a 0%, #e8a0bf 100%); /* Pink gradient */
+  border-color: rgba(232, 160, 191, 0.5);
+  box-shadow: 0 0 16px rgba(184, 77, 122, 0.6);
 }
 }
 
