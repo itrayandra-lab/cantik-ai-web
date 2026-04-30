@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <title>
-      Cantik.AI ΓÇö Platform AI Industri Kecantikan Indonesia
+      Karyawan AI Anda - Raymaizing
     </title>
     <link rel="alternate" hreflang="x-default" href="https://sintra.ai/" />
     <link rel="alternate" hreflang="en" href="https://sintra.ai/" />
@@ -27,8 +27,8 @@
     <script type="text/javascript">
       !function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);
     </script>
-    <link href="assets/img/cantik-ai-flaticon.png" rel="shortcut icon" type="image/x-icon" />
-    <link href="assets/img/cantik-ai-flaticon.png" rel="apple-touch-icon" />
+    <link href="assets/img/favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="assets/img/webclip.png" rel="apple-touch-icon" />
     <link href="https://sintra.ai/" rel="canonical" />
     <style>
       .anti-flicker, .anti-flicker * {visibility: hidden !important; opacity: 0 !important;}
@@ -1127,7 +1127,7 @@ div.header-transparent > div.header {
           </div>
           <div class="navbar__wrapper">
             <a data-wf-native-id-path="ad349e1a-c0c9-dbab-04c7-fdcb238e51b3:e2416028-500d-bf8a-6e18-4f44f2fa2a97:be705a7d-700d-b241-82ef-27f996ec8cf4" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="be705a7d-700d-b241-82ef-27f996ec8cf4" data-wf-component-context="%5B%7B%22componentId%22%3A%22e2416028-500d-bf8a-6e18-4f44f2fa2a96%22%2C%22instanceId%22%3A%22ad349e1a-c0c9-dbab-04c7-fdcb238e51b3%22%7D%2C%7B%22componentId%22%3A%22be705a7d-700d-b241-82ef-27f996ec8cf1%22%2C%22instanceId%22%3A%22e2416028-500d-bf8a-6e18-4f44f2fa2a97%22%7D%5D" href="/" class="navbar__logo w-inline-block">
-              <img loading="lazy" src="assets/img/logo-white.png" alt="Cantik.AI homepage" class="logo big" />
+              <img loading="lazy" src="assets/img/logo.png" alt="Sintra.ai homepage" class="logo big" />
 </a>
             <div class="navbar__positioner">
               <div class="navbar__menu">
@@ -1919,23 +1919,21 @@ margin: 0rem !important;
                   <div class="max-width-large">
                     <div class="home-hero_title">
                       <h1 class="text-size-7xl text-weight-medium text-size-8xl--tablet max-width-medium">
-                        Satu Platform AI, Ribuan Solusi untuk Industri Kosmetik
+                        Delegasikan Tugas ke Tim AI Raymaizing.
                       </h1>
                     </div>
                     <div class="spacer-small">
                     </div>
                     <p class="text-size-2xl text-style-muted text-weight-normal">
-                      Dari riset formulasi, kepatuhan regulasi, hingga akselerasi bisnis. Satu platform, tak terbatas solusi untuk pelaku industri, akademisi, dan inovator kecantikan.
+                      Otomatisasi alur kerja, tingkatkan produktivitas tim, dan fokus pada ekspansi bisnis. Rekrut asisten digital yang siap bekerja 24/7 untuk rutinitas bisnis Anda.
                     </p>
                     <div class="spacer-medium">
                     </div>
                     <div class="button-group">
-                      <a data-wf-native-id-path="95604ea5-4543-a536-dd19-9140f496fdde" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="95604ea5-4543-a536-dd19-9140f496fdde" href="https://app.raymaizing.com/" class="button w-inline-block">
-                        <div>Pilih Peran Anda</div>
-                      </a>
-                      <a href="#automations" class="button-secondary w-inline-block" style="margin-left:1rem;">
-                        <div>Lihat Demo Langsung</div>
-                      </a>
+                      <a data-wf-native-id-path="95604ea5-4543-a536-dd19-9140f496fdde" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="95604ea5-4543-a536-dd19-9140f496fdde" href="https://app.raymaizing.com/" class="button w-inline-block">                      <div>
+                        Mulai Rekrut Tim AI Sekarang
+                      </div>
+</a>
                     </div>
                   </div>
                 </div>
@@ -2168,7 +2166,7 @@ margin: 0rem !important;
                 <!-- Video only - all ambient effects removed for performance -->
                 <video id="heroVideo" class="home-lore_video" autoplay loop muted playsinline preload="auto" style="width: 100%; height: 100%; object-fit: contain;">
                   <source src="assets/videos/home.mp4" type="video/mp4">
-                  Lihat Demo Langsung
+                  Your browser does not support the video tag.
                 </video>
                 
                 <div class="home-lore_overlay">
@@ -2211,7 +2209,7 @@ margin: 0rem !important;
               </script>
               <div class="margin-top margin-large">
                 <p class="text-size-5xl text-weight-medium text-align-center align-center" style="max-width: 1200px;">
-                  Cantik.AI. Mengotomatiskan rutinitas, mendalami strategi, dan memperluas dampak. AI Specialist yang didesain untuk mendampingi keahlian Anda, mempercepat langkah menuju masa depan industri kecantikan.
+                  Raymaizing. Bot AI untuk mempercepat kegiatan rutin, analisis strategis dan komunikasi publik yang berdampak. Mempermudah pekerjaan harian, bukan mengganti peran manusia.
                 </p>
               </div>
             </div>
@@ -2684,8 +2682,8 @@ margin: 0rem !important;
     <div class="glass-slider-content">
       <!-- Header -->
       <div class="glass-slider-header">
-        <h2>Apa yang Cantik.AI Bisa Bantu?</h2>
-        <p>Pilih peran Anda dan temukan solusi AI yang dirancang khusus untuk kebutuhan industri kecantikan Anda.</p>
+        <h2>Katalog Tim Spesialis Raymaizing.</h2>
+        <p>Kami menyediakan grup karyawan digital AI yang dirancang khusus untuk memenuhi kebutuhan departemen bisnis Anda</p>
       </div>
       
       <!-- Swiper Container -->
@@ -2715,10 +2713,10 @@ margin: 0rem !important;
                   </video>
                 </div>
                 <div class="glass-card-content">
-                  <span class="glass-role-badge">UNTUK PERUSAHAAN (B2B)</span>
-                  <h3 class="glass-card-title">Akselerasi Operasional & Profitabilitas</h3>
+                  <span class="glass-role-badge">ORGANIZING & ARSIP</span>
+                  <h3 class="glass-card-title">Archi</h3>
                   <p class="glass-card-description">
-                    Tingkatkan efisiensi kerja tim Anda dengan otomatisasi alur kerja dan analisis pasar real-time.
+                    Mengatur file dan arsip dengan template dan gaya yang konsisten. Archi juga hasil liputan otomatis ke dalam folder yang sesuai.
                   </p>
                 </div>
               </div>
@@ -2733,10 +2731,10 @@ margin: 0rem !important;
                   </video>
                 </div>
                 <div class="glass-card-content">
-                  <span class="glass-role-badge">UNTUK PERUSAHAAN (B2B)</span>
-                  <h3 class="glass-card-title">✔ Automated Supply Chain & Inventory</h3>
+                  <span class="glass-role-badge">PRESS RELEASE</span>
+                  <h3 class="glass-card-title">Scribe</h3>
                   <p class="glass-card-description">
-                    ✔ Predictive Market Analysis<br>✔ ERP Integration (LCA/MYK/DIA)
+                    Menyusun draft press release dengan cepat dan akurat. Scribe memastikan setiap rilis sesuai dengan standar komunikasi publik yang berlaku.
                   </p>
                 </div>
               </div>
@@ -2751,10 +2749,10 @@ margin: 0rem !important;
                   </video>
                 </div>
                 <div class="glass-card-content">
-                  <span class="glass-role-badge">AKADEMISI & PENELITI (R&D)</span>
-                  <h3 class="glass-card-title">Akurasi Data & Riset Terintegrasi</h3>
+                  <span class="glass-role-badge">RINGKASAN KEGIATAN</span>
+                  <h3 class="glass-card-title">Recap</h3>
                   <p class="glass-card-description">
-                    Dukung proses riset dan pengembangan produk dengan AI yang terlatih pada data industri dan regulasi kecantikan.
+                    Merangkum kegiatan dengan kronologi singkat dan highlight. Laporan cepat selesai tanpa ribet, siap untuk atasan.
                   </p>
                 </div>
               </div>
@@ -2769,10 +2767,10 @@ margin: 0rem !important;
                   </video>
                 </div>
                 <div class="glass-card-content">
-                  <span class="glass-role-badge">AKADEMISI & PENELITI (R&D)</span>
-                  <h3 class="glass-card-title">✔ Regulatory Compliance Database</h3>
+                  <span class="glass-role-badge">LAPORAN PIMPINAN</span>
+                  <h3 class="glass-card-title">Rapo</h3>
                   <p class="glass-card-description">
-                    ✔ Formulation R&amp;D Assistant<br>✔ Scientific Data Summarization
+                    Menyusun bahan laporan pimpinan dengan format resmi. Rapo cepat kumpulkan data, susun draft, siap presentasi.
                   </p>
                 </div>
               </div>
@@ -2787,10 +2785,10 @@ margin: 0rem !important;
                   </video>
                 </div>
                 <div class="glass-card-content">
-                  <span class="glass-role-badge">UMKM & ENTREPRENEUR</span>
-                  <h3 class="glass-card-title">Luncurkan Brand Anda dengan AI</h3>
+                  <span class="glass-role-badge">PENCARI ARSIP</span>
+                  <h3 class="glass-card-title">Findy</h3>
                   <p class="glass-card-description">
-                    Tidak perlu tim besar untuk mulai. Cantik.AI hadir sebagai mitra kreatif untuk branding, konten, dan layanan pelanggan 24/7.
+                    Menemukan arsip lama dalam hitungan detik. Findy cari berdasarkan kata kunci, tanggal, atau topik dengan akurat.
                   </p>
                 </div>
               </div>
@@ -2805,10 +2803,10 @@ margin: 0rem !important;
                   </video>
                 </div>
                 <div class="glass-card-content">
-                  <span class="glass-role-badge">UMKM & ENTREPRENEUR</span>
-                  <h3 class="glass-card-title">✔ Instant Marketing Copywriting</h3>
+                  <span class="glass-role-badge"> </span>
+                  <h3 class="glass-card-title">Alerti</h3>
                   <p class="glass-card-description">
-                    ✔ Social Media Assets Generator<br>✔ 24/7 Customer Support Bot
+                    Memantau isu dan memberikan rekomendasi tindakan. Alerti kasih alert real-time untuk respons cepat dan tepat.
                   </p>
                 </div>
               </div>
@@ -2920,25 +2918,25 @@ margin: 0rem !important;
               <div class="text-align-center margin-bottom margin-huge">
                 <div class="max-width-large align-center">
                   <h2 class="text-size-7xl text-align-center text-size-4xl--mobile">
-                    Coba "AI Employee" Sekarang.
+                    Tugas Rutin Selesai Otomatis dan Efisien
                   </h2>
                   <div class="spacer-medium">
                   </div>
                   <p class="text-size-2xl text-style-muted align-center">
-                    Ingin tahu bagaimana AI kami membantu? Pilih satu spesialis AI di bawah ini dan ajukan pertanyaan.
+                    Bot AI mengambil alih tugas manual yang memakan waktu—seperti menyusun draft konten, mengelola katalog, atau merangkum data—sehingga tim Anda tidak lagi terjebak rutinitas administratif. Energi dan waktu tersimpan untuk inovasi, koordinasi strategis, dan eksekusi yang membutuhkan sentuhan manusia. Ini bukan tentang mengganti peran, tapi membebaskan potensi penuh bisnis Anda.
                   </p>
                 </div>
               </div>
               <div class="home-automations_grid breathing-space">
-                <div id="w-node-e7b069d4-3933-9476-e05d-62882093e506-a0cabc6e" class="home-automations_card is-soshie" style="background:linear-gradient(45deg, #e8a0bf, #b84d7a)!important;border:none!important;">
+                <div id="w-node-e7b069d4-3933-9476-e05d-62882093e506-a0cabc6e" class="home-automations_card is-soshie">
                   <div class="home-automations_card-content">
                     <div class="margin-bottom margin-small">
                       <h3 class="text-size-3xl--mobile">
-                        Tanya AI Regulatory
+                        "Bot, buatkan draft konten untuk campaign skincare bulan ini."
                       </h3>
                     </div>
                     <p class="text-size-xl">
-                      <span class="text-style-muted">Spesialis regulasi kecantikan Indonesia. Contoh: "Berapa batas niacinamide untuk produk serum?"</span>
+                      <span class="text-style-muted">Bot langsung menyusun draf konten (caption, ide visual, hingga strategi posting) berdasarkan gaya bahasa (brand voice) yang telah dipelajari. Tim Kreatif tidak lagi menulis dari nol; waktu Anda digunakan untuk mengkurasi narasi agar pesan komunikasi tepat sasaran dan berkonversi tinggi.</span>
                     </p>
                   </div>
                   <img src="assets/img/67477e8395c6fe6685369d24_automation-soshie.png" loading="lazy" sizes="100vw" srcset="assets/img/67477e8395c6fe6685369d24_automation-soshie-p-500.png 500w, assets/img/67477e8395c6fe6685369d24_automation-soshie.png 830w" alt="" class="home-automations_card-image" />
@@ -2947,11 +2945,11 @@ margin: 0rem !important;
                   <div class="home-automations_card-content">
                     <div class="margin-bottom margin-small">
                       <h3 class="text-size-3xl--mobile">
-                        Tanya AI Strategist
+                        "Bot, carikan data formulasi bahan aktif untuk produk acne control."
                       </h3>
                     </div>
                     <p class="text-size-xl">
-                      <span class="text-style-muted">Mitra strategis untuk branding dan konten kecantikan. Contoh: "Buatkan konsep konten untuk peluncuran sabun charcoal."</span>
+                      <span class="text-style-muted">Bot melakukan query ke basis pengetahuan internal Anda untuk mencari referensi atau data spesifik. Tim R&D atau admin tidak perlu lagi membongkar tumpukan dokumen atau mencari file di folder yang berantakan. Data tersaji rapi langsung di kolom chat, akurat, dan mudah ditemukan kapan pun dibutuhkan.</span>
                     </p>
                   </div>
                   <img src="assets/img/67477e835d7ac382c6ebb990_automation-cassie.png" loading="lazy" alt="" class="home-automations_card-image" />
@@ -2960,11 +2958,11 @@ margin: 0rem !important;
                   <div class="home-automations_card-content">
                     <div class="margin-bottom margin-small">
                       <h3 class="text-size-3xl--mobile">
-                        Tanya AI R&D
+                        "Bot, siapkan poin-poin ringkasan performa penjualan minggu ini."
                       </h3>
                     </div>
                     <p class="text-size-xl">
-                      <span class="text-style-muted">Asisten formulasi berbasis data ilmiah. Contoh: "Apa alternatif bahan pengawet alami?"</span>
+                      <span class="text-style-muted">Bot menarik data dari sistem atau arsip, menganalisis angka, dan menyusun poin-poin laporan secara otomatis. Anda tidak perlu panik saat diminta laporan mendadak oleh manajemen; respons tersaji dalam format teks yang rapi dan profesional dalam hitungan menit, siap untuk bahan presentasi atau pengambilan keputusan.</span>
                     </p>
                   </div>
                   <img src="assets/img/67477e83b8cd1c76d0434bef_automation-vizzy.png" loading="lazy" sizes="100vw" srcset="assets/img/67477e83b8cd1c76d0434bef_automation-vizzy-p-500.png 500w, assets/img/67477e83b8cd1c76d0434bef_automation-vizzy.png 948w" alt="" class="home-automations_card-image" />
@@ -2981,20 +2979,20 @@ margin: 0rem !important;
             <div class="padding-global padding-section-large">
               <div class="margin-bottom margin-large">
                 <h2 class="text-size-7xl text-size-4xl--mobile">
-                  Tanya AI R&D
+                  Raymaizing. Tim AI Spesialis untuk akselerasi bisnis, analisis strategi, dan eksekusi kreatif.
                 </h2>
               </div>
               <div>
                 <div class="margin-bottom margin-medium">
                   <p class="text-size-xl">
-                    Asisten formulasi berbasis data ilmiah. Eksplorasi bahan aktif, alternatif pengawet alami, kompatibilitas bahan, dan tren inovasi kosmetik global terkini.
-                    <span class="text-style-muted">Contoh: "Apa alternatif bahan pengawet alami untuk produk skincare?"</span>
+                    Mempermudah rutinitas operasional tanpa menggantikan peran kreatif manusia.
+                    <span class="text-style-muted">Agar tim Anda bisa fokus pada pengambilan keputusan skala besar. Bot dirancang untuk melengkapi kemampuan tim Anda dengan menangani tugas rutin, membebaskan Anda untuk pekerjaan yang membutuhkan analisis mendalam dan strategi jangka panjang.</span>
                   </p>
                 </div>
               </div>
               <p class="text-size-lg">
-                Asisten formulasi berbasis data ilmiah. Eksplorasi bahan aktif, alternatif pengawet alami, kompatibilitas bahan, dan tren inovasi kosmetik global terkini.
-                <span class="text-style-muted">Contoh: "Apa alternatif bahan pengawet alami untuk produk skincare?"</span>
+                Tidak mengambil keputusan sendiri.
+                <span class="text-style-muted">Bot hanya menyiapkan draft dan rekomendasi. Semua output tetap direview dan disetujui oleh manusia. Ini memastikan setiap keputusan tetap berada di bawah kendali penuh tim yang berwenang.</span>
               </p>
             </div>
           </div>
@@ -3006,12 +3004,12 @@ margin: 0rem !important;
                 <div class="text-align-center">
                   <div class="max-width-large align-center">
                     <h2 class="text-size-7xl text-align-center">
-                      Teknologi Cerdas, Standar Industri
+                      Makin Lama Makin Pintar.
                     </h2>
                     <div class="spacer-small">
                     </div>
                     <p class="text-size-2xl text-style-muted align-center">
-                      Cantik.AI bukan sekadar chatbot umum. Platform kami dibangun di atas pemahaman mendalam tentang kimia kosmetik, regulasi Indonesia, dan dinamika pasar kecantikan sehingga setiap jawaban yang diberikan relevan, akurat, dan bisa langsung diterapkan.
+                      Latih bot dengan SOP perusahaan, database produk, dan standar operasional bisnis Anda. Bot akan mempelajari gaya bahasa, format laporan, dan prosedur kerja yang berlaku di perusahaan. Semakin banyak informasi yang diberikan, semakin presisi hasilnya. Bot dirancang untuk melengkapi kemampuan tim Anda dengan menangani tugas rutin, membebaskan Anda untuk pekerjaan yang membutuhkan analisis mendalam dan strategi jangka panjang.
                     </p>
                   </div>
                 </div>
@@ -3034,19 +3032,19 @@ margin: 0rem !important;
                 <div id="w-node-_0d62e851-b652-6d84-71b7-c63593e41ea7-a0cabc6e" class="home-integrations_content">
                   <div class="margin-bottom margin-medium">
                     <h2 class="text-size-7xl">
-                      Data Aman & Terlindungi
+                      Fitur Unggulan.
                     </h2>
                   </div>
                   <div class="margin-bottom margin-large">
                     <p class="text-size-xl">
-                      Kami menjaga kerahasiaan riset formulasi dan data bisnis Anda dengan enkripsi tingkat enterprise. Data R&D, formula rahasia, dan strategi bisnis Anda tidak pernah digunakan untuk melatih model AI pihak lain. Kepercayaan Anda adalah fondasi kami.
-                      <span class="text-style-muted">Terlatih Khusus Industri Kecantikan</span>
+                      Bot Alert Tren & Rekomendasi.
+                      <span class="text-style-muted">Bot memantau pergerakan pasar, tren skincare terbaru, atau langkah kompetitor secara real-time, memberikan early warning kepada tim marketing, dan menyajikan ringkasan situasi dengan opsi respons cepat. Tim Anda lebih siap, lebih sigap, dan tidak tertinggal.</span>
                     </p>
                   </div>
                   <div class="margin-bottom margin-large">
                     <p class="text-size-xl">
-                      AI kami tidak hanya menjawab secara umum. Cantik.AI memiliki pemahaman mendalam tentang kimia kosmetik, standar BPOM, sertifikasi Halal MUI, dan tren pasar kecantikan Indonesia sehingga setiap rekomendasi yang diberikan relevan dan bisa langsung diterapkan.
-                      <span class="text-style-muted">Skalabilitas Tanpa Batas</span>
+                      Bot Pencari Aset Cerdas.
+                      <span class="text-style-muted">Cari file atau data dengan bahasa sehari-hari seperti "Cari riset bahan aktif produk X tahun lalu." Bot menghubungkan data lintas folder dan proyek. Masalah aset hilang atau sulit dicari? Masalah selesai. Pengetahuan perusahaan tersimpan rapi selamanya.</span>
                     </p>
                   </div>
                   <div class="margin-bottom margin-xlarge">
@@ -3075,28 +3073,28 @@ margin: 0rem !important;
               <div class="max-width-large breathing-space">
                 <div class="margin-bottom margin-large">
                   <h2 class="text-size-7xl max-width-medium">
-                    Satu Platform, Banyak Tim Kerja. Kelola Semua AI Specialist di Satu Tempat
+                    Satu Platform, Banyak Tim Kerja.
                   </h2>
                 </div>
                 <div class="home-workspaces_grid">
                   <div>
                     <h3 class="text-size-xl">
-                      Workspace untuk setiap departemen
+                      Workspace untuk setiap grup
                     </h3>
                     <div class="spacer-xsmall">
                     </div>
                     <p class="text-size-lg">
-                      <span class="text-style-muted">Buat ruang kerja terpisah untuk tim Marketing, R&D, Regulatory (BPOM), atau unit lainnya. Setiap workspace memiliki AI Employee dan basis data dokumennya sendiri, yang dipersonalisasi sesuai kebutuhan teknis spesifik masing-masing divisi dalam industri kosmetik Anda.</span>
+                      <span class="text-style-muted">Buat workspace terpisah untuk R&D, Marketing, Branding, atau operasional. Setiap workspace memiliki bot dan basis pengetahuan sendiri, disesuaikan dengan kebutuhan spesifik masing-masing tim.</span>
                     </p>
                   </div>
                   <div>
                     <h3 class="text-size-xl">
-                      Kolaborasi antar tim kecantikan
+                      Kolaborasi antar departemen
                     </h3>
                     <div class="spacer-xsmall">
                     </div>
                     <p class="text-size-lg">
-                      <span class="text-style-muted">Bagikan workspace dengan seluruh anggota tim untuk kolaborasi secara real-time. Semua orang dapat mengakses asisten AI, arsip riset formulasi, dan strategi pasar yang sama, memastikan konsistensi brand dan efisiensi kerja di seluruh organisasi bisnis Anda.</span>
+                      <span class="text-style-muted">Bagikan workspace dengan anggota tim untuk kolaborasi real-time. Semua orang dapat mengakses bot, arsip, dan output yang sama, memastikan konsistensi brand voice dan efisiensi kerja di seluruh organisasi.</span>
                     </p>
                   </div>
                 </div>
@@ -3115,12 +3113,12 @@ margin: 0rem !important;
               <div class="text-align-center margin-bottom margin-xxlarge">
                 <div class="max-width-large align-center">
                   <h2 class="text-size-7xl text-align-center text-size-4xl--mobile">
-                    Cantik.AI menyiapkan analisis, insight formulasi, dan rekomendasi strategis. Semua output tetap direview dan disetujui oleh tim ahli Anda. Ini memastikan setiap keputusan bisnis dan produk tetap berada di bawah kendali penuh para profesional yang berwenang.
+                    Dipercaya Organisasi Yang Ingin Bekerja Lebih Efisien.
                   </h2>
                   <div class="spacer-small">
                   </div>
                   <p class="text-size-2xl text-style-muted align-center">
-                    Teknologi Cerdas, Standar Industri
+                    Raymaizing membantu organisasi dari berbagai sektor pemerintahan, korporat, hingga startup mengotomatisasi tugas repetitif dan membebaskan tim untuk fokus pada pekerjaan strategis. kami mendampingi setiap tahap transformasi digital Anda dengan pendekatan yang praktis dan terukur.
                   </p>
                 </div>
               </div>
@@ -3132,7 +3130,7 @@ margin: 0rem !important;
                         <div class="home-testimonials_card-header">
                           <div class="grow">
                             <div class="text-weight-medium">
-                              Latih Cantik.AI dengan database formulasi, SOP produksi, dan standar regulasi perusahaan Anda. Platform akan mempelajari produk, bahan aktif, dan prosedur kerja yang berlaku di organisasi Anda. Semakin banyak data yang diberikan, semakin presisi rekomendasinyaΓÇödari formulasi produk baru hingga strategi penetrasi pasar yang tepat sasaran.
+                              Arsip Rapi, Laporan Cepat Tim Tidak Panik Lagi
                             </div>
                             <div class="spacer-xsmall">
                             </div>
@@ -3142,10 +3140,10 @@ margin: 0rem !important;
                         </div>
                       </div>
                       <p class="text-size-base text-style-muted">
-                        ≡ƒöÆ Data Aman & Terlindungi
+                        Dulu tim saya habis waktu berjam-jam cari file dokumentasi liputan. Sekarang dengan bot organizing file, semua arsip foto dan video tertata rapi otomatis dengan tagging yang konsisten. Saat pimpinan minta bahan mendadak, kami bisa respon dalam hitungan menit tidak ada lagi kepanikan mencari file.
                       </p>
                       <p class="text-size-sm text-color-tertiary">
-                        AI Regulatory Intelligence.
+                        Januari 2026   Kepala Bagian Dokumentasi   Kementerian
                       </p>
                     </div>
                     <div class="home-testimonials_card">
@@ -3153,7 +3151,7 @@ margin: 0rem !important;
                         <div class="home-testimonials_card-header">
                           <div class="grow">
                             <div class="text-weight-medium">
-                              Cantik.AI memantau pembaruan regulasi BPOM, standar Halal MUI, dan peraturan kosmetik ASEAN secara real-time. Dapatkan notifikasi perubahan regulasi yang relevan dengan produk Anda, lengkap dengan analisis dampak dan rekomendasi tindakan. Tim Anda selalu selangkah lebih maju dari perubahan regulasi.
+                              Press Release Selesai Lebih Cepat, Konsisten
                             </div>
                             <div class="spacer-xsmall">
                             </div>
@@ -3163,10 +3161,10 @@ margin: 0rem !important;
                         </div>
                       </div>
                       <p class="text-size-base text-style-muted">
-                        Formulation Intelligence Engine.
+                        Bot pembuat press release menghemat waktu kami hingga 70%. Dulu menulis rilis dari nol bisa 2-3 jam, sekarang bot menyiapkan draft awal dalam 10 menit dengan format dan gaya bahasa yang sudah sesuai standar instansi. Tim tinggal review dan sempurnakan narasi fokus ke substansi, bukan formatting.
                       </p>
                       <p class="text-size-sm text-color-tertiary">
-                        Cari kompatibilitas bahan, eksplorasi alternatif bahan aktif, atau validasi formula dengan bahasa sehari-hari seperti "Apa pengganti paraben yang aman untuk produk bayi?" Cantik.AI menghubungkan data ilmiah dengan kebutuhan formulasi nyata AndaΓÇöriset lebih cepat, lebih akurat.
+                        Januari 2026   Staf Humas   Lembaga Pemerintah
                       </p>
                     </div>
                     <div class="home-testimonials_card">
@@ -3174,7 +3172,7 @@ margin: 0rem !important;
                         <div class="home-testimonials_card-header">
                           <div class="grow">
                             <div class="text-weight-medium">
-                              Satu Platform, Semua Kebutuhan Industri Kecantikan.
+                              Deteksi Isu Lebih Awal, Respon Lebih Tenang
                             </div>
                             <div class="spacer-xsmall">
                             </div>
@@ -3184,10 +3182,10 @@ margin: 0rem !important;
                         </div>
                       </div>
                       <p class="text-size-base text-style-muted">
-                        Workspace untuk setiap tim
+                        Bot alert isu memberikan early warning saat ada perkembangan di media sosial terkait instansi kami. Kami tidak lagi terlambat tahu isu viral. Bot menyajikan ringkasan situasi dan rekomendasi respons awal, sehingga tim bisa diskusi dengan tenang dan mengambil keputusan komunikasi yang matang bukan reaktif dan tergesa-gesa.
                       </p>
                       <p class="text-size-sm text-color-tertiary">
-                        Buat workspace terpisah untuk tim R&D, Marketing, Regulatory Affairs, atau Produksi. Setiap workspace memiliki AI dan basis pengetahuan sendiri, disesuaikan dengan kebutuhan spesifik masing-masing divisi.
+                        Januari 2026   Koordinator Media Sosial   Biro Humas
                       </p>
                     </div>
                     <div class="home-testimonials_card">
@@ -3195,7 +3193,7 @@ margin: 0rem !important;
                         <div class="home-testimonials_card-header">
                           <div class="grow">
                             <div class="text-weight-medium">
-                              Kolaborasi lintas departemen
+                              Pencarian Arsip Jadi Sangat Mudah
                             </div>
                             <div class="spacer-xsmall">
                             </div>
@@ -3205,10 +3203,10 @@ margin: 0rem !important;
                         </div>
                       </div>
                       <p class="text-size-base text-style-muted">
-                        Bagikan workspace dengan anggota tim untuk kolaborasi real-time. Semua orang dapat mengakses AI, database formulasi, dan output yang samaΓÇömemastikan konsistensi standar produk dan efisiensi kerja di seluruh organisasi.
+                        Bot pencari arsip cerdas ini luar biasa. Saya tinggal ketik "Foto kunjungan Menteri ke Surabaya tahun lalu" dan bot langsung menemukan file yang tepat dari ribuan arsip. Tidak perlu lagi buka folder satu per satu atau tanya-tanya ke rekan kerja. Pengetahuan institusi tidak hilang meski pegawai berganti.
                       </p>
                       <p class="text-size-sm text-color-tertiary">
-                        Dipercaya Pelaku Industri Kecantikan Indonesia.
+                        Januari 2026   Arsiparis   Sekretariat Direktorat
                       </p>
                     </div>
                     <div class="home-testimonials_card">
@@ -3216,7 +3214,7 @@ margin: 0rem !important;
                         <div class="home-testimonials_card-header">
                           <div class="grow">
                             <div class="text-weight-medium">
-                              Cantik.AI membantu perusahaan kosmetik, peneliti, dan UMKM kecantikan dari berbagai segmen untuk mempercepat inovasi produk, memastikan kepatuhan regulasi, dan mengakselerasi pertumbuhan bisnis. Kami mendampingi setiap tahap transformasi digital industri kecantikan Anda.
+                              Bahan Laporan Siap, Pimpinan Puas
                             </div>
                             <div class="spacer-xsmall">
                             </div>
@@ -3226,10 +3224,10 @@ margin: 0rem !important;
                         </div>
                       </div>
                       <p class="text-size-base text-style-muted">
-                        Latih Cantik.AI dengan database formulasi, SOP produksi, dan standar regulasi perusahaan Anda. Platform akan mempelajari produk, bahan aktif, dan prosedur kerja yang berlaku di organisasi Anda. Semakin banyak data yang diberikan, semakin presisi rekomendasinyaΓÇödari formulasi produk baru hingga strategi penetrasi pasar yang tepat sasaran.
+                        Bot asisten laporan sangat membantu saat pimpinan minta bahan mendadak. Bot menarik data kegiatan dari arsip, menyusun poin-poin ringkas, dan format laporan periodik secara otomatis. Yang tadinya butuh 2 hari, sekarang selesai dalam 2 jam. Pimpinan senang karena data lengkap dan tersaji rapi.
                       </p>
                       <p class="text-size-sm text-color-tertiary">
-                        Dulu tim saya habis waktu berjam-jam cari file dokumentasi liputan. Sekarang dengan bot organizing file, semua arsip foto dan video tertata rapi otomatis dengan tagging yang konsisten. Saat pimpinan minta bahan mendadak, kami bisa respon dalam hitungan menit tidak ada lagi kepanikan mencari file.
+                        Januari 2026   Staf Sekretariat   Direktorat Jenderal
                       </p>
                     </div>
                   </div>
@@ -3239,7 +3237,7 @@ margin: 0rem !important;
                         <div class="home-testimonials_card-header">
                           <div class="grow">
                             <div class="text-weight-medium">
-                              Januari 2026   Kepala Bagian Dokumentasi   Kementerian
+                              Ringkasan Kegiatan Otomatis, Laporan Lengkap
                             </div>
                             <div class="spacer-xsmall">
                             </div>
@@ -3249,10 +3247,10 @@ margin: 0rem !important;
                         </div>
                       </div>
                       <p class="text-size-base text-style-muted">
-                        Cantik.AI memantau pembaruan regulasi BPOM, standar Halal MUI, dan peraturan kosmetik ASEAN secara real-time. Dapatkan notifikasi perubahan regulasi yang relevan dengan produk Anda, lengkap dengan analisis dampak dan rekomendasi tindakan. Tim Anda selalu selangkah lebih maju dari perubahan regulasi.
+                        Bot ringkasan kegiatan sangat membantu menyusun laporan pasca event. Bot menggabungkan foto, video, dan catatan menjadi kronologi singkat dengan highlight yang jelas. Tidak ada lagi informasi penting yang terlewat. Laporan kegiatan yang dulu butuh seharian, sekarang selesai dalam 2 jam.
                       </p>
                       <p class="text-size-sm text-color-tertiary">
-                        Bot pembuat press release menghemat waktu kami hingga 70%. Dulu menulis rilis dari nol bisa 2-3 jam, sekarang bot menyiapkan draft awal dalam 10 menit dengan format dan gaya bahasa yang sudah sesuai standar instansi. Tim tinggal review dan sempurnakan narasi fokus ke substansi, bukan formatting.
+                        Januari 2026   Koordinator Kegiatan   Biro Umum
                       </p>
                     </div>
                     <div class="home-testimonials_card">
@@ -3260,7 +3258,7 @@ margin: 0rem !important;
                         <div class="home-testimonials_card-header">
                           <div class="grow">
                             <div class="text-weight-medium">
-                              Januari 2026   Staf Humas   Lembaga Pemerintah
+                              Tim Fokus Strategi, Bukan Administrasi
                             </div>
                             <div class="spacer-xsmall">
                             </div>
@@ -3270,10 +3268,10 @@ margin: 0rem !important;
                         </div>
                       </div>
                       <p class="text-size-base text-style-muted">
-                        Satu Platform, Semua Kebutuhan Industri Kecantikan.
+                        Sebelum pakai Raymaizing, tim saya habis 60% waktu untuk urusan administratif rapikan file, susun laporan, cari arsip. Sekarang bot yang handle semua itu. Tim bisa fokus ke hal yang lebih penting: analisis isu, koordinasi dengan stakeholder, dan merancang strategi komunikasi yang berdampak.
                       </p>
                       <p class="text-size-sm text-color-tertiary">
-                        Bot alert isu memberikan early warning saat ada perkembangan di media sosial terkait instansi kami. Kami tidak lagi terlambat tahu isu viral. Bot menyajikan ringkasan situasi dan rekomendasi respons awal, sehingga tim bisa diskusi dengan tenang dan mengambil keputusan komunikasi yang matang bukan reaktif dan tergesa-gesa.
+                        Januari 2026   Kepala Subbagian Humas   Kementerian
                       </p>
                     </div>
                     <div class="home-testimonials_card">
@@ -3281,7 +3279,7 @@ margin: 0rem !important;
                         <div class="home-testimonials_card-header">
                           <div class="grow">
                             <div class="text-weight-medium">
-                              Januari 2026   Koordinator Media Sosial   Biro Humas
+                              Konsistensi Komunikasi Terjaga
                             </div>
                             <div class="spacer-xsmall">
                             </div>
@@ -3291,10 +3289,10 @@ margin: 0rem !important;
                         </div>
                       </div>
                       <p class="text-size-base text-style-muted">
-                        Kolaborasi lintas departemen
+                        Bot belajar dari template dan dokumen resmi kami, jadi setiap output press release, laporan, atau ringkasan selalu konsisten dengan gaya bahasa dan format instansi. Tidak ada lagi perbedaan style antar staf. Semua output tetap kami review, tapi fondasi dasarnya sudah benar sejak awal.
                       </p>
                       <p class="text-size-sm text-color-tertiary">
-                        Bot pencari arsip cerdas ini luar biasa. Saya tinggal ketik "Foto kunjungan Menteri ke Surabaya tahun lalu" dan bot langsung menemukan file yang tepat dari ribuan arsip. Tidak perlu lagi buka folder satu per satu atau tanya-tanya ke rekan kerja. Pengetahuan institusi tidak hilang meski pegawai berganti.
+                        Januari 2026   Kepala Bagian Komunikasi   Lembaga
                       </p>
                     </div>
                     <div class="home-testimonials_card">
@@ -3302,7 +3300,7 @@ margin: 0rem !important;
                         <div class="home-testimonials_card-header">
                           <div class="grow">
                             <div class="text-weight-medium">
-                              Januari 2026   Arsiparis   Sekretariat Direktorat
+                              Audit Trail Lengkap, Akuntabilitas Terjaga
                             </div>
                             <div class="spacer-xsmall">
                             </div>
@@ -3312,10 +3310,10 @@ margin: 0rem !important;
                         </div>
                       </div>
                       <p class="text-size-base text-style-muted">
-                        Cantik.AI membantu perusahaan kosmetik, peneliti, dan UMKM kecantikan dari berbagai segmen untuk mempercepat inovasi produk, memastikan kepatuhan regulasi, dan mengakselerasi pertumbuhan bisnis. Kami mendampingi setiap tahap transformasi digital industri kecantikan Anda.
+                        Yang saya suka dari Raymaizing adalah semua aktivitas bot tercatat dengan audit trail lengkap. Kami bisa tracking siapa yang akses apa, kapan, dan untuk apa. Ini penting untuk transparansi dan akuntabilitas di instansi pemerintah. Bot tidak mengambil keputusan sendiri semua tetap di bawah kontrol manusia.
                       </p>
                       <p class="text-size-sm text-color-tertiary">
-                        Bot asisten laporan sangat membantu saat pimpinan minta bahan mendadak. Bot menarik data kegiatan dari arsip, menyusun poin-poin ringkas, dan format laporan periodik secara otomatis. Yang tadinya butuh 2 hari, sekarang selesai dalam 2 jam. Pimpinan senang karena data lengkap dan tersaji rapi.
+                        Januari 2026   Sekretaris Direktorat   Kementerian
                       </p>
                     </div>
                     <div class="home-testimonials_card">
@@ -3323,7 +3321,7 @@ margin: 0rem !important;
                         <div class="home-testimonials_card-header">
                           <div class="grow">
                             <div class="text-weight-medium">
-                              Januari 2026   Staf Sekretariat   Direktorat Jenderal
+                              Arsip Rapi, Pekerjaan Lebih Efisien
                             </div>
                             <div class="spacer-xsmall">
                             </div>
@@ -3333,10 +3331,10 @@ margin: 0rem !important;
                         </div>
                       </div>
                       <p class="text-size-base text-style-muted">
-                        Januari 2026   Kepala Bagian Dokumentasi   Kementerian
+                        Bot organizing file menyelamatkan kami dari kekacauan arsip. File foto dan video dari kamera yang tadinya bernama acak, sekarang otomatis tertata rapi dengan batch renaming dan auto tagging berdasarkan tanggal, kegiatan, dan lokasi. Arsip rapi sejak hari pertama, tidak perlu lagi mengandalkan ingatan personal.
                       </p>
                       <p class="text-size-sm text-color-tertiary">
-                        Bot ringkasan kegiatan sangat membantu menyusun laporan pasca event. Bot menggabungkan foto, video, dan catatan menjadi kronologi singkat dengan highlight yang jelas. Tidak ada lagi informasi penting yang terlewat. Laporan kegiatan yang dulu butuh seharian, sekarang selesai dalam 2 jam.
+                        Januari 2026   Dokumentator   Bagian Humas
                       </p>
                     </div>
                   </div>
@@ -3346,7 +3344,7 @@ margin: 0rem !important;
                         <div class="home-testimonials_card-header">
                           <div class="grow">
                             <div class="text-weight-medium">
-                              Januari 2026   Koordinator Kegiatan   Biro Umum
+                              Implementasi Mudah, Hasil Langsung Terasa
                             </div>
                             <div class="spacer-xsmall">
                             </div>
@@ -3356,10 +3354,10 @@ margin: 0rem !important;
                         </div>
                       </div>
                       <p class="text-size-base text-style-muted">
-                        Januari 2026   Staf Humas   Lembaga Pemerintah
+                        Kami baru menggunakan Raymaizing beberapa minggu, tapi hasilnya sudah sangat terasa. Bot organizing file langsung menata arsip dokumentasi kami yang berantakan. Tim tidak perlu training lama, interface-nya intuitif dan mudah dipahami. Manfaatnya langsung terasa di pekerjaan harian.
                       </p>
                       <p class="text-size-sm text-color-tertiary">
-                        Sebelum pakai Cantik.AI, tim R&D kami habis banyak waktu untuk mencari referensi regulasi dan data formulasi secara manual. Sekarang AI yang handle semua itu. Tim bisa fokus ke hal yang lebih penting: inovasi produk, koordinasi dengan supplier, dan merancang strategi peluncuran yang berdampak.
+                        Januari 2026   Staf Dokumentasi   Sekretariat
                       </p>
                     </div>
                     <div class="home-testimonials_card">
@@ -3367,7 +3365,7 @@ margin: 0rem !important;
                         <div class="home-testimonials_card-header">
                           <div class="grow">
                             <div class="text-weight-medium">
-                              Januari 2026   Kepala Subbagian Humas   Kementerian
+                              Dukungan Tim Raymaizing Sangat Responsif
                             </div>
                             <div class="spacer-xsmall">
                             </div>
@@ -3377,10 +3375,10 @@ margin: 0rem !important;
                         </div>
                       </div>
                       <p class="text-size-base text-style-muted">
-                        Januari 2026   Koordinator Media Sosial   Biro Humas
+                        Tim Raymaizing sangat profesional dan responsif. Saat kami butuh kustomisasi untuk kebutuhan instansi, mereka langsung membantu dengan solusi yang tepat. Support-nya cepat, komunikasinya jelas, dan benar-benar memahami kebutuhan institusi pemerintah. Pengalaman terbaik dalam implementasi teknologi.
                       </p>
                       <p class="text-size-sm text-color-tertiary">
-                        Bot belajar dari template dan dokumen resmi kami, jadi setiap output press release, laporan, atau ringkasan selalu konsisten dengan gaya bahasa dan format instansi. Tidak ada lagi perbedaan style antar staf. Semua output tetap kami review, tapi fondasi dasarnya sudah benar sejak awal.
+                        Januari 2026   IT Coordinator   Biro Umum
                       </p>
                     </div>
                     <div class="home-testimonials_card">
@@ -3388,7 +3386,7 @@ margin: 0rem !important;
                         <div class="home-testimonials_card-header">
                           <div class="grow">
                             <div class="text-weight-medium">
-                              Januari 2026   Kepala Bagian Komunikasi   Lembaga
+                              Solusi Tepat untuk Institusi Pemerintah
                             </div>
                             <div class="spacer-xsmall">
                             </div>
@@ -3398,10 +3396,10 @@ margin: 0rem !important;
                         </div>
                       </div>
                       <p class="text-size-base text-style-muted">
-                        Januari 2026   Arsiparis   Sekretariat Direktorat
+                        Platform Raymaizing membantu kami seperti memiliki asisten full-time. Dengan anggaran terbatas, kami tidak bisa menambah pegawai baru. Bot-bot AI ini mengisi gap tersebut dengan menangani tugas-tugas kompleks, sehingga tim bisa fokus pada strategi dan pengambilan keputusan yang lebih penting.
                       </p>
                       <p class="text-size-sm text-color-tertiary">
-                        Yang saya suka dari Cantik.AI adalah semua aktivitas AI tercatat dengan audit trail lengkap. Kami bisa tracking siapa yang akses apa, kapan, dan untuk apa. Ini penting untuk transparansi dan akuntabilitas di perusahaan kosmetik kami. AI tidak mengambil keputusan sendiriΓÇösemua tetap di bawah kontrol tim yang berwenang.
+                        Januari 2026   Kepala Bagian   Sekretariat Jenderal
                       </p>
                     </div>
                     <div class="home-testimonials_card">
@@ -3409,7 +3407,7 @@ margin: 0rem !important;
                         <div class="home-testimonials_card-header">
                           <div class="grow">
                             <div class="text-weight-medium">
-                              Januari 2026   Sekretaris Direktorat   Kementerian
+                              Hemat Biaya, Hasil Maksimal
                             </div>
                             <div class="spacer-xsmall">
                             </div>
@@ -3419,10 +3417,10 @@ margin: 0rem !important;
                         </div>
                       </div>
                       <p class="text-size-base text-style-muted">
-                        Januari 2026   Staf Sekretariat   Direktorat Jenderal
+                        Dengan Raymaizing, kami menghemat anggaran yang tadinya dialokasikan untuk outsourcing berbagai pekerjaan administratif. Bot-bot AI ini menangani organizing file, pembuatan laporan, dan pencarian arsip dengan hasil yang konsisten. Investasi yang sangat worth it untuk efisiensi jangka panjang.
                       </p>
                       <p class="text-size-sm text-color-tertiary">
-                        Bot organizing file menyelamatkan kami dari kekacauan arsip. File foto dan video dari kamera yang tadinya bernama acak, sekarang otomatis tertata rapi dengan batch renaming dan auto tagging berdasarkan tanggal, kegiatan, dan lokasi. Arsip rapi sejak hari pertama, tidak perlu lagi mengandalkan ingatan personal.
+                        Januari 2026   Kepala Subbagian Keuangan   Direktorat
                       </p>
                     </div>
                     <div class="home-testimonials_card">
@@ -3430,7 +3428,7 @@ margin: 0rem !important;
                         <div class="home-testimonials_card-header">
                           <div class="grow">
                             <div class="text-weight-medium">
-                              Januari 2026   Dokumentator   Bagian Humas
+                              Transformasi Digital yang Nyata
                             </div>
                             <div class="spacer-xsmall">
                             </div>
@@ -3440,10 +3438,10 @@ margin: 0rem !important;
                         </div>
                       </div>
                       <p class="text-size-base text-style-muted">
-                        Januari 2026   Koordinator Kegiatan   Biro Umum
+                        Raymaizing memberikan solusi transformasi digital yang konkret dan langsung bisa dirasakan manfaatnya. Bukan sekadar teknologi canggih, tapi benar-benar menjawab kebutuhan operasional harian kami. Bot-bot ini membantu kami bekerja lebih cerdas, lebih cepat, dan lebih terstruktur.
                       </p>
                       <p class="text-size-sm text-color-tertiary">
-                        Kami baru menggunakan Cantik.AI beberapa minggu, tapi hasilnya sudah sangat terasa. AI langsung membantu tim R&D kami menemukan referensi formulasi dan data regulasi yang relevan. Tim tidak perlu training lama, interface-nya intuitif dan mudah dipahami. Manfaatnya langsung terasa di pekerjaan harian.
+                        Januari 2026   Staf Ahli   Kementerian
                       </p>
                     </div>
                   </div>
@@ -3457,14 +3455,14 @@ margin: 0rem !important;
                         <img src="assets/img/670b5cccafc8dc06f64c24bb_mister-2.webp" loading="lazy" alt="" class="floater_avatar" />
                       </div>
                       <div class="text-weight-medium">
-                        Sebelum pakai Cantik.AI, tim R&D kami habis banyak waktu untuk mencari referensi regulasi dan data formulasi secara manual. Sekarang AI yang handle semua itu. Tim bisa fokus ke hal yang lebih penting: inovasi produk, koordinasi dengan supplier, dan merancang strategi peluncuran yang berdampak.
+                        Dipercaya 100+ organisasi pemerintah dan korporat
                       </div>
                     </div>
                     <div class="floater_divider">
                     </div>
                     <div style="display:flex" class="floater_cta more">
                       <div class="text-weight-medium">
-                        Dukungan Tim Cantik.AI Sangat Responsif
+                        View more
                       </div>
                       <div class="icon-embed-xsmall w-embed">
                         <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true" role="img">
@@ -3475,7 +3473,7 @@ margin: 0rem !important;
                     </div>
                     <div style="display:none" class="floater_cta less">
                       <div class="text-weight-medium">
-                        Tim Cantik.AI sangat profesional dan responsif. Saat kami butuh kustomisasi untuk kebutuhan spesifik perusahaan kosmetik kami, mereka langsung membantu dengan solusi yang tepat. Support-nya cepat, komunikasinya jelas, dan benar-benar memahami kebutuhan industri kecantikan. Pengalaman terbaik dalam implementasi teknologi AI.
+                        View less
                       </div>
                       <div class="icon-embed-xsmall w-embed">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" fill="none">
@@ -3582,21 +3580,20 @@ margin: 0rem !important;
                       <div class="text-color-alternate">
                         <div class="home-cta_content-wrap">
                           <h2 class="text-size-7xl max-width-medium">
-                            Saatnya Bekerja Lebih Cerdas, Lebih Efektif
+                            Saatnya Membangun Tim yang Lebih Cerdas, Lebih Efektif.
                           </h2>
                           <div class="spacer-small">
                           </div>
                           <p class="text-size-2xl text-style-muted align-center text-size-lg--mobile">
-                            Mulai dengan satu AI Employee untuk satu unit kerja spesifik—seperti tim R&D atau Marketing. Lihat hasilnya, rasakan dampaknya, kemudian kembangkan ke seluruh ekosistem bisnis kosmetik Anda.
+                            Mulai dengan satu grup bot untuk satu departemen. Lihat hasilnya. Rasakan dampaknya pada efisiensi operasional. Kemudian kembangkan ke seluruh struktur perusahaan. Kami mendampingi setiap tahap—dari pelatihan tim, kustomisasi bot, hingga implementasi penuh dengan pendekatan praktis dan terukur.
                           </p>
                           <div class="spacer-medium">
                           </div>
                           <div class="button-group">
-                            <a data-wf-native-id-path="98c04889-8a65-9d21-5077-a09cd3a8e9b6" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="98c04889-8a65-9d21-5077-a09cd3a8e9b6" href="https://app.raymaizing.com/" class="button w-inline-block">                            
-                              <div>
-                                Mulai Dengan Cantik.AI
-                              </div>
-                            </a>
+                            <a data-wf-native-id-path="98c04889-8a65-9d21-5077-a09cd3a8e9b6" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="98c04889-8a65-9d21-5077-a09cd3a8e9b6" href="https://app.raymaizing.com/" class="button w-inline-block">                            <div>
+                              Mulai Dengan Raymaizing
+                            </div>
+</a>
                           </div>
                         </div>
                       </div>
@@ -3636,116 +3633,17 @@ margin: 0rem !important;
                     <div class="spacer-small">
                     </div>
                     <p class="text-size-base text-style-muted">
-                      Kami memahami kekhawatiran Anda tentang implementasi AI di industri kosmetik, mulai dari keamanan data formulasi, akurasi regulasi, hingga kesiapan tim internal.
-                      <br /><br />
-                      Berikut jawaban atas pertanyaan yang paling sering kami terima dari pemilik brand dan profesional industri kecantikan. Jika masih ada yang ingin ditanyakan, tim ahli kami siap membantu Anda.
+                      Kami memahami kekhawatiran Anda tentang implementasi AI di instansi pemerintah keamanan data, akuntabilitas, dan kesiapan tim.
+                      <br />
+                      <br />
+                      Berikut jawaban atas pertanyaan yang paling sering kami terima dari organisasi pemerintahan. Jika masih ada yang ingin ditanyakan, tim kami siap membantu.
                     </p>
                   </div>
                   <div class="home-faq_list">
                     <div class="home-faq_accordion">
                       <div data-w-id="440b171e-b57c-bd88-307d-f0af2ba96ac5" class="home-faq_question">
                         <h3 class="text-size-2xl text-weight-medium">
-                          Apakah AI Employee mengambil keputusan bisnis sendiri?
-                        </h3>
-                        <div class="home-faq_icon-wrapper">
-                          <div class="icon-embed-small w-embed">
-                            <svg width="100%" height="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5303 20.8839C16.2374 21.1768 15.7626 21.1768 15.4697 20.8839L7.82318 13.2374C7.53029 12.9445 7.53029 12.4697 7.82318 12.1768L8.17674 11.8232C8.46963 11.5303 8.9445 11.5303 9.2374 11.8232L16 18.5858L22.7626 11.8232C23.0555 11.5303 23.5303 11.5303 23.8232 11.8232L24.1768 12.1768C24.4697 12.4697 24.4697 12.9445 24.1768 13.2374L16.5303 20.8839Z" fill="currentColor"></path>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                      <div style="width:100%;height:0px" class="home-faq_answer">
-                        <p class="text-size-base text-style-muted line-height-1-5">
-                          Tidak. Cantik.AI berfungsi sebagai asisten cerdas yang memberikan rekomendasi strategis berdasarkan data industri. Keputusan akhir, kreativitas, dan visi brand tetap sepenuhnya berada di tangan Anda sebagai pemilik atau profesional.
-                        </p>
-                        <div class="spacer-small-2"></div>
-                      </div>
-                    </div>
-                    <div class="home-faq_accordion">
-                      <div data-w-id="2bbb742c-78fd-5772-44e3-e116d3cafa53" class="home-faq_question">
-                        <h3 class="text-size-2xl text-weight-medium">
-                          Bagaimana dengan keamanan data riset dan formulasi?
-                        </h3>
-                        <div class="home-faq_icon-wrapper">
-                          <div class="icon-embed-small w-embed">
-                            <svg width="100%" height="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5303 20.8839C16.2374 21.1768 15.7626 21.1768 15.4697 20.8839L7.82318 13.2374C7.53029 12.9445 7.53029 12.4697 7.82318 12.1768L8.17674 11.8232C8.46963 11.5303 8.9445 11.5303 9.2374 11.8232L16 18.5858L22.7626 11.8232C23.0555 11.5303 23.5303 11.5303 23.8232 11.8232L24.1768 12.1768C24.4697 12.4697 24.4697 12.9445 24.1768 13.2374L16.5303 20.8839Z" fill="currentColor"></path>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                      <div style="width:100%;height:0px" class="home-faq_answer">
-                        <p class="text-size-base text-style-muted line-height-1-5">
-                          Kami menjamin kerahasiaan data riset, strategi pemasaran, dan data internal perusahaan Anda. Setiap workspace bersifat terisolasi untuk memastikan informasi berharga tidak bocor ke pihak luar.
-                        </p>
-                        <div class="spacer-small-2"></div>
-                      </div>
-                    </div>
-                    <div class="home-faq_accordion">
-                      <div data-w-id="c3bce0a2-4ad3-e957-bfdf-7ab2ef4911ad" class="home-faq_question">
-                        <h3 class="text-size-2xl text-weight-medium">
-                          Apakah tim kami perlu pelatihan khusus untuk menggunakannya?
-                        </h3>
-                        <div class="home-faq_icon-wrapper">
-                          <div class="icon-embed-small w-embed">
-                            <svg width="100%" height="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5303 20.8839C16.2374 21.1768 15.7626 21.1768 15.4697 20.8839L7.82318 13.2374C7.53029 12.9445 7.53029 12.4697 7.82318 12.1768L8.17674 11.8232C8.46963 11.5303 8.9445 11.5303 9.2374 11.8232L16 18.5858L22.7626 11.8232C23.0555 11.5303 23.5303 11.5303 23.8232 11.8232L24.1768 12.1768C24.4697 12.4697 24.4697 12.9445 24.1768 13.2374L16.5303 20.8839Z" fill="currentColor"></path>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                      <div style="width:100%;height:0px" class="home-faq_answer">
-                        <p class="text-size-base text-style-muted line-height-1-5">
-                          Cantik.AI didesain untuk kemudahan penggunaan dengan bahasa sehari-hari. Namun, kami juga menyediakan pendampingan mulai dari pelatihan tim hingga kustomisasi spesialis AI agar sesuai dengan alur kerja unik instansi atau perusahaan Anda.
-                        </p>
-                        <div class="spacer-small-2"></div>
-                      </div>
-                    </div>
-                    <div class="home-faq_accordion">
-                      <div data-w-id="b8ab74e2-e42b-42b5-7950-c7dd3b7dc3e1" class="home-faq_question">
-                        <h3 class="text-size-2xl text-weight-medium">
-                          Bisakah AI disesuaikan dengan kebutuhan spesifik brand kami?
-                        </h3>
-                        <div class="home-faq_icon-wrapper">
-                          <div class="icon-embed-small w-embed">
-                            <svg width="100%" height="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5303 20.8839C16.2374 21.1768 15.7626 21.1768 15.4697 20.8839L7.82318 13.2374C7.53029 12.9445 7.53029 12.4697 7.82318 12.1768L8.17674 11.8232C8.46963 11.5303 8.9445 11.5303 9.2374 11.8232L16 18.5858L22.7626 11.8232C23.0555 11.5303 23.5303 11.5303 23.8232 11.8232L24.1768 12.1768C24.4697 12.4697 24.4697 12.9445 24.1768 13.2374L16.5303 20.8839Z" fill="currentColor"></path>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                      <div style="width:100%;height:0px" class="home-faq_answer">
-                        <p class="text-size-base text-style-muted line-height-1-5">
-                          Tentu. Anda bisa membuat workspace terpisah yang dipersonalisasi untuk unit kerja berbeda, seperti tim R&amp;D, Pemasaran, atau Regulasi, lengkap dengan dokumen dan bot spesialis masing-masing.
-                        </p>
-                        <div class="spacer-small-2"></div>
-                      </div>
-                    </div>
-                    <div class="home-faq_accordion">
-                      <div data-w-id="c159e52d-005d-b32a-d504-22efbd1c89fe" class="home-faq_question">
-                        <h3 class="text-size-2xl text-weight-medium">
-                          Bagaimana cara memulai implementasi di bisnis kosmetik saya?
-                        </h3>
-                        <div class="home-faq_icon-wrapper">
-                          <div class="icon-embed-small w-embed">
-                            <svg width="100%" height="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5303 20.8839C16.2374 21.1768 15.7626 21.1768 15.4697 20.8839L7.82318 13.2374C7.53029 12.9445 7.53029 12.4697 7.82318 12.1768L8.17674 11.8232C8.46963 11.5303 8.9445 11.5303 9.2374 11.8232L16 18.5858L22.7626 11.8232C23.0555 11.5303 23.5303 11.5303 23.8232 11.8232L24.1768 12.1768C24.4697 12.4697 24.4697 12.9445 24.1768 13.2374L16.5303 20.8839Z" fill="currentColor"></path>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                      <div style="width:100%;height:0px" class="home-faq_answer">
-                        <p class="text-size-base text-style-muted line-height-1-5">
-                          Anda bisa memulai secara bertahap dengan satu unit kerja, melihat dampaknya, lalu mengembangkannya ke seluruh organisasi dengan pendekatan praktis dan terukur yang kami sediakan.
-                        </p>
-                        <div class="spacer-small-2"></div>
-                      </div>
-                    </div>
-                    <div class="home-faq_accordion">
-                      <div data-w-id="3ff1c98f-4c72-49ed-1cde-73a98d0ddaf4" class="home-faq_question">
-                        <h3 class="text-size-2xl text-weight-medium">
-                          Apakah AI akan menggantikan peran ahli dan tim kami?
+                          Apakah bot mengambil keputusan sendiri?
                         </h3>
                         <div class="home-faq_icon-wrapper">
                           <div class="icon-embed-small w-embed">
@@ -3758,7 +3656,117 @@ margin: 0rem !important;
                       </div>
                       <div style="width:100%;height:0px" class="home-faq_answer">
                         <p class="text-size-base text-style-muted line-height-1-5">
-                          Sama sekali tidak. Cantik.AI hadir untuk mempermudah pekerjaan harian, mengotomatiskan rutinitas, dan mempertajam analisis strategis agar tim Anda bisa fokus pada inovasi yang lebih berdampak besar.
+                          Tidak. Bot Raymaizing hanya menyiapkan draft dan rekomendasi. Semua output press release, laporan, ringkasan tetap harus direview dan disetujui oleh aparatur yang berwenang. Ini memastikan setiap komunikasi publik dan keputusan tetap berada di bawah kendali penuh manusia. Bot adalah asisten, bukan pengambil keputusan.
+                        </p>
+                        <div class="spacer-small-2">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="home-faq_accordion">
+                      <div data-w-id="2bbb742c-78fd-5772-44e3-e116d3cafa53" class="home-faq_question">
+                        <h3 class="text-size-2xl text-weight-medium">
+                          Bagaimana dengan keamanan dan audit trail?
+                        </h3>
+                        <div class="home-faq_icon-wrapper">
+                          <div class="icon-embed-small w-embed">
+                            <svg width="100%" height="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5303 20.8839C16.2374 21.1768 15.7626 21.1768 15.4697 20.8839L7.82318 13.2374C7.53029 12.9445 7.53029 12.4697 7.82318 12.1768L8.17674 11.8232C8.46963 11.5303 8.9445 11.5303 9.2374 11.8232L16 18.5858L22.7626 11.8232C23.0555 11.5303 23.5303 11.5303 23.8232 11.8232L24.1768 12.1768C24.4697 12.4697 24.4697 12.9445 24.1768 13.2374L16.5303 20.8839Z" fill="currentColor">
+                              </path>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div style="width:100%;height:0px" class="home-faq_answer">
+                        <p class="text-size-base text-style-muted line-height-1-5">
+                          Semua aktivitas bot tercatat dengan audit trail lengkap. Anda bisa tracking siapa yang mengakses apa, kapan, dan untuk tujuan apa. Ini penting untuk transparansi dan akuntabilitas di instansi pemerintah. Data Anda tersimpan aman dan hanya dapat diakses oleh tim yang berwenang sesuai dengan kebijakan keamanan organisasi Anda.
+                        </p>
+                        <div class="spacer-small-2">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="home-faq_accordion">
+                      <div data-w-id="c3bce0a2-4ad3-e957-bfdf-7ab2ef4911ad" class="home-faq_question">
+                        <h3 class="text-size-2xl text-weight-medium">
+                          Apakah tim kami perlu pelatihan khusus?
+                        </h3>
+                        <div class="home-faq_icon-wrapper">
+                          <div class="icon-embed-small w-embed">
+                            <svg width="100%" height="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5303 20.8839C16.2374 21.1768 15.7626 21.1768 15.4697 20.8839L7.82318 13.2374C7.53029 12.9445 7.53029 12.4697 7.82318 12.1768L8.17674 11.8232C8.46963 11.5303 8.9445 11.5303 9.2374 11.8232L16 18.5858L22.7626 11.8232C23.0555 11.5303 23.5303 11.5303 23.8232 11.8232L24.1768 12.1768C24.4697 12.4697 24.4697 12.9445 24.1768 13.2374L16.5303 20.8839Z" fill="currentColor">
+                              </path>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div style="width:100%;height:0px" class="home-faq_answer">
+                        <p class="text-size-base text-style-muted line-height-1-5">
+                          Kami menyediakan pelatihan lengkap untuk tim Anda dari pengenalan sistem, cara menggunakan bot, hingga best practices. Pelatihan disesuaikan dengan kebutuhan dan tingkat kesiapan tim. Kami juga memberikan pendampingan berkelanjutan selama implementasi, sehingga tim tidak merasa ditinggal sendirian. Interface bot dirancang user-friendly dan mudah dipahami.
+                        </p>
+                        <div class="spacer-small-2">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="home-faq_accordion">
+                      <div data-w-id="b8ab74e2-e42b-42b5-7950-c7dd3b7dc3e1" class="home-faq_question">
+                        <h3 class="text-size-2xl text-weight-medium">
+                          Bisakah bot disesuaikan dengan kebutuhan instansi kami?
+                        </h3>
+                        <div class="home-faq_icon-wrapper">
+                          <div class="icon-embed-small w-embed">
+                            <svg width="100%" height="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5303 20.8839C16.2374 21.1768 15.7626 21.1768 15.4697 20.8839L7.82318 13.2374C7.53029 12.9445 7.53029 12.4697 7.82318 12.1768L8.17674 11.8232C8.46963 11.5303 8.9445 11.5303 9.2374 11.8232L16 18.5858L22.7626 11.8232C23.0555 11.5303 23.5303 11.5303 23.8232 11.8232L24.1768 12.1768C24.4697 12.4697 24.4697 12.9445 24.1768 13.2374L16.5303 20.8839Z" fill="currentColor">
+                              </path>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div style="width:100%;height:0px" class="home-faq_answer">
+                        <p class="text-size-base text-style-muted line-height-1-5">
+                          Ya, sangat bisa. Bot belajar dari dokumen resmi, template komunikasi, dan standar operasional instansi Anda. Anda bisa melatih bot dengan gaya bahasa, format laporan, dan prosedur kerja yang berlaku di organisasi Anda. Semakin banyak informasi yang diberikan, semakin presisi dan sesuai hasilnya dengan kebutuhan spesifik instansi Anda.
+                        </p>
+                        <div class="spacer-small-2">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="home-faq_accordion">
+                      <div data-w-id="c159e52d-005d-b32a-d504-22efbd1c89fe" class="home-faq_question">
+                        <h3 class="text-size-2xl text-weight-medium">
+                          Bagaimana cara memulai implementasi?
+                        </h3>
+                        <div class="home-faq_icon-wrapper">
+                          <div class="icon-embed-small w-embed">
+                            <svg width="100%" height="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5303 20.8839C16.2374 21.1768 15.7626 21.1768 15.4697 20.8839L7.82318 13.2374C7.53029 12.9445 7.53029 12.4697 7.82318 12.1768L8.17674 11.8232C8.46963 11.5303 8.9445 11.5303 9.2374 11.8232L16 18.5858L22.7626 11.8232C23.0555 11.5303 23.5303 11.5303 23.8232 11.8232L24.1768 12.1768C24.4697 12.4697 24.4697 12.9445 24.1768 13.2374L16.5303 20.8839Z" fill="currentColor">
+                              </path>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div style="width:100%;height:0px" class="home-faq_answer">
+                        <p class="text-size-base text-style-muted line-height-1-5">
+                          Kami merekomendasikan pendekatan bertahap: mulai dengan pilot project satu bot untuk satu unit kerja (misalnya Bot Organizing File untuk tim dokumentasi). Lihat hasilnya dalam 2-4 minggu. Jika hasilnya positif, kembangkan ke bot lain dan unit kerja lainnya. Kami mendampingi setiap tahap dari assessment kebutuhan, pelatihan, hingga implementasi penuh dengan pendekatan yang praktis dan terukur.
+                        </p>
+                        <div class="spacer-small-2">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="home-faq_accordion">
+                      <div data-w-id="3ff1c98f-4c72-49ed-1cde-73a98d0ddaf4" class="home-faq_question">
+                        <h3 class="text-size-2xl text-weight-medium">
+                          Apakah bot akan menggantikan pekerjaan aparatur?
+                        </h3>
+                        <div class="home-faq_icon-wrapper">
+                          <div class="icon-embed-small w-embed">
+                            <svg width="100%" height="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5303 20.8839C16.2374 21.1768 15.7626 21.1768 15.4697 20.8839L7.82318 13.2374C7.53029 12.9445 7.53029 12.4697 7.82318 12.1768L8.17674 11.8232C8.46963 11.5303 8.9445 11.5303 9.2374 11.8232L16 18.5858L22.7626 11.8232C23.0555 11.5303 23.5303 11.5303 23.8232 11.8232L24.1768 12.1768C24.4697 12.4697 24.4697 12.9445 24.1768 13.2374L16.5303 20.8839Z" fill="currentColor">
+                              </path>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div style="width:100%;height:0px" class="home-faq_answer">
+                        <p class="text-size-base text-style-muted line-height-1-5">
+                          Tidak. Filosofi Raymaizing adalah "Mempermudah Pekerjaan Harian, Bukan Mengganti Peran Manusia." Bot mengambil alih tugas repetitif dan administratif rapikan arsip, susun draft, rangkum data sehingga aparatur tidak lagi terjebak rutinitas manual. Energi dan waktu tersimpan untuk analisis mendalam, koordinasi strategis, dan pengambilan keputusan yang membutuhkan pertimbangan manusiawi. Bot membebaskan potensi penuh tim, bukan menggantikannya.
                         </p>
                         <div class="spacer-small-2">
                         </div>
@@ -3779,22 +3787,22 @@ margin: 0rem !important;
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
               <!-- Left: Copyright -->
               <div style="color: rgba(255,255,255,0.7); font-size: 15px; font-weight: 500;">
-                © 2026 Cantik.AI. All rights reserved.
+                © 2026 Raymaizing. Semua hak dilindungi.
               </div>
               
               <!-- Center: Links -->
               <div style="display: flex; gap: 32px; flex-wrap: wrap; align-items: center;">
                 <a href="#" style="color: rgba(255,255,255,0.7); font-size: 15px; text-decoration: none; transition: all 0.3s; font-weight: 500;" onmouseover="this.style.color='rgba(255,255,255,1)'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">
-                  Privacy Policy
+                  Tentang Kami
                 </a>
                 <a href="#" style="color: rgba(255,255,255,0.7); font-size: 15px; text-decoration: none; transition: all 0.3s; font-weight: 500;" onmouseover="this.style.color='rgba(255,255,255,1)'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">
-                  Terms of Service
+                  Kebijakan Privasi
                 </a>
-                <a href="#faq" style="color: rgba(255,255,255,0.7); font-size: 15px; text-decoration: none; transition: all 0.3s; font-weight: 500;" onmouseover="this.style.color='rgba(255,255,255,1)'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">
-                  FAQ
+                <a href="#" style="color: rgba(255,255,255,0.7); font-size: 15px; text-decoration: none; transition: all 0.3s; font-weight: 500;" onmouseover="this.style.color='rgba(255,255,255,1)'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">
+                  Syarat & Ketentuan
                 </a>
-                <a href="https://app.raymaizing.com/" style="color: rgba(255,255,255,0.7); font-size: 15px; text-decoration: none; transition: all 0.3s; font-weight: 500;" onmouseover="this.style.color='rgba(255,255,255,1)'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">
-                  Contact Us
+                <a href="#" style="color: rgba(255,255,255,0.7); font-size: 15px; text-decoration: none; transition: all 0.3s; font-weight: 500;" onmouseover="this.style.color='rgba(255,255,255,1)'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">
+                  Kontak
                 </a>
               </div>
               
@@ -3845,7 +3853,7 @@ margin: 0rem !important;
     </script>
     <!-- Google Tag Manager (noscript) -->
     <noscript>
-      Semua aktivitas bot tercatat dengan audit trail lengkap. Anda bisa tracking siapa yang mengakses apa, kapan, dan untuk tujuan apa. Ini penting untuk transparansi dan akuntabilitas di instansi pemerintah. Data Anda tersimpan aman dan hanya dapat diakses oleh tim yang berwenang sesuai dengan kebijakan keamanan organisasi Anda.
+      &lt;iframe src=&#34;https://load.s.sintra.ai/ns.html?id=GTM-58H2TRQC&#34; height=&#34;0&#34; width=&#34;0&#34; style=&#34;display:none;visibility:hidden&#34;&gt;&lt;/iframe&gt;
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
     <!-- Essential -->
