@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# Route /admin dan /admin/* → /pages/admin/
+RewriteCond %{REQUEST_URI} ^/admin(/.*)?$
+RewriteRule ^admin(/.*)?$ pages/admin$1 [L]
+
+# Route /blog dan /blog/* → /pages/blog/
+RewriteRule ^blog/?$ pages/blog/index.php [L]
+RewriteRule ^blog/([a-z0-9-]+)/?$ pages/blog/article.php?slug=$1 [L,QSA]
+
+# Home
+RewriteRule ^home/?$ index.html [L]

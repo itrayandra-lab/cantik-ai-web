@@ -40,19 +40,36 @@
     header.style.zIndex = '9999';
     
     // Add scroll listener for background change
+    var logoImg = document.querySelector('.navbar__logo img.logo');
+    if (!logoImg) logoImg = document.querySelector('.navbar__logo img');
+
     window.addEventListener('scroll', function() {
       if (window.scrollY > 50) {
-        // Scrolled down - add background
-        header.style.background = 'rgba(0, 0, 0, 0.85)';
-        header.style.backdropFilter = 'blur(10px)';
-        header.style.webkitBackdropFilter = 'blur(10px)';
-        header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.3)';
+        header.style.background = '#ffffff';
+        header.style.backdropFilter = 'none';
+        header.style.webkitBackdropFilter = 'none';
+        header.style.boxShadow = '0 2px 20px rgba(184, 77, 122, 0.1)';
+        header.style.borderBottom = '1px solid rgba(184, 77, 122, 0.12)';
+        document.querySelectorAll('.header .navbar__link, .header .navbar__drawer').forEach(function(el) {
+          el.style.color = '#2d1a24';
+        });
+        document.querySelectorAll('.navbar__burger .burger-line').forEach(function(el) {
+          el.style.background = '#2d1a24';
+        });
+        if (logoImg) logoImg.src = 'assets/img/logo-colour-pink.png';
       } else {
-        // At top - transparent
         header.style.background = 'transparent';
         header.style.backdropFilter = 'none';
         header.style.webkitBackdropFilter = 'none';
         header.style.boxShadow = 'none';
+        header.style.borderBottom = 'none';
+        document.querySelectorAll('.header .navbar__link, .header .navbar__drawer').forEach(function(el) {
+          el.style.color = '#fff';
+        });
+        document.querySelectorAll('.navbar__burger .burger-line').forEach(function(el) {
+          el.style.background = '#fff';
+        });
+        if (logoImg) logoImg.src = 'assets/img/logo-white.png';
       }
     });
     

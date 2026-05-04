@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Blog listing
+RewriteRule ^$ index.php [L]
+
+# Article detail: /blog/slug → article.php?slug=slug
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-z0-9-]+)/?$ article.php?slug=$1 [L,QSA]
