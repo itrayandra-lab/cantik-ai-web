@@ -524,6 +524,15 @@
           --base-color--purple-200: #9AFFFB !important; /* Cyan terang */
           --base-color--purple-500: #2E9CBE !important; /* Biru teknologi */
         }
+
+        /* CTA section - force pink gradient, tidak boleh di-override */
+        .section_home-cta {
+          background: linear-gradient(to bottom, #000000 0%, #b84d7a 100%) !important;
+          background-image: linear-gradient(to bottom, #000000 0%, #b84d7a 100%) !important;
+        }
+        .section_home-cta .home-cta_background {
+          display: none !important;
+        }
         
         body, html{
 	background: #000;
@@ -1093,6 +1102,46 @@ div.header-transparent > div.header {
   text-align: center !important;
   margin-left: auto !important;
   margin-right: auto !important;
+}
+
+/* Brain section - full width image */
+.section_home-brain .home-brain_background,
+.section_home-brain .home-brain_soshie {
+  width: 100% !important;
+  max-width: 100% !important;
+  position: relative !important;
+  height: auto !important;
+  left: 0 !important;
+  right: 0 !important;
+  transform: none !important;
+  aspect-ratio: unset !important;
+  margin-bottom: 0 !important;
+  display: block !important;
+  line-height: 0 !important;
+}
+
+.section_home-brain .home-brain_video {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  object-fit: cover !important;
+  max-width: 100% !important;
+  vertical-align: bottom !important;
+}
+
+/* Remove excess spacing below brain section */
+.section_home-brain {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.section_home-brain .home-brain_soshie-overlay {
+  display: none !important;
+}
+
+.section_home-integrations {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
 }
 
 /* Automations section - force center */
@@ -1934,7 +1983,7 @@ margin: 0rem !important;
                 playsinline
                 preload="auto"
               >
-                <source src="assets/videos/hero-bg.mp4" type="video/mp4">
+                <source src="assets/videos/hero-cantik-ai.mp4" type="video/mp4">
                 <source src="assets/videos/hero-bg.webm" type="video/webm">
               </video>
             </div>
@@ -1960,9 +2009,6 @@ margin: 0rem !important;
                       <a data-wf-native-id-path="95604ea5-4543-a536-dd19-9140f496fdde" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="95604ea5-4543-a536-dd19-9140f496fdde" href="https://app.raymaizing.com/" class="button w-inline-block">
                         <div>Pilih Peran Anda</div>
                       </a>
-                      <a href="#automations" class="button-secondary w-inline-block" style="margin-left:1rem;">
-                        <div>Lihat Demo Langsung</div>
-                      </a>
                     </div>
                   </div>
                 </div>
@@ -1974,61 +2020,10 @@ margin: 0rem !important;
         <!-- Hero Video Initialization Script -->
         <script>
         (function() {
-          // REPLACE ALL PURPLE COLORS WITH CYAN/BLUE
+          // REPLACE ALL PURPLE COLORS WITH CYAN/BLUE - DISABLED
           function replacePurpleColors() {
-            // Purple hex colors to replace
-            var purpleColors = [
-              '#8b5cf6', '#8B5CF6',
-              '#8d5bff', '#8D5BFF',
-              '#e9d5ff', '#E9D5FF',
-              '#a78bfa', '#A78BFA',
-              '#c4b5fd', '#C4B5FD',
-              'rgb(139, 92, 246)',
-              'rgb(141, 91, 255)',
-              'rgb(233, 213, 255)',
-              'rgb(167, 139, 250)',
-              'rgb(196, 181, 253)'
-            ];
-            
-            // Replacement colors
-            var cyanColor = '#9AFFFB'; // Cyan terang
-            var blueColor = '#2E9CBE'; // Biru teknologi
-            
-            // Get all elements
-            var allElements = document.querySelectorAll('*');
-            
-            allElements.forEach(function(element) {
-              var style = element.getAttribute('style');
-              if (style) {
-                var modified = false;
-                purpleColors.forEach(function(purple) {
-                  if (style.includes(purple)) {
-                    // Replace with blue for most cases
-                    style = style.replace(new RegExp(purple, 'gi'), blueColor);
-                    modified = true;
-                  }
-                });
-                
-                if (modified) {
-                  element.setAttribute('style', style);
-                }
-              }
-              
-              // Check computed styles for background
-              var computedStyle = window.getComputedStyle(element);
-              var bgColor = computedStyle.backgroundColor;
-              
-              // Replace purple backgrounds
-              if (bgColor && (
-                bgColor.includes('139, 92, 246') ||
-                bgColor.includes('141, 91, 255') ||
-                bgColor.includes('233, 213, 255')
-              )) {
-                element.style.backgroundColor = blueColor;
-              }
-            });
-            
-            console.log('✅ Purple colors replaced with cyan/blue');
+            // Disabled - tidak dipakai lagi
+            return;
           }
           
           // Run color replacement
@@ -2038,6 +2033,12 @@ margin: 0rem !important;
           if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', function() {
               replacePurpleColors();
+              // Force CTA section pink gradient after replacement
+              var ctaSection = document.querySelector('.section_home-cta');
+              if (ctaSection) {
+                ctaSection.style.setProperty('background', 'linear-gradient(to bottom, #000000 0%, #b84d7a 100%)', 'important');
+                ctaSection.style.setProperty('background-image', 'linear-gradient(to bottom, #000000 0%, #b84d7a 100%)', 'important');
+              }
             });
           }
           
@@ -2045,6 +2046,12 @@ margin: 0rem !important;
           window.addEventListener('load', function() {
             setTimeout(function() {
               replacePurpleColors();
+              // Force CTA section pink gradient after replacement
+              var ctaSection = document.querySelector('.section_home-cta');
+              if (ctaSection) {
+                ctaSection.style.setProperty('background', 'linear-gradient(to bottom, #000000 0%, #b84d7a 100%)', 'important');
+                ctaSection.style.setProperty('background-image', 'linear-gradient(to bottom, #000000 0%, #b84d7a 100%)', 'important');
+              }
             }, 100);
           });
           
@@ -2397,20 +2404,20 @@ margin: 0rem !important;
 .glass-video-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1;
   border-radius: 24px;
   overflow: hidden;
   margin-bottom: 28px;
   background: rgba(232, 160, 191, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.08);
+  line-height: 0;
 }
 
 .glass-video-wrapper video,
 .glass-video-wrapper img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
+  object-fit: cover;
 }
 
 /* Text Content */
@@ -2701,7 +2708,7 @@ margin: 0rem !important;
 }
 </style>
 
-<!-- HTML Structure -->
+<!-- HTML Structure Tim -->
 <div class="section_home-helpers background-color-alternate" id="features-section">
   <div class="slider_cdn w-embed w-script">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -2921,7 +2928,7 @@ margin: 0rem !important;
 
         <div class="section_home-automations background-color-alternate" id="automations">
           <div class="home-automations_background">
-            <img src="assets/img/673f7efdd574ab7ce78808c6_automations-helpers-cover.png" loading="lazy" alt="" class="home-automations_background-image" />
+            <img src="assets/img/team-conection.png" loading="lazy" alt="Team Connection" class="home-automations_background-image" />
             <div class="home-automations_background-overlay">
             </div>
           </div>
@@ -2951,7 +2958,7 @@ margin: 0rem !important;
                       <span class="text-style-muted">Spesialis regulasi kecantikan Indonesia. Contoh: "Berapa batas niacinamide untuk produk serum?"</span>
                     </p>
                   </div>
-                  <img src="assets/img/67477e8395c6fe6685369d24_automation-soshie.png" loading="lazy" sizes="100vw" srcset="assets/img/67477e8395c6fe6685369d24_automation-soshie-p-500.png 500w, assets/img/67477e8395c6fe6685369d24_automation-soshie.png 830w" alt="" class="home-automations_card-image" />
+                  <img src="assets/img/AI-Regulatori.png" loading="lazy" alt="AI Regulatory" class="home-automations_card-image" />
                 </div>
                 <div class="home-automations_card is-cassie">
                   <div class="home-automations_card-content">
@@ -2964,7 +2971,7 @@ margin: 0rem !important;
                       <span class="text-style-muted">Mitra strategis untuk branding dan konten kecantikan. Contoh: "Buatkan konsep konten untuk peluncuran sabun charcoal."</span>
                     </p>
                   </div>
-                  <img src="assets/img/67477e835d7ac382c6ebb990_automation-cassie.png" loading="lazy" alt="" class="home-automations_card-image" />
+                  <img src="assets/img/AI-Strategist.png" loading="lazy" alt="AI Strategist" class="home-automations_card-image" />
                 </div>
                 <div class="home-automations_card is-vizzy">
                   <div class="home-automations_card-content">
@@ -2977,42 +2984,16 @@ margin: 0rem !important;
                       <span class="text-style-muted">Asisten formulasi berbasis data ilmiah. Contoh: "Apa alternatif bahan pengawet alami?"</span>
                     </p>
                   </div>
-                  <img src="assets/img/67477e83b8cd1c76d0434bef_automation-vizzy.png" loading="lazy" sizes="100vw" srcset="assets/img/67477e83b8cd1c76d0434bef_automation-vizzy-p-500.png 500w, assets/img/67477e83b8cd1c76d0434bef_automation-vizzy.png 948w" alt="" class="home-automations_card-image" />
+                  <img src="assets/img/AI-RND.png" loading="lazy" alt="AI R&D" class="home-automations_card-image" />
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="section_home-present background-color-alternate">
-          <div class="home-present_visual-wrapper">
-            <img src="assets/img/672384f30ff5f820be7412d1_present-mockup.png" loading="lazy" sizes="100vw" srcset="assets/img/672384f30ff5f820be7412d1_present-mockup-p-500.png 500w, assets/img/672384f30ff5f820be7412d1_present-mockup-p-800.png 800w, assets/img/672384f30ff5f820be7412d1_present-mockup.png 2000w" alt="" class="home-present_image" />
-          </div>
-          <div class="home-present_content breathing-space">
-            <div class="padding-global padding-section-large">
-              <div class="margin-bottom margin-large">
-                <h2 class="text-size-7xl text-size-4xl--mobile">
-                  Tanya AI R&D
-                </h2>
-              </div>
-              <div>
-                <div class="margin-bottom margin-medium">
-                  <p class="text-size-xl">
-                    Asisten formulasi berbasis data ilmiah. Eksplorasi bahan aktif, alternatif pengawet alami, kompatibilitas bahan, dan tren inovasi kosmetik global terkini.
-                    <span class="text-style-muted">Contoh: "Apa alternatif bahan pengawet alami untuk produk skincare?"</span>
-                  </p>
-                </div>
-              </div>
-              <p class="text-size-lg">
-                Asisten formulasi berbasis data ilmiah. Eksplorasi bahan aktif, alternatif pengawet alami, kompatibilitas bahan, dan tren inovasi kosmetik global terkini.
-                <span class="text-style-muted">Contoh: "Apa alternatif bahan pengawet alami untuk produk skincare?"</span>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div id="fitur" class="section_home-brain background-color-alternate">
-          <div class="home-brain_header">
-            <div class="padding-global">
-              <div class="container-large">
+        <div id="fitur" class="section_home-brain background-color-alternate" style="padding-bottom:0!important;margin-bottom:0!important;">
+          <div class="home-brain_header" style="padding-bottom:0!important;">
+            <div class="padding-global" style="padding-bottom:0!important;">
+              <div class="container-large" style="padding-bottom:0!important;">
                 <div class="text-align-center">
                   <div class="max-width-large align-center">
                     <h2 class="text-size-7xl text-align-center">
@@ -3028,18 +3009,15 @@ margin: 0rem !important;
               </div>
             </div>
           </div>
-          <div class="home-brain_background">
-            <img class="home-brain_floaters" src="assets/img/673eb161f734e9a1b54ff1bc_brain-ai-floaters.avif" alt="" style="opacity:0.2" sizes="100vw" data-w-id="471afe4a-3250-b4c9-19be-b27a3811e347" loading="lazy" srcset="assets/img/673eb161f734e9a1b54ff1bc_brain-ai-floaters-p-500.png 500w, assets/img/673eb161f734e9a1b54ff1bc_brain-ai-floaters-p-800.png 800w, assets/img/673eb161f734e9a1b54ff1bc_brain-ai-floaters-p-1080.png 1080w, assets/img/673eb161f734e9a1b54ff1bc_brain-ai-floaters-p-1600.png 1600w, assets/img/673eb161f734e9a1b54ff1bc_brain-ai-floaters-p-2000.png 2000w, assets/img/673eb161f734e9a1b54ff1bc_brain-ai-floaters.avif 2950w" />
-            <div class="home-brain_soshie">
-              <img src="assets/img/661d4f6d81ac1042b721396cMartynas-poster-00001.png" alt="Soshie Character" class="home-brain_video" style="width: 100%; height: 100%; object-fit: cover;" />
-              <div class="home-brain_soshie-overlay">
-              </div>
+          <div class="home-brain_background" style="width:100%;max-width:100%;padding:0;margin:0;">
+            <div class="home-brain_soshie" style="width:100%;max-width:100%;height:auto;position:relative;">
+              <img src="assets/img/our-feature.png" alt="Our Feature" class="home-brain_video" style="width:100%;height:auto;object-fit:cover;display:block;max-width:100%;" />
             </div>
           </div>
         </div>
-        <div class="section_home-integrations background-color-alternate" id="integrations-section">
+        <div class="section_home-integrations background-color-alternate" id="integrations-section" style="padding-top:0!important;margin-top:0!important;">
           <div class="padding-global">
-            <div class="container-large padding-section-large">
+            <div class="container-large" style="padding-top:5rem!important;padding-bottom:5rem!important;">
               <div class="home-integrations_grid">
                 <div id="w-node-_0d62e851-b652-6d84-71b7-c63593e41ea7-a0cabc6e" class="home-integrations_content">
                   <div class="margin-bottom margin-medium">
@@ -3059,20 +3037,9 @@ margin: 0rem !important;
                       <span class="text-style-muted">Skalabilitas Tanpa Batas</span>
                     </p>
                   </div>
-                  <div class="margin-bottom margin-xlarge">
-                    <div class="home-integrations_icons-wrapper">
-                      <img src="assets/img/6628e2d9b36b0b9ab9ae8974.png" loading="lazy" alt="" class="home-integrations_logo" />
-                      <img src="assets/img/6735d8d567988dc4ab79316a.png" loading="lazy" alt="" class="home-integrations_logo" />
-                      <img src="assets/img/6735d8de64d6f4d7f26fd126.png" loading="lazy" alt="" class="home-integrations_logo" />
-                      <img src="assets/img/6735d8e5d76655df048cc4f9.png" loading="lazy" alt="" class="home-integrations_logo" />
-                      <img src="assets/img/6735d8ee29c42f15c6707fa7.png" loading="lazy" alt="" class="home-integrations_logo" />
-                      <img src="assets/img/6735d8ef1b32e53cf36b4a36.png" loading="lazy" alt="" class="home-integrations_logo" />
-                      <img src="assets/img/6735d8efa606f510309578f2.png" loading="lazy" alt="" class="home-integrations_logo" />
-                      <img src="assets/img/6735d8f48f6442c3908dd984.png" loading="lazy" alt="" class="home-integrations_logo" />
-                    </div>
-                  </div>
+                  
                 </div>
-                <img src="assets/img/6735d29b63a7448ed3346cf2_iphone-integrations-clear.png" loading="lazy" id="w-node-b7984500-9794-b31a-eb93-efd15890502a-a0cabc6e" alt="" class="home-integrations_visual" />
+                <img src="assets/img/data-aman.png" loading="lazy" id="w-node-b7984500-9794-b31a-eb93-efd15890502a-a0cabc6e" alt="Data Aman & Terlindungi" class="home-integrations_visual" />
               </div>
             </div>
           </div>
@@ -3114,7 +3081,7 @@ margin: 0rem !important;
             </div>
           </div>
           <div class="home-workspaces_background">
-            <img src="assets/img/6735e6a05e6e7f0def9fae4e_workspaces-final-mockup.png" loading="lazy" sizes="100vw" srcset="assets/img/6735e6a05e6e7f0def9fae4e_workspaces-final-mockup-p-500.png 500w, assets/img/6735e6a05e6e7f0def9fae4e_workspaces-final-mockup.png 1685w" alt="" class="home-workspaces_background-image" />
+            <img src="assets/img/ecosystem.png" loading="lazy" alt="Ecosystem" class="home-workspaces_background-image" />
             <div class="home-workspace_background-overlay">
             </div>
           </div>
@@ -3582,7 +3549,7 @@ margin: 0rem !important;
         <!-- END PRICING SECTION -->
         <!-- ============================================ -->
 
-        <div class="section_home-cta background-color-alternate">
+        <div class="section_home-cta background-color-alternate" style="background:linear-gradient(to bottom, #000000 0%, #b84d7a 100%)!important;background-image:linear-gradient(to bottom, #000000 0%, #b84d7a 100%)!important;">
           <div class="padding-global">
             <div class="container-large padding-section-large padding-top">
               <div class="home-cta_component">
@@ -3614,9 +3581,9 @@ margin: 0rem !important;
                   </div>
                 </div>
                 <div id="w-node-_65b4894e-d767-f4cb-2606-6d455801483e-a0cabc6e" class="home-cta_visual">
-                  <img src="assets/img/673fa35a6278374bebb41f4e_homepage-cta-mockup.png" loading="lazy" sizes="100vw" srcset="assets/img/673fa35a6278374bebb41f4e_homepage-cta-mockup-p-500.png 500w, assets/img/673fa35a6278374bebb41f4e_homepage-cta-mockup-p-800.png 800w, assets/img/673fa35a6278374bebb41f4e_homepage-cta-mockup-p-1080.png 1080w, assets/img/673fa35a6278374bebb41f4e_homepage-cta-mockup.png 2307w" alt="" class="home-cta_visual-image" />
+                  <img src="assets/img/trial-chat.png" loading="lazy" alt="Trial Chat" class="home-cta_visual-image" />
                 </div>
-                <div class="home-cta_background">
+                <div class="home-cta_background" style="display:none!important;">
                 </div>
               </div>
             </div>
