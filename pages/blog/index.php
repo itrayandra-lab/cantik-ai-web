@@ -2,6 +2,14 @@
 require_once __DIR__ . '/../../pages/admin/config/database.php';
 
 $pdo = getDB();
+
+// Handle slug routing langsung (dipanggil dari Valet driver)
+// Jika ada $_GET['slug'], tampilkan artikel
+if (!empty($_GET['slug'])) {
+    require __DIR__ . '/article.php';
+    exit;
+}
+
 $pdo->exec("UPDATE articles SET status='published', published_at=NOW() WHERE status='scheduled' AND scheduled_at <= NOW()");
 
 $category = $_GET['category'] ?? '';
