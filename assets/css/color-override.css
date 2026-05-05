@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
    COLOR OVERRIDE - Cantik.AI Pink Palette
    Primary: #b84d7a | Light: #e8a0bf | Accent: #9d5a76
    Dark: #6b4c5e   | Darkest: #1a0a2e
@@ -29,15 +29,15 @@
 }
 
 /* ── Inline-style overrides (old cyan/blue values) ──────── */
-[style*="#2E9CBE"],
-[style*="#9AFFFB"],
-[style*="#1E7A9A"],
-[style*="#156078"] {
+[style*="#b84d7a"],
+[style*="#e8a0bf"],
+[style*="#9d5a76"],
+[style*="#6b4c5e"] {
   color: #b84d7a !important;
 }
 
-[style*="background"][style*="#2E9CBE"],
-[style*="background"][style*="#9AFFFB"] {
+[style*="background"][style*="#b84d7a"],
+[style*="background"][style*="#e8a0bf"] {
   background-color: #b84d7a !important;
 }
 
@@ -183,14 +183,14 @@ svg [fill="#8b5cf6"],
 svg [fill="#8d5bff"],
 svg [fill="#e9d5ff"],
 svg [fill="#a78bfa"],
-svg [fill="#2E9CBE"],
-svg [fill="#9AFFFB"] {
+svg [fill="#b84d7a"],
+svg [fill="#e8a0bf"] {
   fill: #b84d7a !important;
 }
 
 svg [stroke="#8b5cf6"],
 svg [stroke="#8d5bff"],
-svg [stroke="#2E9CBE"] {
+svg [stroke="#b84d7a"] {
   stroke: #b84d7a !important;
 }
 
@@ -316,11 +316,11 @@ svg [stroke="#2E9CBE"] {
 
 /* ── Inline JS color replacement override ───────────────── */
 /* Overrides the JS that replaces purple with old cyan values */
-[style*="background-color: rgb(46, 156, 190)"],
-[style*="background-color: rgb(154, 255, 251)"] {
+[style*="background-color: rgb(184, 77, 122)"],
+[style*="background-color: rgb(232, 160, 191)"] {
   background-color: #b84d7a !important;
 }
-[style*="color: rgb(46, 156, 190)"],
-[style*="color: rgb(154, 255, 251)"] {
+[style*="color: rgb(184, 77, 122)"],
+[style*="color: rgb(232, 160, 191)"] {
   color: #e8a0bf !important;
 }
