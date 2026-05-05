@@ -721,6 +721,16 @@
 @media screen and (max-width: 991px){
   .navbar__menu{
     background: #fff;
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 80vw !important;
+    max-width: 320px !important;
+    z-index: 9998 !important;
+    overflow-y: auto !important;
+    padding-top: 80px !important;
+    box-shadow: -4px 0 24px rgba(0,0,0,.15) !important;
   }
   
   .navbar .navbar__positioner::after{
@@ -731,17 +741,18 @@
     color: #2d1a24;
   }
 
-  /* Pastikan menu items terlihat di mobile */
+  /* Menu items */
   .navbar__menu .navbar__navigation {
-    padding: 16px 0;
+    padding: 8px 0;
   }
 
   .navbar__menu .navbar__link,
   .navbar__menu .dyn-menu-item a {
     color: #2d1a24 !important;
     font-size: 16px !important;
-    padding: 12px 24px !important;
+    padding: 14px 24px !important;
     display: block !important;
+    border-bottom: 1px solid rgba(184,77,122,.08) !important;
   }
 
   .navbar__menu .navbar__link:hover,
@@ -752,11 +763,12 @@
 
   /* Button Login di mobile */
   .navbar__menu .header__navigation {
-    padding: 16px 24px;
+    padding: 20px 24px;
     border-top: 1px solid rgba(184,77,122,.1);
   }
 
-  .navbar__menu .navbar__link.cta {
+  .navbar__menu .navbar__link.cta,
+  .navbar__menu #nav-cta-btn {
     display: block !important;
     text-align: center !important;
     background: linear-gradient(135deg, #e8a0bf, #b84d7a) !important;
@@ -764,6 +776,16 @@
     border-radius: 8px !important;
     padding: 12px 24px !important;
     margin: 0 !important;
+    border-bottom: none !important;
+  }
+
+  /* Overlay backdrop */
+  .navbar.active::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 9997;
   }
 }
           </style>
