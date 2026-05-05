@@ -720,15 +720,50 @@
 
 @media screen and (max-width: 991px){
   .navbar__menu{
-    background: #000;
+    background: #fff;
   }
   
   .navbar .navbar__positioner::after{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 25%);
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 25%);
   }
   
   .navbar__drawer_card .navbar__link{
-    color: #fff;
+    color: #2d1a24;
+  }
+
+  /* Pastikan menu items terlihat di mobile */
+  .navbar__menu .navbar__navigation {
+    padding: 16px 0;
+  }
+
+  .navbar__menu .navbar__link,
+  .navbar__menu .dyn-menu-item a {
+    color: #2d1a24 !important;
+    font-size: 16px !important;
+    padding: 12px 24px !important;
+    display: block !important;
+  }
+
+  .navbar__menu .navbar__link:hover,
+  .navbar__menu .dyn-menu-item a:hover {
+    color: #b84d7a !important;
+    background: #fdf0f5 !important;
+  }
+
+  /* Button Login di mobile */
+  .navbar__menu .header__navigation {
+    padding: 16px 24px;
+    border-top: 1px solid rgba(184,77,122,.1);
+  }
+
+  .navbar__menu .navbar__link.cta {
+    display: block !important;
+    text-align: center !important;
+    background: linear-gradient(135deg, #e8a0bf, #b84d7a) !important;
+    color: #fff !important;
+    border-radius: 8px !important;
+    padding: 12px 24px !important;
+    margin: 0 !important;
   }
 }
           </style>
@@ -2949,12 +2984,12 @@ margin: 0rem !important;
                 <div id="w-node-e7b069d4-3933-9476-e05d-62882093e506-a0cabc6e" class="home-automations_card is-soshie" style="background:linear-gradient(45deg, #e8a0bf, #b84d7a)!important;border:none!important;">
                   <div class="home-automations_card-content">
                     <div class="margin-bottom margin-small">
-                      <h3 class="text-size-3xl--mobile">
+                      <h3 class="text-size-3xl--mobile" style="color:#fff!important;">
                         Tanya AI Regulatory
                       </h3>
                     </div>
                     <p class="text-size-xl">
-                      <span class="text-style-muted">Spesialis regulasi kecantikan Indonesia. Contoh: "Berapa batas niacinamide untuk produk serum?"</span>
+                      <span class="text-style-muted" style="color:rgba(255,255,255,.9)!important;">Spesialis regulasi kecantikan Indonesia. Contoh: "Berapa batas niacinamide untuk produk serum?"</span>
                     </p>
                   </div>
                   <img src="assets/img/AI-Regulatori.png" loading="lazy" alt="AI Regulatory" class="home-automations_card-image" />
