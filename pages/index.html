@@ -719,20 +719,30 @@
 }
 
 @media screen and (max-width: 991px){
+  /* State default: tersembunyi di luar layar sebelah KIRI */
   .navbar__menu{
     background: #fff;
     position: fixed !important;
     top: 0 !important;
-    right: 0 !important;
+    left: 0 !important;
     bottom: 0 !important;
+    right: auto !important;
     width: 80vw !important;
     max-width: 320px !important;
     z-index: 9998 !important;
     overflow-y: auto !important;
     padding-top: 0 !important;
-    box-shadow: -4px 0 24px rgba(0,0,0,.15) !important;
+    box-shadow: 4px 0 24px rgba(0,0,0,.15) !important;
     display: flex !important;
     flex-direction: column !important;
+    /* Sembunyikan ke kiri */
+    transform: translateX(-100%) !important;
+    transition: transform 0.3s ease !important;
+  }
+
+  /* State active: slide masuk dari kiri */
+  .navbar__menu.active {
+    transform: translateX(0%) !important;
   }
 
   /* Header label di atas menu */
@@ -800,7 +810,7 @@
     font-weight: 600 !important;
   }
 
-  /* Overlay backdrop */
+  /* Overlay backdrop — muncul saat menu active */
   .navbar.active::before {
     content: '';
     position: fixed;
@@ -911,13 +921,13 @@
   }
   
   .navbar__menu {
-    transition: 250ms ease transform;
-    transform: translate(100%, 0%);
+    transition: 0.3s ease transform !important;
+    transform: translateX(-100%) !important;
   }
 
   .navbar__menu.active{
-    transform: translate(0%, 0%);
-    z-index: 2;
+    transform: translateX(0%) !important;
+    z-index: 9998 !important;
   }
 
   .navbar__burger.active .burger-line:nth-child(1){
