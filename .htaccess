@@ -1,12 +1,40 @@
+Options -Indexes
 RewriteEngine On
 
-# Route /admin dan /admin/* → /pages/admin/
-RewriteCond %{REQUEST_URI} ^/admin(/.*)?$
-RewriteRule ^admin(/.*)?$ pages/admin$1 [L]
+# ── ADMIN ──────────────────────────────────────────────
+# /admin/login.php → /pages/admin/login.php
+RewriteRule ^admin/login\.php$ pages/admin/login.php [L]
+RewriteRule ^admin/logout\.php$ pages/admin/logout.php [L]
+RewriteRule ^admin/activity\.php$ pages/admin/activity.php [L]
+RewriteRule ^admin/settings\.php$ pages/admin/settings.php [L]
 
-# Route /blog dan /blog/* → /pages/blog/
+# /admin/articles/* → /pages/admin/articles/*
+RewriteRule ^admin/articles/(.+)$ pages/admin/articles/$1 [L,QSA]
+
+# /admin/menus/* → /pages/admin/menus/*
+RewriteRule ^admin/menus/(.+)$ pages/admin/menus/$1 [L,QSA]
+
+# /admin/users/* → /pages/admin/users/*
+RewriteRule ^admin/users/(.+)$ pages/admin/users/$1 [L,QSA]
+
+# /admin/api/* → /pages/admin/api/*
+RewriteRule ^admin/api/(.+)$ pages/admin/api/$1 [L,QSA]
+
+# /admin/ or /admin → /pages/admin/index.php
+RewriteRule ^admin/?$ pages/admin/index.php [L]
+
+# /admin/* catch-all
+RewriteRule ^admin/(.+)$ pages/admin/$1 [L,QSA]
+
+# ── BLOG ───────────────────────────────────────────────
+# /blog/ → pages/blog/index.php
 RewriteRule ^blog/?$ pages/blog/index.php [L]
-RewriteRule ^blog/([a-z0-9-]+)/?$ pages/blog/article.php?slug=$1 [L,QSA]
 
-# Home
-RewriteRule ^home/?$ index.html [L]
+# /blog/slug → pages/blog/index.php?slug=slug
+RewriteRule ^blog/([a-z0-9][a-z0-9\-]*)/?$ pages/blog/index.php?slug=$1 [L,QSA]
+
+# ── HOME ───────────────────────────────────────────────
+RewriteRule ^home/?$ pages/index.html [L]
+
+# Root → pages/index.html
+RewriteRule ^$ pages/index.html [L]
