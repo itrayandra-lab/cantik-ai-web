@@ -4220,6 +4220,57 @@ window.requestAnimationFrame(scrollPlay);
   })();
   </script>
 
+  <!-- ============================================ -->
+  <!-- BURGER MENU - Standalone (tidak bergantung Webflow) -->
+  <!-- ============================================ -->
+  <script>
+  (function() {
+    var burger = document.querySelector('.navbar__burger');
+    var menu   = document.querySelector('.navbar__menu');
+    var navbar = document.querySelector('.navbar');
+    var isOpen = false;
+    var scrollPos = 0;
+
+    if (!burger || !menu) return;
+
+    function openMenu() {
+      isOpen = true;
+      scrollPos = window.pageYOffset;
+      menu.classList.add('active');
+      burger.classList.add('active');
+      if (navbar) navbar.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      isOpen = false;
+      menu.classList.remove('active');
+      burger.classList.remove('active');
+      if (navbar) navbar.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    burger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      isOpen ? closeMenu() : openMenu();
+    });
+
+    // Tutup saat klik link di dalam menu
+    menu.addEventListener('click', function(e) {
+      if (e.target.tagName === 'A' || e.target.closest('a')) {
+        closeMenu();
+      }
+    });
+
+    // Tutup saat klik di luar menu
+    document.addEventListener('click', function(e) {
+      if (isOpen && !menu.contains(e.target) && !burger.contains(e.target)) {
+        closeMenu();
+      }
+    });
+  })();
+  </script>
+
   </body>
 </html>
 
