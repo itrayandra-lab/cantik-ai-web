@@ -729,44 +729,63 @@
     max-width: 320px !important;
     z-index: 9998 !important;
     overflow-y: auto !important;
-    padding-top: 80px !important;
+    padding-top: 0 !important;
     box-shadow: -4px 0 24px rgba(0,0,0,.15) !important;
-  }
-  
-  .navbar .navbar__positioner::after{
-    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 25%);
-  }
-  
-  .navbar__drawer_card .navbar__link{
-    color: #2d1a24;
+    display: flex !important;
+    flex-direction: column !important;
   }
 
-  /* Menu items */
+  /* Header label di atas menu */
+  .navbar__menu::before {
+    content: 'Menu';
+    display: block;
+    padding: 20px 24px 16px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a0a12;
+    border-bottom: 1px solid rgba(184,77,122,.1);
+    flex-shrink: 0;
+  }
+
+  .navbar .navbar__positioner::after { display: none; }
+  .navbar__drawer_card .navbar__link { color: #2d1a24; }
+
+  /* Nav items — urutan 1 */
   .navbar__menu .navbar__navigation {
     padding: 8px 0;
+    flex: 1;
+    order: 1;
   }
 
-  .navbar__menu .navbar__link,
-  .navbar__menu .dyn-menu-item a {
+  /* Semua link di dalam menu */
+  .navbar__menu .navbar__link:not(.cta),
+  .navbar__menu .dyn-menu-item > a {
     color: #2d1a24 !important;
-    font-size: 16px !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
     padding: 14px 24px !important;
     display: block !important;
-    border-bottom: 1px solid rgba(184,77,122,.08) !important;
+    border-bottom: 1px solid rgba(184,77,122,.07) !important;
+    text-align: left !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
   }
 
-  .navbar__menu .navbar__link:hover,
-  .navbar__menu .dyn-menu-item a:hover {
+  .navbar__menu .navbar__link:not(.cta):hover,
+  .navbar__menu .dyn-menu-item > a:hover {
     color: #b84d7a !important;
     background: #fdf0f5 !important;
   }
 
-  /* Button Login di mobile */
+  /* Login button container — urutan 2 (di bawah) */
   .navbar__menu .header__navigation {
     padding: 20px 24px;
     border-top: 1px solid rgba(184,77,122,.1);
+    order: 2;
   }
 
+  /* Login button */
   .navbar__menu .navbar__link.cta,
   .navbar__menu #nav-cta-btn {
     display: block !important;
@@ -777,6 +796,8 @@
     padding: 12px 24px !important;
     margin: 0 !important;
     border-bottom: none !important;
+    box-shadow: 0 4px 12px rgba(184,77,122,.3) !important;
+    font-weight: 600 !important;
   }
 
   /* Overlay backdrop */
