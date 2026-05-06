@@ -811,14 +811,62 @@
   }
 
   /* Overlay backdrop — muncul saat menu active */
-  .navbar.active::before {
-    content: '';
+  .navbar-backdrop {
+    display: none;
     position: fixed;
     inset: 0;
     background: rgba(0,0,0,.5);
-    z-index: 9997;
+    z-index: 9990;
+  }
+  .navbar-backdrop.active {
+    display: block;
   }
 }
+
+/* ===== MOBILE DRAWER (sama dengan blog) ===== */
+.home-nav-drawer {
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  width: 80vw; max-width: 300px;
+  background: #fff;
+  z-index: 10002;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 4px 0 24px rgba(0,0,0,.15);
+  overflow-y: auto;
+}
+.home-nav-drawer.open { transform: translateX(0); }
+.home-nav-drawer__header {
+  padding: 20px 24px 16px;
+  font-size: 17px; font-weight: 700; color: #1a0a12;
+  border-bottom: 1px solid rgba(184,77,122,.1);
+  flex-shrink: 0;
+}
+.home-nav-drawer__items { flex: 1; padding: 8px 0; }
+.home-nav-drawer__items a {
+  display: block; padding: 14px 24px;
+  font-size: 15px; font-weight: 500; color: #2d1a24;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(184,77,122,.07);
+}
+.home-nav-drawer__items a:hover { color: #b84d7a; background: #fdf0f5; }
+.home-nav-drawer__footer { padding: 20px 24px; border-top: 1px solid rgba(184,77,122,.1); }
+.home-nav-drawer__login {
+  display: block; text-align: center;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #e8a0bf, #b84d7a);
+  color: #fff; border-radius: 8px;
+  font-size: 15px; font-weight: 600; text-decoration: none;
+  box-shadow: 0 4px 12px rgba(184,77,122,.3);
+}
+.home-nav-backdrop {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,.5); z-index: 10001;
+}
+.home-nav-backdrop.open { display: block; }
+
           </style>
         </div>
         <div data-wf--navbar--variant="base" class="navbar">
@@ -4226,47 +4274,67 @@ window.requestAnimationFrame(scrollPlay);
   <script>
   (function() {
     var burger = document.querySelector('.navbar__burger');
-    var menu   = document.querySelector('.navbar__menu');
     var navbar = document.querySelector('.navbar');
     var isOpen = false;
-    var scrollPos = 0;
 
-    if (!burger || !menu) return;
+    if (!burger) return;
 
-    function openMenu() {
+    // Buat drawer dan backdrop
+    var backdrop = document.createElement('div');
+    backdrop.className = 'home-nav-backdrop';
+    document.body.appendChild(backdrop);
+
+    var drawer = document.createElement('div');
+    drawer.className = 'home-nav-drawer';
+    drawer.innerHTML = '<div class="home-nav-drawer__header">Menu</div>'
+      + '<div class="home-nav-drawer__items" id="homeDrawerItems"></div>'
+      + '<div class="home-nav-drawer__footer"><a href="https://app.cantik.ai/" class="home-nav-drawer__login">Login</a></div>';
+    document.body.appendChild(drawer);
+
+    // Isi menu items dari nav-menu-primary yang sudah di-render
+    function populateDrawer() {
+      var items = document.querySelectorAll('#nav-menu-primary .dyn-menu-item > a, #nav-menu-primary .navbar__link');
+      var drawerItems = document.getElementById('homeDrawerItems');
+      if (!drawerItems) return;
+      drawerItems.innerHTML = '';
+      items.forEach(function(item) {
+        var a = document.createElement('a');
+        a.href = item.href || '#';
+        a.textContent = item.textContent.trim().replace('▾','').trim();
+        drawerItems.appendChild(a);
+      });
+      // Fallback jika belum ada
+      if (drawerItems.children.length === 0) {
+        setTimeout(populateDrawer, 500);
+      }
+    }
+    setTimeout(populateDrawer, 800);
+
+    function openDrawer() {
       isOpen = true;
-      scrollPos = window.pageYOffset;
-      menu.classList.add('active');
-      burger.classList.add('active');
+      drawer.classList.add('open');
+      backdrop.classList.add('open');
       if (navbar) navbar.classList.add('active');
       document.body.style.overflow = 'hidden';
     }
 
-    function closeMenu() {
+    function closeDrawer() {
       isOpen = false;
-      menu.classList.remove('active');
-      burger.classList.remove('active');
+      drawer.classList.remove('open');
+      backdrop.classList.remove('open');
       if (navbar) navbar.classList.remove('active');
       document.body.style.overflow = '';
     }
 
     burger.addEventListener('click', function(e) {
       e.stopPropagation();
-      isOpen ? closeMenu() : openMenu();
+      isOpen ? closeDrawer() : openDrawer();
     });
 
-    // Tutup saat klik link di dalam menu
-    menu.addEventListener('click', function(e) {
-      if (e.target.tagName === 'A' || e.target.closest('a')) {
-        closeMenu();
-      }
-    });
+    backdrop.addEventListener('click', closeDrawer);
 
-    // Tutup saat klik di luar menu
-    document.addEventListener('click', function(e) {
-      if (isOpen && !menu.contains(e.target) && !burger.contains(e.target)) {
-        closeMenu();
-      }
+    drawer.addEventListener('click', function(e) {
+      if (e.target.tagName === 'A') closeDrawer();
     });
   })();
   </script>

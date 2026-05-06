@@ -12,7 +12,6 @@
       <div class="site-footer__brand">
         <img src="/assets/img/logo-colour-pink.png" alt="Cantik.AI">
         <p>Platform AI untuk Industri Kecantikan Indonesia. Dari regulasi BPOM, formulasi kosmetik, hingga strategi bisnis.</p>
-        <a href="https://app.cantik.ai/" class="site-footer__cta">Mulai Gratis →</a>
       </div>
 
       <!-- Links -->

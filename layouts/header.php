@@ -2,14 +2,6 @@
 /**
  * layouts/header.php
  * Header & Navbar untuk semua halaman publik (blog, pages, dll)
- *
- * Variabel yang bisa di-set sebelum include:
- *   $pageTitle   - judul halaman (wajib)
- *   $pageDesc    - meta description
- *   $canonical   - canonical URL
- *   $ogImage     - Open Graph image URL
- *   $extraHead   - HTML tambahan di dalam <head> (opsional)
- *   $bodyClass   - class tambahan untuk <body> (opsional)
  */
 
 $siteUrl   = 'https://cantik.ai';
@@ -29,33 +21,24 @@ $bodyClass = isset($bodyClass) ? $bodyClass : '';
 <meta name="description" content="<?= htmlspecialchars($pageDesc) ?>">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="<?= htmlspecialchars($canonical) ?>">
-
-<!-- Open Graph -->
 <meta property="og:type"        content="website">
 <meta property="og:title"       content="<?= htmlspecialchars($pageTitle) ?>">
 <meta property="og:description" content="<?= htmlspecialchars($pageDesc) ?>">
 <meta property="og:url"         content="<?= htmlspecialchars($canonical) ?>">
 <meta property="og:image"       content="<?= htmlspecialchars($ogImage) ?>">
 <meta property="og:site_name"   content="<?= htmlspecialchars($siteName) ?>">
-
-<!-- Twitter Card -->
 <meta name="twitter:card"        content="summary_large_image">
 <meta name="twitter:title"       content="<?= htmlspecialchars($pageTitle) ?>">
 <meta name="twitter:description" content="<?= htmlspecialchars($pageDesc) ?>">
 <meta name="twitter:image"       content="<?= htmlspecialchars($ogImage) ?>">
-
-<!-- Favicon -->
 <link rel="icon" href="/assets/img/cantik-ai-flaticon.png" type="image/png">
 <link rel="apple-touch-icon" href="/assets/img/cantik-ai-flaticon.png">
-
-<!-- Styles -->
 <link rel="stylesheet" href="/assets/css/vendor/sintraweb.shared.min.css">
 <link rel="stylesheet" href="/assets/css/main.css">
 
 <?php if (isset($extraHead)) echo $extraHead; ?>
 
 <style>
-/* ===== BASE ===== */
 *, *::before, *::after { box-sizing: border-box; }
 body { background:#fff; color:#1a0a12; font-family:'Segoe UI',system-ui,sans-serif; margin:0; padding-top:72px; }
 
@@ -75,16 +58,82 @@ body { background:#fff; color:#1a0a12; font-family:'Segoe UI',system-ui,sans-ser
 .site-navbar .nav-cta { display:flex; align-items:center; gap:10px; flex-shrink:0; }
 .btn-nav-login { padding:8px 20px; border-radius:8px; font-size:14px; font-weight:600; font-family:'Inter',system-ui,sans-serif; text-decoration:none; background:linear-gradient(135deg,#e8a0bf,#b84d7a); color:#fff; border:none; transition:opacity .15s; }
 .btn-nav-login:hover { opacity:.85; }
-.nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:6px; border:none; background:none; }
-.nav-hamburger span { display:block; width:22px; height:2px; background:#2d1a24; border-radius:2px; }
-.nav-mobile-menu { display:none; position:fixed; top:72px; left:0; right:0; background:#fff; border-bottom:1px solid rgba(184,77,122,.12); padding:16px 2.5rem; z-index:999; box-shadow:0 8px 24px rgba(184,77,122,.1); }
-.nav-mobile-menu.open { display:block; }
-.nav-mobile-menu a { display:block; padding:10px 0; border-bottom:1px solid rgba(184,77,122,.08); font-size:15px; font-weight:500; color:#2d1a24; text-decoration:none; }
-.nav-mobile-menu a:hover { color:#e8a0bf; }
-.nav-mobile-menu a:last-child { border-bottom:none; }
+
+/* ===== HAMBURGER ===== */
+.nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:6px; border:none; background:none; z-index:1001; }
+.nav-hamburger span { display:block; width:22px; height:2px; background:#2d1a24; border-radius:2px; transition:all .3s; }
+
+/* ===== MOBILE DRAWER (slide dari kiri) ===== */
+.nav-drawer {
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  width: 80vw; max-width: 300px;
+  background: #fff;
+  z-index: 1002;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 4px 0 24px rgba(0,0,0,.15);
+  overflow-y: auto;
+}
+.nav-drawer.open { transform: translateX(0); }
+
+.nav-drawer__header {
+  padding: 20px 24px 16px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a0a12;
+  border-bottom: 1px solid rgba(184,77,122,.1);
+  flex-shrink: 0;
+}
+
+.nav-drawer__items { flex: 1; padding: 8px 0; }
+.nav-drawer__items a {
+  display: block;
+  padding: 14px 24px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #2d1a24;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(184,77,122,.07);
+}
+.nav-drawer__items a:hover { color: #b84d7a; background: #fdf0f5; }
+.nav-drawer__items a:last-child { border-bottom: none; }
+
+.nav-drawer__footer {
+  padding: 20px 24px;
+  border-top: 1px solid rgba(184,77,122,.1);
+}
+.nav-drawer__login {
+  display: block;
+  text-align: center;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #e8a0bf, #b84d7a);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(184,77,122,.3);
+}
+
+/* Backdrop */
+.nav-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  z-index: 1001;
+}
+.nav-backdrop.open { display: block; }
+
 @media(max-width:768px) {
   .site-navbar .nav-menu, .site-navbar .nav-cta { display:none !important; }
-  .nav-hamburger { display:flex; }
+  .nav-hamburger { display:flex; order:1; }
+  /* Mobile: hamburger kiri, logo kanan */
+  .site-navbar .nav-logo { order:3; margin-left:auto; }
+  .site-navbar .nav-inner { justify-content: flex-start; }
 }
 </style>
 </head>
@@ -100,25 +149,67 @@ body { background:#fff; color:#1a0a12; font-family:'Segoe UI',system-ui,sans-ser
     <div class="nav-cta">
       <a href="https://app.cantik.ai/" class="btn-nav-login">Login</a>
     </div>
-    <button class="nav-hamburger" onclick="toggleSiteMenu()" aria-label="Menu">
+    <button class="nav-hamburger" id="siteHamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
-<div class="nav-mobile-menu" id="siteMobileMenu"></div>
+
+<!-- Mobile Drawer -->
+<div class="nav-backdrop" id="siteBackdrop"></div>
+<div class="nav-drawer" id="siteDrawer">
+  <div class="nav-drawer__header">Menu</div>
+  <div class="nav-drawer__items" id="siteDrawerItems"></div>
+  <div class="nav-drawer__footer">
+    <a href="https://app.cantik.ai/" class="nav-drawer__login">Login</a>
+  </div>
+</div>
 
 <script>
-// Load menu dari API
 (function() {
-  var path = window.location.pathname;
+  var path     = window.location.pathname;
+  var hamburger = document.getElementById('siteHamburger');
+  var drawer    = document.getElementById('siteDrawer');
+  var backdrop  = document.getElementById('siteBackdrop');
+  var drawerItems = document.getElementById('siteDrawerItems');
+  var isOpen    = false;
+
+  function openDrawer() {
+    isOpen = true;
+    drawer.classList.add('open');
+    backdrop.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDrawer() {
+    isOpen = false;
+    drawer.classList.remove('open');
+    backdrop.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  hamburger.addEventListener('click', function(e) {
+    e.stopPropagation();
+    isOpen ? closeDrawer() : openDrawer();
+  });
+
+  backdrop.addEventListener('click', closeDrawer);
+
+  drawerItems.addEventListener('click', function(e) {
+    if (e.target.tagName === 'A') closeDrawer();
+  });
+
+  // Load menu dari API
   fetch('/pages/admin/api/menu.php?slug=main-nav')
     .then(function(r) { return r.json(); })
     .then(function(data) {
       if (!data.items) return;
-      var nav    = document.getElementById('siteNavMenu');
-      var mobile = document.getElementById('siteMobileMenu');
+      var nav = document.getElementById('siteNavMenu');
+
       data.items.forEach(function(item) {
         var active = path === item.url || path.startsWith(item.url + '/');
+
+        // Desktop menu
         var li = document.createElement('li');
         if (item.children && item.children.length) {
           li.innerHTML = '<a href="' + item.url + '" class="' + (active ? 'active' : '') + '">' + item.title + ' ▾</a>'
@@ -129,16 +220,13 @@ body { background:#fff; color:#1a0a12; font-family:'Segoe UI',system-ui,sans-ser
           li.innerHTML = '<a href="' + item.url + '" class="' + (active ? 'active' : '') + '">' + item.title + '</a>';
         }
         nav.appendChild(li);
-        // Mobile
+
+        // Mobile drawer
         var a = document.createElement('a');
-        a.href = item.url; a.textContent = item.title;
-        mobile.appendChild(a);
-        (item.children || []).forEach(function(c) {
-          var ca = document.createElement('a');
-          ca.href = c.url; ca.textContent = '· ' + c.title;
-          ca.style.cssText = 'padding-left:20px;font-size:13px;color:#9d7a8a;';
-          mobile.appendChild(ca);
-        });
+        a.href = item.url;
+        a.textContent = item.title;
+        if (active) a.style.color = '#b84d7a';
+        drawerItems.appendChild(a);
       });
     })
     .catch(function() {
@@ -148,16 +236,10 @@ body { background:#fff; color:#1a0a12; font-family:'Segoe UI',system-ui,sans-ser
         var li = document.createElement('li');
         li.innerHTML = '<a href="' + l.url + '">' + l.title + '</a>';
         nav.appendChild(li);
+        var a = document.createElement('a');
+        a.href = l.url; a.textContent = l.title;
+        drawerItems.appendChild(a);
       });
     });
 })();
-
-function toggleSiteMenu() {
-  document.getElementById('siteMobileMenu').classList.toggle('open');
-}
-document.addEventListener('click', function(e) {
-  if (!e.target.closest('.site-navbar') && !e.target.closest('.nav-mobile-menu'))
-    document.getElementById('siteMobileMenu').classList.remove('open');
-});
 </script>
-
