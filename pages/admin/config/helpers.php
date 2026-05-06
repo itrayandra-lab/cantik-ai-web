@@ -30,18 +30,29 @@ function uploadImage($file, $subfolder = 'menu-icons') {
     $uploadDir = __DIR__ . '/../uploads/' . $subfolder . '/';
     
     if (!is_dir($uploadDir)) {
-        mkdir($uploadDir, 0755, true);
+        mkdir($uploadDir, 0775, true);
+        // Coba chmod jika mkdir berhasil
+        @chmod($uploadDir, 0775);
+    }
+
+    // Cek apakah folder writable
+    if (!is_writable($uploadDir)) {
+        // Coba chmod dulu
+        @chmod($uploadDir, 0775);
+        if (!is_writable($uploadDir)) {
+            return ['error' => 'Folder upload tidak bisa ditulis. Hubungi administrator untuk set permission folder: ' . $uploadDir];
+        }
     }
     
     $allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp', 'image/svg+xml'];
-    $maxSize = 2 * 1024 * 1024; // 2MB
+    $maxSize = 5 * 1024 * 1024; // 5MB
     
     if (!in_array($file['type'], $allowedTypes)) {
         return ['error' => 'Tipe file tidak diizinkan. Gunakan JPG, PNG, GIF, WEBP, atau SVG.'];
     }
     
     if ($file['size'] > $maxSize) {
-        return ['error' => 'Ukuran file terlalu besar. Maksimal 2MB.'];
+        return ['error' => 'Ukuran file terlalu besar. Maksimal 5MB.'];
     }
     
     $ext = pathinfo($file['name'], PATHINFO_EXTENSION);
@@ -49,10 +60,11 @@ function uploadImage($file, $subfolder = 'menu-icons') {
     $destination = $uploadDir . $filename;
     
     if (move_uploaded_file($file['tmp_name'], $destination)) {
+        @chmod($destination, 0644);
         return ['path' => 'pages/admin/uploads/' . $subfolder . '/' . $filename];
     }
     
-    return ['error' => 'Gagal mengupload file.'];
+    return ['error' => 'Gagal mengupload file. Pastikan permission folder uploads sudah benar (chmod 775).'];
 }
 
 function deleteUploadedFile($path) {
