@@ -4273,69 +4273,83 @@ window.requestAnimationFrame(scrollPlay);
   <!-- ============================================ -->
   <script>
   (function() {
-    var burger = document.querySelector('.navbar__burger');
-    var navbar = document.querySelector('.navbar');
-    var isOpen = false;
+    function initBurger() {
+      var burger = document.querySelector('.navbar__burger');
+      var navbar = document.querySelector('.navbar');
+      var isOpen = false;
 
-    if (!burger) return;
+      if (!burger) return;
+      if (burger._burgerInit) return; // Jangan init dua kali
+      burger._burgerInit = true;
 
-    // Buat drawer dan backdrop
-    var backdrop = document.createElement('div');
-    backdrop.className = 'home-nav-backdrop';
-    document.body.appendChild(backdrop);
-
-    var drawer = document.createElement('div');
-    drawer.className = 'home-nav-drawer';
-    drawer.innerHTML = '<div class="home-nav-drawer__header">Menu</div>'
-      + '<div class="home-nav-drawer__items" id="homeDrawerItems"></div>'
-      + '<div class="home-nav-drawer__footer"><a href="https://app.cantik.ai/" class="home-nav-drawer__login">Login</a></div>';
-    document.body.appendChild(drawer);
-
-    // Isi menu items dari nav-menu-primary yang sudah di-render
-    function populateDrawer() {
-      var items = document.querySelectorAll('#nav-menu-primary .dyn-menu-item > a, #nav-menu-primary .navbar__link');
-      var drawerItems = document.getElementById('homeDrawerItems');
-      if (!drawerItems) return;
-      drawerItems.innerHTML = '';
-      items.forEach(function(item) {
-        var a = document.createElement('a');
-        a.href = item.href || '#';
-        a.textContent = item.textContent.trim().replace('▾','').trim();
-        drawerItems.appendChild(a);
+      // Hapus elemen lama jika ada
+      ['homeNavDrawer','homeNavBackdrop'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) el.remove();
       });
-      // Fallback jika belum ada
-      if (drawerItems.children.length === 0) {
-        setTimeout(populateDrawer, 500);
+
+      var backdrop = document.createElement('div');
+      backdrop.id = 'homeNavBackdrop';
+      backdrop.className = 'home-nav-backdrop';
+      document.body.appendChild(backdrop);
+
+      var drawer = document.createElement('div');
+      drawer.id = 'homeNavDrawer';
+      drawer.className = 'home-nav-drawer';
+      drawer.innerHTML = '<div class="home-nav-drawer__header">Menu</div>'
+        + '<div class="home-nav-drawer__items" id="homeDrawerItems"></div>'
+        + '<div class="home-nav-drawer__footer"><a href="https://app.cantik.ai/" class="home-nav-drawer__login">Login</a></div>';
+      document.body.appendChild(drawer);
+
+      function populateDrawer() {
+        var drawerItems = document.getElementById('homeDrawerItems');
+        if (!drawerItems) return;
+        var items = document.querySelectorAll('#nav-menu-primary .dyn-menu-item > a, #nav-menu-primary .navbar__link:not(.cta)');
+        if (items.length === 0) { setTimeout(populateDrawer, 500); return; }
+        drawerItems.innerHTML = '';
+        items.forEach(function(item) {
+          var a = document.createElement('a');
+          a.href = item.href || '#';
+          a.textContent = item.textContent.trim().replace('▾','').trim();
+          drawerItems.appendChild(a);
+        });
       }
+      setTimeout(populateDrawer, 800);
+
+      function openDrawer() {
+        isOpen = true;
+        drawer.classList.add('open');
+        backdrop.classList.add('open');
+        if (navbar) navbar.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeDrawer() {
+        isOpen = false;
+        drawer.classList.remove('open');
+        backdrop.classList.remove('open');
+        if (navbar) navbar.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      burger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        isOpen ? closeDrawer() : openDrawer();
+      });
+      backdrop.addEventListener('click', closeDrawer);
+      drawer.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') closeDrawer();
+      });
     }
-    setTimeout(populateDrawer, 800);
 
-    function openDrawer() {
-      isOpen = true;
-      drawer.classList.add('open');
-      backdrop.classList.add('open');
-      if (navbar) navbar.classList.add('active');
-      document.body.style.overflow = 'hidden';
+    // Jalankan saat DOM ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initBurger);
+    } else {
+      initBurger();
     }
-
-    function closeDrawer() {
-      isOpen = false;
-      drawer.classList.remove('open');
-      backdrop.classList.remove('open');
-      if (navbar) navbar.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-
-    burger.addEventListener('click', function(e) {
-      e.stopPropagation();
-      isOpen ? closeDrawer() : openDrawer();
-    });
-
-    backdrop.addEventListener('click', closeDrawer);
-
-    drawer.addEventListener('click', function(e) {
-      if (e.target.tagName === 'A') closeDrawer();
-    });
+    // Backup saat semua resource load
+    window.addEventListener('load', initBurger);
   })();
   </script>
 
