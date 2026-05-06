@@ -579,898 +579,106 @@
 }
       </style>
     </div>
-    <div class="header-transparent" style="margin-top: 0 !important; padding-top: 0 !important;">
-      <div data-wf--header-white-text--variant="cta-only" class="header" style="margin-top: 0 !important; padding-top: 0 !important;">
-        <div class="header__styles w-embed">
-          <style>
-            /* STICKY NAVBAR - Simple and Clean */
-            .header-transparent {
-              position: fixed !important;
-              top: 0 !important;
-              left: 0 !important;
-              right: 0 !important;
-              width: 100% !important;
-              z-index: 9999 !important;
-              background: transparent !important;
-              transition: all 0.3s ease !important;
-              margin: 0 !important;
-              padding: 0 !important;
-            }
-            
-            .header {
-              position: fixed !important;
-              top: 0 !important;
-              left: 0 !important;
-              right: 0 !important;
-              width: 100% !important;
-              background: transparent !important;
-              margin: 0 !important;
-              padding: 0 !important;
-            }
-            
-            /* Navbar wrapper - no background by default */
-            .navbar__wrapper {
-              background: transparent !important;
-              transition: all 0.3s ease !important;
-              border-bottom: none !important;
-            }
-            
-            /* Navbar wrapper with glassmorphism when scrolled */
-            .header-transparent.scrolled {
-              background: #ffffff !important;
-              backdrop-filter: none !important;
-              -webkit-backdrop-filter: none !important;
-              border-bottom: 1px solid rgba(184, 77, 122, 0.12) !important;
-              box-shadow: 0 2px 20px rgba(184, 77, 122, 0.1) !important;
-            }
-            
-            .header-transparent.scrolled .header {
-              background: #ffffff !important;
-              backdrop-filter: none !important;
-              -webkit-backdrop-filter: none !important;
-            }
-            
-            /* Nav links dark when scrolled */
-            .header-transparent.scrolled .navbar__link,
-            .header-transparent.scrolled .navbar__drawer {
-              color: #2d1a24 !important;
-            }
-            .header-transparent.scrolled .navbar__link:hover,
-            .header-transparent.scrolled .navbar__drawer:hover {
-              color: #e8a0bf !important;
-              background: transparent !important;
-            }
-            .header-transparent .navbar__link:hover,
-            .header-transparent .navbar__drawer:hover {
-              color: #e8a0bf !important;
-              background: transparent !important;
-            }
-            .header-transparent.scrolled .navbar__burger .burger-line {
-              background: #2d1a24 !important;
-            }
-            
-            /* Center the navigation menu */
-            .navbar__navigation {
-              display: flex !important;
-              justify-content: center !important;
-              align-items: center !important;
-              gap: 2rem !important;
-              flex: 1 !important;
-            }
-            
-            .navbar__positioner {
-              display: flex !important;
-              align-items: center !important;
-              width: 100% !important;
-            }
-            
-            /* Reduce navbar height by reducing padding */
-            .navbar,
-            .header .navbar {
-              padding-top: -0.4rem !important;
-              padding-bottom: -0.4rem !important;
-            }
-            
-            .navbar__wrapper {
-              padding-top: 0 !important;
-              padding-bottom: 0 !important;
-            }
-            
-            .navbar__menu {
-              padding-top: 0 !important;
-              padding-bottom: 0 !important;
-            }
-            
-            /* Adjust logo size to match smaller navbar */
-            .logo.big {
-              height: 36px !important;
-            }
-            
-            @media screen and (min-width: 992px) {
-              .logo.big {
-                height: 36px !important;
-              }
-            }
-            
-            /* Remove any gaps at top of page */
-            html, body {
-              margin: 0 !important;
-              padding: 0 !important;
-            }
-            
-            body {
-              padding-top: 0 !important;
-            }
-            
-            .header .logo{
-	filter: none !important; /* Remove grayscale and invert to show original colors */
+        <style>
+/* ===== SITE NAVBAR (sama dengan blog) ===== */
+.site-navbar { position:fixed; top:0; left:0; right:0; height:72px; background:#fff; border-bottom:1px solid rgba(184,77,122,.12); box-shadow:0 2px 16px rgba(184,77,122,.08); z-index:10000; display:flex; align-items:center; }
+.site-navbar .nav-inner { max-width:1280px; margin:0 auto; padding:0 2.5rem; width:100%; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+.site-navbar .nav-logo { display:flex; align-items:center; text-decoration:none; flex-shrink:0; }
+.site-navbar .nav-logo img { height:36px; width:auto; display:block; }
+.site-navbar .nav-menu { display:flex; align-items:center; gap:4px; list-style:none; margin:0; padding:0; flex:1; justify-content:center; }
+.site-navbar .nav-menu li { position:relative; }
+.site-navbar .nav-menu a { display:block; padding:8px 14px; font-size:14px; font-weight:500; font-family:'Inter',system-ui,-apple-system,sans-serif; letter-spacing:-0.01em; color:#2d1a24; text-decoration:none; transition:color .15s; white-space:nowrap; background:transparent !important; }
+.site-navbar .nav-menu a:hover, .site-navbar .nav-menu a.active { color:#e8a0bf; }
+.site-navbar .nav-menu .dropdown { position:absolute; top:calc(100% + 8px); left:0; background:#fff; border:1px solid rgba(184,77,122,.15); border-radius:12px; box-shadow:0 8px 32px rgba(184,77,122,.12); min-width:200px; padding:8px; opacity:0; pointer-events:none; transform:translateY(-6px); transition:opacity .2s,transform .2s; z-index:100; }
+.site-navbar .nav-menu li:hover .dropdown { opacity:1; pointer-events:all; transform:translateY(0); }
+.site-navbar .nav-menu .dropdown a { border-radius:8px; font-size:13.5px; padding:8px 12px; color:#2d1a24; }
+.site-navbar .nav-menu .dropdown a:hover { color:#e8a0bf; }
+.site-navbar .nav-cta { display:flex; align-items:center; gap:10px; flex-shrink:0; }
+.btn-nav-login { padding:8px 20px; border-radius:8px; font-size:14px; font-weight:600; font-family:'Inter',system-ui,sans-serif; text-decoration:none; background:linear-gradient(135deg,#e8a0bf,#b84d7a); color:#fff; border:none; transition:opacity .15s; }
+.btn-nav-login:hover { opacity:.85; }
+.nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:6px; border:none; background:none; z-index:10001; }
+.nav-hamburger span { display:block; width:22px; height:2px; background:#2d1a24; border-radius:2px; transition:all .3s; }
+.nav-drawer { position:fixed; top:0; left:0; bottom:0; width:80vw; max-width:300px; background:#fff; z-index:10002; transform:translateX(-100%); transition:transform 0.3s ease; display:flex; flex-direction:column; box-shadow:4px 0 24px rgba(0,0,0,.15); overflow-y:auto; }
+.nav-drawer.open { transform:translateX(0); }
+.nav-drawer__header { padding:20px 24px 16px; font-size:17px; font-weight:700; color:#1a0a12; border-bottom:1px solid rgba(184,77,122,.1); flex-shrink:0; }
+.nav-drawer__items { flex:1; padding:8px 0; }
+.nav-drawer__items a { display:block; padding:14px 24px; font-size:15px; font-weight:500; color:#2d1a24; text-decoration:none; border-bottom:1px solid rgba(184,77,122,.07); }
+.nav-drawer__items a:hover { color:#b84d7a; background:#fdf0f5; }
+.nav-drawer__items a:last-child { border-bottom:none; }
+.nav-drawer__footer { padding:20px 24px; border-top:1px solid rgba(184,77,122,.1); }
+.nav-drawer__login { display:block; text-align:center; padding:12px 24px; background:linear-gradient(135deg,#e8a0bf,#b84d7a); color:#fff; border-radius:8px; font-size:15px; font-weight:600; text-decoration:none; box-shadow:0 4px 12px rgba(184,77,122,.3); }
+.nav-backdrop { display:none; position:fixed; inset:0; background:rgba(0,0,0,.5); z-index:10001; }
+.nav-backdrop.open { display:block; }
+@media(max-width:768px) {
+  .site-navbar .nav-menu, .site-navbar .nav-cta { display:none !important; }
+  .nav-hamburger { display:flex; order:1; }
+  .site-navbar .nav-logo { order:3; margin-left:auto; }
+  .site-navbar .nav-inner { justify-content:flex-start; }
 }
-.header .navbar__link, .header .navbar__drawer{
-	color: #fff;
-}
+    </style>
 
-.navbar__drawer_card .navbar__link{
-	color: #000;
-}
-
-@media screen and (max-width: 991px){
-  /* State default: tersembunyi di luar layar sebelah KIRI */
-  .navbar__menu{
-    background: #fff;
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    bottom: 0 !important;
-    right: auto !important;
-    width: 80vw !important;
-    max-width: 320px !important;
-    z-index: 9998 !important;
-    overflow-y: auto !important;
-    padding-top: 0 !important;
-    box-shadow: 4px 0 24px rgba(0,0,0,.15) !important;
-    display: flex !important;
-    flex-direction: column !important;
-    /* Sembunyikan ke kiri */
-    transform: translateX(-100%) !important;
-    transition: transform 0.3s ease !important;
-  }
-
-  /* State active: slide masuk dari kiri */
-  .navbar__menu.active {
-    transform: translateX(0%) !important;
-  }
-
-  /* Header label di atas menu */
-  .navbar__menu::before {
-    content: 'Menu';
-    display: block;
-    padding: 20px 24px 16px;
-    font-size: 18px;
-    font-weight: 700;
-    color: #1a0a12;
-    border-bottom: 1px solid rgba(184,77,122,.1);
-    flex-shrink: 0;
-  }
-
-  .navbar .navbar__positioner::after { display: none; }
-  .navbar__drawer_card .navbar__link { color: #2d1a24; }
-
-  /* Nav items — urutan 1 */
-  .navbar__menu .navbar__navigation {
-    padding: 8px 0;
-    flex: 1;
-    order: 1;
-  }
-
-  /* Semua link di dalam menu */
-  .navbar__menu .navbar__link:not(.cta),
-  .navbar__menu .dyn-menu-item > a {
-    color: #2d1a24 !important;
-    font-size: 15px !important;
-    font-weight: 500 !important;
-    padding: 14px 24px !important;
-    display: block !important;
-    border-bottom: 1px solid rgba(184,77,122,.07) !important;
-    text-align: left !important;
-    background: transparent !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-  }
-
-  .navbar__menu .navbar__link:not(.cta):hover,
-  .navbar__menu .dyn-menu-item > a:hover {
-    color: #b84d7a !important;
-    background: #fdf0f5 !important;
-  }
-
-  /* Login button container — urutan 2 (di bawah) */
-  .navbar__menu .header__navigation {
-    padding: 20px 24px;
-    border-top: 1px solid rgba(184,77,122,.1);
-    order: 2;
-  }
-
-  /* Login button */
-  .navbar__menu .navbar__link.cta,
-  .navbar__menu #nav-cta-btn {
-    display: block !important;
-    text-align: center !important;
-    background: linear-gradient(135deg, #e8a0bf, #b84d7a) !important;
-    color: #fff !important;
-    border-radius: 8px !important;
-    padding: 12px 24px !important;
-    margin: 0 !important;
-    border-bottom: none !important;
-    box-shadow: 0 4px 12px rgba(184,77,122,.3) !important;
-    font-weight: 600 !important;
-  }
-
-  /* Overlay backdrop — muncul saat menu active */
-  .navbar-backdrop {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,.5);
-    z-index: 9990;
-  }
-  .navbar-backdrop.active {
-    display: block;
-  }
-}
-
-/* ===== MOBILE DRAWER (sama dengan blog) ===== */
-.home-nav-drawer {
-  position: fixed;
-  top: 0; left: 0; bottom: 0;
-  width: 80vw; max-width: 300px;
-  background: #fff;
-  z-index: 10002;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 4px 0 24px rgba(0,0,0,.15);
-  overflow-y: auto;
-}
-.home-nav-drawer.open { transform: translateX(0); }
-.home-nav-drawer__header {
-  padding: 20px 24px 16px;
-  font-size: 17px; font-weight: 700; color: #1a0a12;
-  border-bottom: 1px solid rgba(184,77,122,.1);
-  flex-shrink: 0;
-}
-.home-nav-drawer__items { flex: 1; padding: 8px 0; }
-.home-nav-drawer__items a {
-  display: block; padding: 14px 24px;
-  font-size: 15px; font-weight: 500; color: #2d1a24;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(184,77,122,.07);
-}
-.home-nav-drawer__items a:hover { color: #b84d7a; background: #fdf0f5; }
-.home-nav-drawer__footer { padding: 20px 24px; border-top: 1px solid rgba(184,77,122,.1); }
-.home-nav-drawer__login {
-  display: block; text-align: center;
-  padding: 12px 24px;
-  background: linear-gradient(135deg, #e8a0bf, #b84d7a);
-  color: #fff; border-radius: 8px;
-  font-size: 15px; font-weight: 600; text-decoration: none;
-  box-shadow: 0 4px 12px rgba(184,77,122,.3);
-}
-.home-nav-backdrop {
-  display: none; position: fixed; inset: 0;
-  background: rgba(0,0,0,.5); z-index: 10001;
-}
-.home-nav-backdrop.open { display: block; }
-
-          </style>
+    <!-- SITE NAVBAR -->
+    <nav class="site-navbar">
+      <div class="nav-inner">
+        <a href="/" class="nav-logo">
+          <img src="assets/img/logo-colour-pink.png" alt="Cantik.AI">
+        </a>
+        <ul class="nav-menu" id="siteNavMenu"></ul>
+        <div class="nav-cta">
+          <a href="https://app.cantik.ai/" class="btn-nav-login">Login</a>
         </div>
-        <div data-wf--navbar--variant="base" class="navbar">
-          <div class="navbar__styles w-embed">
-            <style>
-              .navbar__positioner{
-	pointer-events: none;
-}
-
-.navbar__menu{
-	pointer-events: auto;
-}
-
-.navbar__drawer_trigger svg{
-	transform: rotate(180deg);
-  transition: 250ms ease transform;
-}
-
-.navbar__burger .burger-line{
-	background: #fff;
-  z-index: 2;
-}
-
-
-@media only screen and (min-width: 992px) {
-
-  .navbar__drawer:hover{
-    z-index: 2;
-  }
-
-  .navbar__drawer:hover .navbar__drawer_dropdown{
-    pointer-events: auto;
-    opacity: 1;
-    z-index: 2;
-  }
-  
-  .navbar__drawer:hover .navbar__drawer_trigger svg{
-    transform: rotate(0deg);
-  }
-  
-  .navbar__drawer_dropdown{
-    pointer-events: none;
-    opacity: 0;
-  }
- 
-}
-
-@media only screen and (max-width: 991px) {
-
-	.navbar .navbar__positioner::after{
-  	content: &#39;&#39;;
-    position: absolute;
-    z-index: 2;
-    top: 0%;
-    left: 0%;
-    right: 0%;
-    height: 6rem;
-    width: 100vw;
-    opacity: 0;
-    transition: 250ms ease opacity;
-  }
-  
-  .navbar.active .navbar__positioner::after{
-  	opacity: 1;
-  }
-
-	.navbar__drawer_trigger {
-  	opacity: 0.6;
-  }
-
-	.navbar__drawer_trigger svg{
-  	display: none;
-  }
-  
-  .navbar__link, .navbar__drawer {
-  	font-weight: 500;
-  }
-  
-  .navbar__link &gt; div{
-  	font-size: 2rem;
-    line-height: 1.2;
-  }
-
-  .navbar__drawer.active{
-    z-index: 2;
-  }
-  
-  .navbar__drawer.active .navbar__drawer_dropdown{
-    pointer-events: auto;
-    opacity: 1;
-    z-index: 2;
-  }
-  
-  .navbar__drawer.active .navbar__drawer_trigger svg{
-    transform: rotate(0deg);
-  }
-
-  .navbar__burger .burger-line{
-    transition: 250ms ease transform;
-  }
-  
-  .navbar__menu {
-    transition: 0.3s ease transform !important;
-    transform: translateX(-100%) !important;
-  }
-
-  .navbar__menu.active{
-    transform: translateX(0%) !important;
-    z-index: 9998 !important;
-  }
-
-  .navbar__burger.active .burger-line:nth-child(1){
-    transform: translate(0, 0.25rem) rotate(45deg);
-  }
-  
-  .navbar__burger.active .burger-line:nth-child(2){
-    transform: translate(0, -0.25rem) rotate(-45deg);
-  }
- 
-}
-
-@media (max-width: 1024px) {
-  .navbar__drawer_trigger {
-    padding-bottom: .75rem;
-  }
-}
-
-/* LOGO ANIMATION & HERO ALIGNMENT FIX */
-
-/* Logo hover animation - subtle and elegant */
-.navbar__logo {
-  transition: all 0.3s ease;
-  display: inline-block;
-}
-
-.navbar__logo:hover {
-  transform: translateY(-2px);
-}
-
-.navbar__logo .logo {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  filter: drop-shadow(0 0 0 transparent);
-}
-
-.navbar__logo:hover .logo {
-  filter: drop-shadow(0 0 12px rgba(79, 70, 229, 0.4));
-  transform: scale(1.05);
-}
-
-/* Logo pulse animation on page load */
-@keyframes logoPulse {
-  0% {
-    transform: scale(1);
-    filter: drop-shadow(0 0 0 transparent);
-  }
-  50% {
-    transform: scale(1.08);
-    filter: drop-shadow(0 0 16px rgba(79, 70, 229, 0.6));
-  }
-  100% {
-    transform: scale(1);
-    filter: drop-shadow(0 0 0 transparent);
-  }
-}
-
-.navbar__logo .logo {
-  animation: logoPulse 2s ease-in-out 0.5s;
-}
-
-/* PERFECT LEFT ALIGNMENT - Logo & Hero Title */
-
-/* CRITICAL: Make navbar fixed and floating */
-.header-transparent,
-div.header-transparent,
-.header-transparent > .header,
-div.header-transparent > div.header {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  width: 100% !important;
-  z-index: 9999 !important;
-  background: transparent !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* Hero Video Styles - FIXED v7 */
-.home-hero_background {
-  position: absolute; /* Back to absolute - only in hero section */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background-color: #000;
-  z-index: 0;
-}
-
-.home-hero_background-video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.home-hero_background-video video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center; /* Center video to show 16:9 aspect properly */
-  z-index: 1;
-  transform: scaleX(-1); /* Flip video back to correct orientation */
-  -webkit-transform: scaleX(-1);
-}
-
-/* Hero Overlay - FIXED v3: Strong gradients bottom and left only, NO overlay on top-right */
-.home-hero_background-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 5; /* Above video, below text */
-  pointer-events: none;
-  background: 
-    /* Very strong bottom gradient - extends higher for more spacing */
-    linear-gradient(to top, 
-      rgba(0, 0, 0, 0.98) 0%, 
-      rgba(0, 0, 0, 0.95) 8%,
-      rgba(0, 0, 0, 0.85) 15%,
-      rgba(0, 0, 0, 0.7) 25%,
-      rgba(0, 0, 0, 0.5) 40%,
-      rgba(0, 0, 0, 0.3) 55%,
-      rgba(0, 0, 0, 0.15) 70%,
-      transparent 85%
-    ),
-    /* Strong left gradient for text area only - stops at 50% to keep right clear */
-    linear-gradient(to right, 
-      rgba(0, 0, 0, 0.85) 0%, 
-      rgba(0, 0, 0, 0.7) 10%,
-      rgba(0, 0, 0, 0.5) 20%,
-      rgba(0, 0, 0, 0.3) 35%,
-      rgba(0, 0, 0, 0.1) 45%,
-      transparent 50%
-    );
-  /* NO overall tint - keep right side clear */
-}
-
-/* Ensure text is above everything */
-.section_home-hero .padding-global {
-  position: relative;
-  z-index: 10; /* Above video and overlay, below header */
-}
-
-/* Move hero text down to show more video in 16:9 aspect ratio */
-.section_home-hero .container-large {
-  padding-top: 25vh !important; /* Push text down to show more video */
-}
-
-/* Ensure hero section has proper stacking */
-.section_home-hero {
-  position: relative;
-  isolation: isolate;
-  margin-top: 0 !important; /* No negative margin needed - navbar is absolute */
-  padding-top: 0 !important; /* No padding needed */
-  min-height: 100vh; /* Ensure hero section is full viewport height */
-  z-index: 1; /* Above video background, below navbar */
-}
-
-/* Ensure main wrapper has no top spacing */
-.main-wrapper {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-/* Force video to play */
-#hero-video {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-}
-
-/* Navbar wrapper - ensure consistent padding */
-.navbar__wrapper {
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
-/* Remove Webflow default horizontal padding from navbar */
-.navbar {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-.header .navbar {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-/* Hero section - match navbar padding exactly */
-.section_home-hero .padding-global {
-  padding-left: 2.5rem !important;
-  padding-right: 2.5rem !important;
-}
-
-.section_home-hero .container-large {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-/* Hero title - remove all extra spacing */
-.home-hero_title {
-  margin-left: 0 !important;
-  padding-left: 0 !important;
-}
-
-.home-hero_title h1 {
-  margin-left: 0 !important;
-  padding-left: 0 !important;
-  text-align: left !important;
-}
-
-/* Max-width containers - align left */
-.max-width-large {
-  margin-left: 0 !important;
-  margin-right: auto !important;
-  padding-left: 0 !important;
-}
-
-.text-color-alternate .max-width-large {
-  padding-left: 0 !important;
-}
-
-/* CENTER TEXT ALIGNMENT FIX - For specific sections */
-
-/* Testimonials section - force center */
-.section_home-testimonials .max-width-large {
-  margin-left: auto !important;
-  margin-right: auto !important;
-  text-align: center !important;
-}
-
-.section_home-testimonials h2,
-.section_home-testimonials p {
-  text-align: center !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-/* Brain section - force center */
-.section_home-brain .max-width-large {
-  margin-left: auto !important;
-  margin-right: auto !important;
-  text-align: center !important;
-}
-
-.section_home-brain h2,
-.section_home-brain p {
-  text-align: center !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-/* Brain section - full width image */
-.section_home-brain .home-brain_background,
-.section_home-brain .home-brain_soshie {
-  width: 100% !important;
-  max-width: 100% !important;
-  position: relative !important;
-  height: auto !important;
-  left: 0 !important;
-  right: 0 !important;
-  transform: none !important;
-  aspect-ratio: unset !important;
-  margin-bottom: 0 !important;
-  display: block !important;
-  line-height: 0 !important;
-}
-
-.section_home-brain .home-brain_video {
-  width: 100% !important;
-  height: auto !important;
-  display: block !important;
-  object-fit: cover !important;
-  max-width: 100% !important;
-  vertical-align: bottom !important;
-}
-
-/* Remove excess spacing below brain section */
-.section_home-brain {
-  padding-bottom: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-.section_home-brain .home-brain_soshie-overlay {
-  display: none !important;
-}
-
-.section_home-integrations {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-}
-
-/* Automations section - force center */
-.section_home-automations .max-width-large {
-  margin-left: auto !important;
-  margin-right: auto !important;
-  text-align: center !important;
-}
-
-.section_home-automations .text-align-center h2,
-.section_home-automations .text-align-center p {
-  text-align: center !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-/* Responsive adjustments */
-@media (max-width: 991px) {
-  .navbar__wrapper {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  
-  .section_home-hero .padding-global {
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
-  }
-}
-
-@media (max-width: 767px) {
-  .navbar__wrapper {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-  
-  .section_home-hero .padding-global {
-    padding-left: 1.5rem !important;
-    padding-right: 1.5rem !important;
-  }
-}
-
-            </style>
-            <script>
-              // Add scrolled class to navbar when scrolling
-              window.addEventListener('DOMContentLoaded', function() {
-                const headerTransparent = document.querySelector('.header-transparent');
-                
-                window.addEventListener('scroll', function() {
-                  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                  
-                  if (scrollTop > 50) {
-                    headerTransparent.classList.add('scrolled');
-                  } else {
-                    headerTransparent.classList.remove('scrolled');
-                  }
-                });
-              });
-            </script>
-          </div>
-          <div class="navbar__wrapper">
-            <a data-wf-native-id-path="ad349e1a-c0c9-dbab-04c7-fdcb238e51b3:e2416028-500d-bf8a-6e18-4f44f2fa2a97:be705a7d-700d-b241-82ef-27f996ec8cf4" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="be705a7d-700d-b241-82ef-27f996ec8cf4" data-wf-component-context="%5B%7B%22componentId%22%3A%22e2416028-500d-bf8a-6e18-4f44f2fa2a96%22%2C%22instanceId%22%3A%22ad349e1a-c0c9-dbab-04c7-fdcb238e51b3%22%7D%2C%7B%22componentId%22%3A%22be705a7d-700d-b241-82ef-27f996ec8cf1%22%2C%22instanceId%22%3A%22e2416028-500d-bf8a-6e18-4f44f2fa2a97%22%7D%5D" href="/" class="navbar__logo w-inline-block">
-              <img loading="lazy" src="assets/img/logo-white.png" alt="Cantik.AI homepage" class="logo big" />
-</a>
-            <div class="navbar__positioner">
-              <div class="navbar__menu">
-                <div class="navbar__navigation" id="nav-menu-primary">
-                  <!-- Menu dimuat dari database via API -->
-                </div>
-                <div class="header__navigation">
-                  <a href="https://app.cantik.ai/" class="navbar__link cta w-inline-block" id="nav-cta-btn">
-                    <div class="text-size-base text-weight-medium">Login</div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="navbar__burger">
-              <div class="burger-line">
-              </div>
-              <div class="burger-line">
-              </div>
-            </div>
-          </div>
-          <div class="navbar__scripts w-embed w-script">
-            <script>
-              let isBurgerOpen = false;
-
-const navbar = document.querySelector('.navbar__menu');
-const burgerIcon = document.querySelector('.navbar__burger');
-const sectionLinks = document.querySelectorAll('[data-scroll-to]');
-let scrollPosition = 0;
-
-const openBurger = () => {
-    isBurgerOpen = true;
-    scrollPosition = window.pageYOffset;
-    navbar.classList.add('active');
-    burgerIcon.classList.add('active');
-    document.documentElement.style.overflowY = 'hidden';
-    document.documentElement.style.height = '100vh';
-    document.body.style.overflow = 'hidden';
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${scrollPosition}px`;
-};
-
-const closeBurger = () => {
-    isBurgerOpen = false;
-    navbar.classList.remove('active');
-    burgerIcon.classList.remove('active');
-    document.documentElement.style.overflowY = '';
-    document.documentElement.style.height = '';
-    document.body.style.overflow = '';
-    document.body.style.position = '';
-    document.body.style.top = '';
-    window.scrollTo(0, scrollPosition);
-};
-
-sectionLinks.forEach((link) => {
-	link.addEventListener('click', closeBurger);
-})
-
-// Smooth scroll navigation for anchor links
-document.addEventListener('DOMContentLoaded', function() {
-  const navLinks = document.querySelectorAll('a[href^="#"]');
-  
-  navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href === '#') return;
-      
-      e.preventDefault();
-      const targetId = href.substring(1);
-      const targetElement = document.getElementById(targetId);
-      
-      if (targetElement) {
-        const navbar = document.querySelector('.header-transparent');
-        const navbarHeight = navbar ? navbar.offsetHeight : 80;
-        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
-        
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        });
-        
-        closeBurger();
-      }
-    });
-  });
-  
-  const existingLinks = document.querySelectorAll('[data-scroll-to]');
-  existingLinks.forEach(link => {
-    const scrollTo = link.getAttribute('data-scroll-to');
-    if (scrollTo) {
-      link.setAttribute('href', '#' + scrollTo);
-    }
-  });
-});
-
-burgerIcon.addEventListener('click', () => {
-    if (!isBurgerOpen) {
-        openBurger();
-    } else {
-        closeBurger();
-    }
-});
-
-const drawers = document.querySelectorAll('.navbar__drawer');
-let activeDrawer = null;
-
-drawers.forEach((drawer) => {
-    const drawerTrigger = drawer.querySelector('.navbar__drawer_trigger');
-
-    drawerTrigger.addEventListener('click', (event) => {
-        event.stopPropagation();
-
-        // Close the currently open drawer if it's not the clicked one
-        if (activeDrawer && activeDrawer !== drawer) {
-            activeDrawer.classList.remove('active');
-        }
-
-        // Toggle the clicked drawer
-        const isDrawerOpen = drawer.classList.toggle('active');
-
-        // Update the activeDrawer reference
-        activeDrawer = isDrawerOpen ? drawer : null;
-    });
-});
-
-// Close all drawers if clicking outside of them
-window.addEventListener('click', () => {
-    if (activeDrawer) {
-        activeDrawer.classList.remove('active');
-        activeDrawer = null;
-    }
-});
-            </script>
-          </div>
-        </div>
+        <button class="nav-hamburger" id="siteHamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <div class="nav-backdrop" id="siteBackdrop"></div>
+    <div class="nav-drawer" id="siteDrawer">
+      <div class="nav-drawer__header">Menu</div>
+      <div class="nav-drawer__items" id="siteDrawerItems"></div>
+      <div class="nav-drawer__footer">
+        <a href="https://app.cantik.ai/" class="nav-drawer__login">Login</a>
       </div>
     </div>
-    <div class="page-wrapper">
+    <script>
+    (function() {
+      var path = window.location.pathname;
+      var hamburger = document.getElementById('siteHamburger');
+      var drawer = document.getElementById('siteDrawer');
+      var backdrop = document.getElementById('siteBackdrop');
+      var drawerItems = document.getElementById('siteDrawerItems');
+      var isOpen = false;
+      function openDrawer() { isOpen=true; drawer.classList.add('open'); backdrop.classList.add('open'); document.body.style.overflow='hidden'; }
+      function closeDrawer() { isOpen=false; drawer.classList.remove('open'); backdrop.classList.remove('open'); document.body.style.overflow=''; }
+      hamburger.addEventListener('click', function(e) { e.stopPropagation(); isOpen ? closeDrawer() : openDrawer(); });
+      backdrop.addEventListener('click', closeDrawer);
+      drawerItems.addEventListener('click', function(e) { if (e.target.tagName==='A') closeDrawer(); });
+      fetch('/pages/admin/api/menu.php?slug=main-nav')
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          if (!data.items) return;
+          var nav = document.getElementById('siteNavMenu');
+          data.items.forEach(function(item) {
+            var active = path===item.url || path.startsWith(item.url+'/');
+            var li = document.createElement('li');
+            li.innerHTML = '<a href="'+item.url+'" class="'+(active?'active':'')+'">' + item.title + '</a>';
+            nav.appendChild(li);
+            var a = document.createElement('a');
+            a.href = item.url; a.textContent = item.title;
+            if (active) a.style.color = '#b84d7a';
+            drawerItems.appendChild(a);
+          });
+        })
+        .catch(function() {
+          var nav = document.getElementById('siteNavMenu');
+          [{title:'Beranda',url:'/'},{title:'Blog',url:'/blog/'}].forEach(function(l) {
+            var li = document.createElement('li'); li.innerHTML='<a href="'+l.url+'">'+l.title+'</a>'; nav.appendChild(li);
+            var a = document.createElement('a'); a.href=l.url; a.textContent=l.title; drawerItems.appendChild(a);
+          });
+        });
+    })();
+    </script>
+<div class="page-wrapper">
       <div class="global-styles w-embed">
         <style>
           html{
