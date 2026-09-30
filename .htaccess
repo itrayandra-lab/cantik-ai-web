@@ -33,6 +33,10 @@ RewriteRule ^blog/?$ pages/blog/index.php [L]
 # /blog/slug → pages/blog/index.php?slug=slug
 RewriteRule ^blog/([a-z0-9][a-z0-9\-]*)/?$ pages/blog/index.php?slug=$1 [L,QSA]
 
+# ── FEATURE ────────────────────────────────────────────
+# /feature/slug → pages/feature/slug.php
+RewriteRule ^feature/([a-z0-9][a-z0-9\-]*)/?$ pages/feature/$1.php [L,QSA]
+
 # ── HOME ───────────────────────────────────────────────
 RewriteRule ^home/?$ pages/index.html [L]
 
