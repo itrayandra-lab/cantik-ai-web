@@ -392,7 +392,7 @@ $extraHead = '<script type="application/ld+json">'
   display:inline-flex; align-items:center; gap:9px;
   padding:14px 30px; border-radius:12px;
   font-size:15px; font-weight:700; text-decoration:none; line-height:1;
-  transition:opacity .18s, transform .18s, box-shadow .18s, background .18s, border-color .18s;
+  transition:opacity .18s, transform .18s, box-shadow .18s, background .18s, border-color .18s, color .18s;
 }
 .afc-btn span { transition:transform .18s; }
 .afc-btn:hover span { transform:translateX(3px); }
@@ -401,10 +401,10 @@ $extraHead = '<script type="application/ld+json">'
   box-shadow:0 8px 24px rgba(184,77,122,.34);
 }
 .afc-btn--primary:hover { opacity:.92; transform:translateY(-1px); box-shadow:0 12px 30px rgba(184,77,122,.4); }
-.afc-btn--ghost { background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.22); color:#fff; }
-.afc-btn--ghost:hover { background:rgba(232,160,191,.16); border-color:rgba(232,160,191,.5); transform:translateY(-1px); }
 .afc-btn--line { background:#fff; border:1px solid rgba(184,77,122,.35); color:#b84d7a; }
 .afc-btn--line:hover { background:#fdf0f5; border-color:#b84d7a; transform:translateY(-1px); }
+.afc-btn--ghost { background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.22); color:#fff; }
+.afc-btn--ghost:hover { background:rgba(232,160,191,.16); border-color:rgba(232,160,191,.5); transform:translateY(-1px); }
 
 /* ══ 01 — HERO ══════════════════════════════════════════════════ */
 .afc-hero {
@@ -773,6 +773,35 @@ $extraHead = '<script type="application/ld+json">'
 }
 .afc-final__actions { margin-top:30px; display:flex; flex-wrap:wrap; gap:13px; justify-content:center; align-items:center; }
 
+/* CTA final — primary pakai aksen #ff0099, secondary glass pill.
+   Sengaja terpisah dari .afc-btn--primary/--line supaya palet pink
+   situs (yang dipakai hero + tombol kartu expert) tidak ikut berubah. */
+.afc-cta-primary {
+  padding:16px 34px;
+  background:linear-gradient(135deg,#ff33aa 0%,#ff0099 55%,#e60080 100%);
+  color:#fff; font-size:15.5px; font-weight:700; letter-spacing:.005em;
+  box-shadow:0 10px 28px rgba(255,0,153,.34);
+}
+.afc-cta-primary:hover {
+  box-shadow:0 16px 40px rgba(255,0,153,.5);
+  transform:translateY(-2px);
+}
+.afc-cta-glass {
+  padding:16px 30px;
+  background:rgba(255,255,255,.62);
+  border:1px solid rgba(184,77,122,.26);
+  -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px);
+  color:#9d5a76; font-size:15px; font-weight:600;
+  box-shadow:0 4px 16px rgba(184,77,122,.07);
+}
+.afc-cta-glass:hover {
+  background:rgba(255,255,255,.9);
+  border-color:rgba(184,77,122,.5);
+  color:#b84d7a;
+  transform:translateY(-2px);
+  box-shadow:0 12px 30px rgba(184,77,122,.16);
+}
+
 /* ══ RESPONSIVE ══════════════════════════════════════════════════ */
 @media(max-width:1080px) {
   .afc-hero__inner { grid-template-columns:1fr; gap:44px; }
@@ -802,6 +831,8 @@ $extraHead = '<script type="application/ld+json">'
   .afc-faq__atext { padding:0 18px 20px 56px; }
   .afc-final { padding:40px 20px; }
   .afc-final__flow { gap:8px; letter-spacing:.1em; }
+  .afc-final__actions .afc-btn { width:100%; justify-content:center; }
+  .afc-cta-primary, .afc-cta-glass { padding:15px 22px; }
 }
 </style>
 CSS;
@@ -1199,16 +1230,17 @@ require_once __DIR__ . '/../../layouts/header.php';
           Your Cosmetic Development Journey, <em>Powered by Specialized AI Expertise.</em>
         </h2>
         <p class="afc-final__lead">
-          Explore the right AI expert for every question, every stage, and every product decision.
+          Temukan spesialis AI yang tepat untuk menjawab setiap pertanyaan, mendampingi setiap
+          tahap riset, dan mempercepat keputusan produk kosmetik Anda.
         </p>
 
         <p class="afc-final__flow">Formulate &rarr; Comply &rarr; Certify &rarr; Validate</p>
 
         <div class="afc-final__actions">
-          <a class="afc-btn afc-btn--primary" href="<?= htmlspecialchars($appUrl) ?>">
-            Explore AI for Cosmetic Industry <span aria-hidden="true">&rarr;</span>
+          <a class="afc-btn afc-cta-primary" href="<?= htmlspecialchars($appUrl) ?>">
+            Eksplorasi Cantik.AI Sekarang <span aria-hidden="true">&rarr;</span>
           </a>
-          <a class="afc-btn afc-btn--line" href="<?= htmlspecialchars($appUrl) ?>">Start with Formulator</a>
+          <a class="afc-btn afc-cta-glass" href="<?= htmlspecialchars($appUrl) ?>">Mulai dengan AI Formulator</a>
         </div>
       </div>
     </div>
