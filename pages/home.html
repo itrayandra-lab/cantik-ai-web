@@ -20,6 +20,9 @@
     <meta content="summary_large_image" name="twitter:card" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="assets/css/vendor/sintraweb.shared.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Navbar (shared dengan layouts/header.php) -->
+    <link href="/assets/css/navbar.css" rel="stylesheet" type="text/css" />
     <!-- Pricing Section CSS -->
     <link href="assets/css/pricing.css" rel="stylesheet" type="text/css" />
     <!-- Color Override CSS - Purple to Cyan/Blue -->
@@ -4010,128 +4013,8 @@ window.requestAnimationFrame(scrollPlay);
   <!-- STICKY NAVBAR & SMOOTH SCROLL SCRIPT -->
   <!-- ============================================ -->
   <script src="assets/js/sticky-navbar.js"></script>
-
-  <!-- ============================================ -->
-  <!-- DYNAMIC MENU FROM DATABASE (main-nav) -->
-  <!-- ============================================ -->
-  <script>
-  (function() {
-    var API_URL = '/pages/admin/api/menu.php?slug=main-nav';
-
-    // CSS untuk dropdown submenu dinamis
-    var style = document.createElement('style');
-    style.textContent = [
-      '.dyn-menu-item { position: relative; }',
-      '.dyn-menu-item > a { display: inline-flex; align-items: center; gap: 6px; }',
-      '.dyn-menu-item .dyn-arrow { font-size: 10px; transition: transform .2s; display: inline-block; }',
-      '.dyn-menu-item:hover .dyn-arrow { transform: rotate(180deg); }',
-      /* Pseudo-element bridge: mengisi gap antara trigger dan dropdown agar hover tidak putus */
-      '.dyn-menu-item::after {',
-      '  content: ""; position: absolute; top: 100%; left: 0;',
-      '  width: 100%; height: 8px; background: transparent;',
-      '}',
-      '.dyn-submenu {',
-      '  display: none; position: absolute; top: calc(100% + 2px); left: 50%;',
-      '  transform: translateX(-50%); min-width: 200px;',
-      '  background: rgba(15,23,42,.97); border: 1px solid rgba(51,65,85,.8);',
-      '  border-radius: 10px; padding: 6px; z-index: 999;',
-      '  box-shadow: 0 16px 40px rgba(0,0,0,.5);',
-      '  backdrop-filter: blur(12px);',
-      /* Padding-top agar area hover overlap dengan bridge */
-      '  padding-top: 8px;',
-      '}',
-      '.dyn-menu-item:hover .dyn-submenu { display: block; }',
-      '.dyn-submenu a {',
-      '  display: flex; align-items: center; gap: 8px;',
-      '  padding: 8px 12px; border-radius: 7px;',
-      '  color: #cbd5e1; font-size: 14px; text-decoration: none;',
-      '  transition: background .15s, color .15s; white-space: nowrap;',
-      '}',
-      '.dyn-submenu a:hover { background: rgba(6,182,212,.12); color: #22d3ee; }',
-      '.dyn-submenu a img { width: 18px; height: 18px; object-fit: contain; border-radius: 3px; flex-shrink: 0; }',
-      '.dyn-menu-icon { width: 20px; height: 20px; object-fit: contain; border-radius: 4px; flex-shrink: 0; }',
-    ].join('');
-    document.head.appendChild(style);
-
-    function buildMenuHTML(items) {
-      return items.map(function(item) {
-        var iconHTML = item.icon_image
-          ? '<img src="/' + item.icon_image + '" alt="' + (item.icon_alt || '') + '" class="dyn-menu-icon">'
-          : '';
-        var hasChildren = item.children && item.children.length > 0;
-        var arrowHTML = hasChildren ? '<span class="dyn-arrow">▾</span>' : '';
-        var cls = 'navbar__link w-inline-block' + (item.css_class ? ' ' + item.css_class : '');
-
-        var submenuHTML = '';
-        if (hasChildren) {
-          submenuHTML = '<div class="dyn-submenu">' +
-            item.children.map(function(child) {
-              var childIcon = child.icon_image
-                ? '<img src="/' + child.icon_image + '" alt="' + (child.icon_alt || '') + '">'
-                : '';
-              return '<a href="' + child.url + '" target="' + child.target + '">' +
-                childIcon + '<span>' + child.title + '</span></a>';
-            }).join('') +
-          '</div>';
-        }
-
-        return '<div class="dyn-menu-item">' +
-          '<a href="' + item.url + '" target="' + item.target + '" class="' + cls + '">' +
-            iconHTML +
-            '<div class="text-size-base">' + item.title + '</div>' +
-            arrowHTML +
-          '</a>' +
-          submenuHTML +
-        '</div>';
-      }).join('');
-    }
-
-    function renderMenus(items) {
-      var targets = ['nav-menu-primary', 'nav-menu-secondary'];
-      targets.forEach(function(id) {
-        var el = document.getElementById(id);
-        if (el) {
-          el.innerHTML = buildMenuHTML(items);
-        }
-      });
-    }
-
-    // Fetch dari API
-    fetch(API_URL)
-      .then(function(res) { return res.json(); })
-      .then(function(data) {
-        if (data && data.items) {
-          renderMenus(data.items);
-        }
-      })
-      .catch(function(err) {
-        console.warn('[Raymaizing] Gagal memuat menu dari database:', err);
-      });
-
-    // Hover dengan delay agar tidak langsung hilang saat mouse melintas gap
-    document.addEventListener('mouseover', function(e) {
-      var item = e.target.closest('.dyn-menu-item');
-      if (item) {
-        clearTimeout(item._hideTimer);
-        var sub = item.querySelector('.dyn-submenu');
-        if (sub) sub.style.display = 'block';
-      }
-    });
-    document.addEventListener('mouseout', function(e) {
-      var item = e.target.closest('.dyn-menu-item');
-      if (item) {
-        var related = e.relatedTarget;
-        // Jika mouse masih di dalam item yang sama, jangan sembunyikan
-        if (related && item.contains(related)) return;
-        clearTimeout(item._hideTimer);
-        item._hideTimer = setTimeout(function() {
-          var sub = item.querySelector('.dyn-submenu');
-          if (sub) sub.style.display = 'none';
-        }, 120); // 120ms delay — cukup untuk melintas gap kecil
-      }
-    });
-  })();
-  </script>
+    <script src="/assets/js/navbar.js" defer></script>
+  <!-- DYNAMIC MENU: ditangani /assets/js/navbar.js (punya fallback bila DB tidak tersedia) -->
 
   </body>
 </html>
