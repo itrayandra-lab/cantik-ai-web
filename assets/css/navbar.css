@@ -12,15 +12,22 @@ body { padding-top: 72px; }
   box-shadow: 0 2px 16px rgba(184,77,122,.08);
   z-index: 1000; display: flex; align-items: center;
 }
+/* Desktop dua blok:
+   kiri  → logo, rata kiri
+   kanan → nav menu + tombol Login, rata kanan dan berdekatan
+   .margin-left:auto pada .nav-menu yang menengahkan kelompok kanan. */
 .site-navbar .nav-inner {
   max-width: 1280px; margin: 0 auto; padding: 0 2.5rem; width: 100%;
-  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  display: flex; align-items: center; justify-content: flex-start; gap: 22px;
 }
 .site-navbar .nav-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
 .site-navbar .nav-logo img { height: 36px; width: auto; display: block; }
+/* flex:1 + margin-left:auto = kelompok menu + Login terdorong ke kanan,
+   justify-content:flex-end merapikan isi menu di dalam ruangnya. */
 .site-navbar .nav-menu {
   display: flex; align-items: center; gap: 4px;
-  list-style: none; margin: 0; padding: 0; flex: 1; justify-content: center;
+  list-style: none; margin: 0 0 0 auto; padding: 0;
+  flex: 1; justify-content: flex-end;
 }
 .site-navbar .nav-menu li { position: relative; }
 .site-navbar .nav-menu a {
@@ -198,8 +205,11 @@ body { padding-top: 72px; }
 
 @media(max-width:768px) {
   .site-navbar .nav-menu, .site-navbar .nav-cta { display: none !important; }
+  /* Burger kiri, logo kanan. Menu + Login disembunyikan di atas dan
+     keduanya sudah tersedia di dalam drawer, jadi reset semua
+     property alignment desktop di sini. */
   .nav-hamburger { display: flex; order: 1; }
-  /* Mobile: hamburger kiri, logo kanan */
-  .site-navbar .nav-logo { order: 3; margin-left: auto; }
-  .site-navbar .nav-inner { justify-content: flex-start; }
+  .site-navbar .nav-logo { order: 2; margin-left: auto; }
+  .site-navbar .nav-menu { margin: 0; flex: 0; justify-content: flex-start; }
+  .site-navbar .nav-inner { justify-content: flex-start; gap: 12px; }
 }

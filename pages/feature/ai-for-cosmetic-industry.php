@@ -773,17 +773,19 @@ $extraHead = '<script type="application/ld+json">'
 }
 .afc-final__actions { margin-top:30px; display:flex; flex-wrap:wrap; gap:13px; justify-content:center; align-items:center; }
 
-/* CTA final — primary pakai aksen #ff0099, secondary glass pill.
-   Sengaja terpisah dari .afc-btn--primary/--line supaya palet pink
-   situs (yang dipakai hero + tombol kartu expert) tidak ikut berubah. */
+/* CTA final — primary memakai gradient yang SAMA PERSIS dengan
+   .afc-btn--primary di hero, supaya "Eksplorasi Cantik.AI Sekarang" dan
+   "Explore AI Experts" terlihat identik. Yang tetap terpisah cuma ukuran
+   padding (final CTA sedikit lebih besar). */
 .afc-cta-primary {
   padding:16px 34px;
-  background:linear-gradient(135deg,#ff33aa 0%,#ff0099 55%,#e60080 100%);
+  background:linear-gradient(135deg,#e8a0bf,#b84d7a);
   color:#fff; font-size:15.5px; font-weight:700; letter-spacing:.005em;
-  box-shadow:0 10px 28px rgba(255,0,153,.34);
+  box-shadow:0 10px 28px rgba(184,77,122,.34);
 }
 .afc-cta-primary:hover {
-  box-shadow:0 16px 40px rgba(255,0,153,.5);
+  opacity:.92;
+  box-shadow:0 16px 40px rgba(184,77,122,.45);
   transform:translateY(-2px);
 }
 .afc-cta-glass {
