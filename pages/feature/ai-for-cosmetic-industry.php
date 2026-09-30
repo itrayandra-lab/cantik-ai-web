@@ -243,8 +243,6 @@ $chatAi   = 'Untuk menghasilkan formula yang stabil dan nyaman di kulit, mulaila
     . 'profil kulit target, lalu pilih sistem emulsi dan bahan aktif yang sesuai. Kompatibilitas bahan, '
     . 'pH, dan kondisi penyimpanan harus diuji bersamaan, karena menstabilkan satu komponen dapat '
     . 'memengaruhi keseluruhan formula.';
-$chatNote = 'Insight yang dihasilkan AI sebaiknya ditinjau dan diverifikasi oleh profesional yang '
-    . 'kompeten sebelum digunakan dalam pengembangan produk maupun keputusan regulasi.';
 
 /* ================================================================
    06 — TARGET AUDIENCE
@@ -627,7 +625,6 @@ $extraHead = '<script type="application/ld+json">'
 /* Di dalam hero kolomnya lebih sempit — rapatkan sedikit */
 /* Kanan hero: kartu chat menempel ke tepi kanan container */
 .afc-hero .afc-chat { margin:0 0 0 auto; max-width:520px; }
-.afc-hero .afc-chat__note { text-align:left; }
 
 .afc-chat [hidden] { display:none !important; }
 .afc-chat__bar {
@@ -706,11 +703,6 @@ $extraHead = '<script type="application/ld+json">'
 .afc-chat__replay:hover { background:#fdf0f5; border-color:#b84d7a; }
 .afc-chat__replay span { transition:transform .3s; }
 .afc-chat__replay:hover span { transform:rotate(-180deg); }
-
-.afc-chat__note {
-  margin:18px 0 0; padding-top:16px; border-top:1px solid rgba(184,77,122,.14);
-  font-size:12.5px; line-height:1.7; color:#9d7a8a; text-align:center;
-}
 
 /* ══ 06 — TARGET AUDIENCE ═══════════════════════════════════════ */
 .afc-aud { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
@@ -1049,8 +1041,6 @@ require_once __DIR__ . '/../../layouts/header.php';
             <span aria-hidden="true">&#8635;</span> Putar Ulang
           </button>
         </div>
-
-        <p class="afc-chat__note"><?= htmlspecialchars($chatNote) ?></p>
       </div>
     </div>
   </header>
