@@ -1,0 +1,205 @@
+/* ==========================================================
+   navbar.css — Site Navbar (shared: layouts/header.php + homepage)
+   Single source of truth. Jangan duplikat inline style lagi.
+   ========================================================== */
+
+body { padding-top: 72px; }
+
+/* ===== NAVBAR ===== */
+.site-navbar {
+  position: fixed; top: 0; left: 0; right: 0; height: 72px;
+  background: #fff; border-bottom: 1px solid rgba(184,77,122,.12);
+  box-shadow: 0 2px 16px rgba(184,77,122,.08);
+  z-index: 1000; display: flex; align-items: center;
+}
+.site-navbar .nav-inner {
+  max-width: 1280px; margin: 0 auto; padding: 0 2.5rem; width: 100%;
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+}
+.site-navbar .nav-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
+.site-navbar .nav-logo img { height: 36px; width: auto; display: block; }
+.site-navbar .nav-menu {
+  display: flex; align-items: center; gap: 4px;
+  list-style: none; margin: 0; padding: 0; flex: 1; justify-content: center;
+}
+.site-navbar .nav-menu li { position: relative; }
+.site-navbar .nav-menu a {
+  display: block; padding: 8px 14px; font-size: 14px; font-weight: 500;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  letter-spacing: -0.01em; color: #2d1a24; text-decoration: none;
+  transition: color .15s; white-space: nowrap; background: transparent !important;
+}
+.site-navbar .nav-menu a:hover, .site-navbar .nav-menu a.active { color: #e8a0bf; }
+.site-navbar .nav-cta { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.btn-nav-login {
+  padding: 8px 20px; border-radius: 8px; font-size: 14px; font-weight: 600;
+  font-family: 'Inter', system-ui, sans-serif; text-decoration: none;
+  background: linear-gradient(135deg, #e8a0bf, #b84d7a);
+  color: #fff; border: none; transition: opacity .15s;
+}
+.btn-nav-login:hover { opacity: .85; }
+
+/* ===== DROPDOWN (parent punya anak) ===== */
+.site-navbar .nav-menu .has-dropdown > a { display: inline-flex; align-items: center; }
+.site-navbar .nav-menu .nav-caret {
+  display: inline-block; margin-left: 5px; font-size: 9px;
+  opacity: .55; transition: transform .2s;
+}
+.site-navbar .nav-menu li:hover > a .nav-caret,
+.site-navbar .nav-menu li:focus-within > a .nav-caret,
+.site-navbar .nav-menu li.is-open > a .nav-caret { transform: rotate(180deg); }
+
+/* top:100% (bukan +Npx) + padding di dalam panel → tidak ada celah hover
+   yang membuat dropdown flicker saat kursor bergerak ke bawah. */
+.site-navbar .nav-menu .dropdown {
+  position: absolute; top: 100%; left: 50%;
+  transform: translate(-50%, -6px);
+  background: transparent; border: none; box-shadow: none;
+  padding: 10px 0 0;
+  min-width: 230px; max-width: min(92vw, 560px);
+  max-height: 72vh; overflow-y: auto; overscroll-behavior: contain;
+  opacity: 0; pointer-events: none;
+  transition: opacity .18s ease, transform .18s ease;
+  z-index: 100;
+}
+.site-navbar .nav-menu .dropdown__inner {
+  background: #fff; border: 1px solid rgba(184,77,122,.15);
+  border-radius: 14px; box-shadow: 0 12px 40px rgba(184,77,122,.14);
+  padding: 8px;
+}
+.site-navbar .nav-menu li:hover > .dropdown,
+.site-navbar .nav-menu li:focus-within > .dropdown,
+.site-navbar .nav-menu li.is-open > .dropdown { opacity: 1; pointer-events: all; transform: translate(-50%, 0); }
+.site-navbar .nav-menu .dropdown::-webkit-scrollbar { width: 6px; }
+.site-navbar .nav-menu .dropdown::-webkit-scrollbar-thumb { background: rgba(184,77,122,.25); border-radius: 99px; }
+.site-navbar .nav-menu .dropdown::-webkit-scrollbar-track { background: transparent; }
+
+/* >4 anak → 2 kolom (mega menu) */
+.site-navbar .nav-menu .dropdown__inner--grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 2px; min-width: 520px;
+}
+.site-navbar .nav-menu .dropdown__item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 10px; border-radius: 10px;
+  font-size: 13.5px; font-weight: 500; line-height: 1.35;
+  color: #2d1a24; text-decoration: none;
+  transition: background .15s, color .15s;
+}
+.site-navbar .nav-menu .dropdown__item:hover { background: #fdf0f5; color: #b84d7a; }
+.site-navbar .nav-menu .dropdown__item.active { background: #fdf0f5; color: #b84d7a; font-weight: 600; }
+.site-navbar .nav-menu .dropdown__icon {
+  width: 26px; height: 26px; object-fit: contain;
+  border-radius: 7px; flex-shrink: 0; background: #fff;
+}
+.site-navbar .nav-menu li.is-parent-active > a { color: #e8a0bf; }
+
+/* ==========================================================
+   Navbar Webflow (#nav-menu-primary) — homepage & halaman statis
+   ========================================================== */
+.dyn-menu-item { position: relative; }
+.dyn-menu-item .navbar__link { display: inline-flex; align-items: center; }
+.dyn-menu-item.is-parent-active > a, .dyn-menu-item > a.active { color: #e8a0bf; }
+.dyn-arrow { display: inline-block; margin-left: 5px; font-size: 9px; opacity: .6; transition: transform .2s; }
+.dyn-menu-item:hover > a .dyn-arrow,
+.dyn-menu-item:focus-within > a .dyn-arrow,
+.dyn-menu-item.is-open > a .dyn-arrow { transform: rotate(180deg); }
+.dyn-menu-icon { width: 20px; height: 20px; object-fit: contain; border-radius: 4px; flex-shrink: 0; margin-right: 6px; }
+
+/* Panel: .dyn-submenu = posisi/overflow, .dyn-submenu__card = tampilan kartu.
+   Padding-top di panel (bukan margin) → tidak ada celah hover yg bikin flicker. */
+.dyn-submenu {
+  display: none; position: absolute; top: 100%; left: 50%;
+  transform: translate(-50%, -6px);
+  min-width: 230px; max-width: min(90vw, 460px);
+  max-height: 70vh; overflow-y: auto; overscroll-behavior: contain;
+  padding: 10px 0 0; background: transparent; border: none; z-index: 1000;
+  opacity: 0; pointer-events: none;
+  transition: opacity .18s ease, transform .18s ease;
+}
+.dyn-submenu__card {
+  background: #fff; border: 1px solid rgba(184,77,122,.15);
+  border-radius: 14px; box-shadow: 0 12px 40px rgba(184,77,122,.14);
+  padding: 8px;
+}
+.dyn-menu-item:hover > .dyn-submenu,
+.dyn-menu-item:focus-within > .dyn-submenu,
+.dyn-menu-item.is-open > .dyn-submenu { display: block; opacity: 1; pointer-events: all; transform: translate(-50%, 0); }
+.dyn-submenu .dropdown__item { color: #2d1a24; }
+.dyn-submenu .dropdown__item:hover { background: #fdf0f5; color: #b84d7a; }
+.dyn-submenu .dropdown__item.active { background: #fdf0f5; color: #b84d7a; font-weight: 600; }
+
+/* ===== HAMBURGER ===== */
+.nav-hamburger {
+  display: none; flex-direction: column; gap: 5px; cursor: pointer;
+  padding: 6px; border: none; background: none; z-index: 1001;
+}
+.nav-hamburger span {
+  display: block; width: 22px; height: 2px;
+  background: #2d1a24; border-radius: 2px; transition: all .3s;
+}
+
+/* ===== MOBILE DRAWER ===== */
+.nav-drawer {
+  position: fixed; top: 0; left: 0; bottom: 0;
+  width: 80vw; max-width: 300px; background: #fff; z-index: 1002;
+  transform: translateX(-100%); transition: transform 0.3s ease;
+  display: flex; flex-direction: column;
+  box-shadow: 4px 0 24px rgba(0,0,0,.15); overflow-y: auto;
+}
+.nav-drawer.open { transform: translateX(0); }
+.nav-drawer__header {
+  padding: 20px 24px 16px; font-size: 17px; font-weight: 700; color: #1a0a12;
+  border-bottom: 1px solid rgba(184,77,122,.1); flex-shrink: 0;
+}
+.nav-drawer__items { flex: 1; padding: 8px 0; }
+.nav-drawer__items .drawer-item { border-bottom: 1px solid rgba(184,77,122,.07); }
+.nav-drawer__items .drawer-item:last-child { border-bottom: none; }
+
+/* Parent dengan dropdown → accordion, bukan link */
+.nav-drawer__toggle {
+  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 14px 24px; background: none; border: none;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 15px; font-weight: 600; color: #2d1a24;
+  text-align: left; cursor: pointer;
+}
+.nav-drawer__toggle:hover { color: #b84d7a; }
+.nav-drawer__chevron { font-size: 10px; opacity: .5; transition: transform .2s; flex-shrink: 0; }
+.nav-drawer__toggle[aria-expanded="true"] .nav-drawer__chevron { transform: rotate(180deg); }
+.nav-drawer__sub { display: none; padding: 0 24px 12px; }
+.nav-drawer__sub.open { display: block; }
+.nav-drawer__sub .dropdown__item { padding: 9px 12px; font-size: 14px; color: #4a2d3a; }
+.nav-drawer__sub .dropdown__item:hover,
+.nav-drawer__sub .dropdown__item.active { background: #fdf0f5; color: #b84d7a; }
+.nav-drawer__sub .dropdown__icon { width: 24px; height: 24px; }
+
+/* Parent tanpa dropdown → link biasa */
+.nav-drawer__items .drawer-link {
+  display: block; padding: 14px 24px;
+  font-size: 15px; font-weight: 500; color: #2d1a24; text-decoration: none;
+}
+.nav-drawer__items .drawer-link:hover { color: #b84d7a; background: #fdf0f5; }
+.nav-drawer__items .drawer-link.active { color: #b84d7a; font-weight: 600; }
+
+.nav-drawer__footer { padding: 20px 24px; border-top: 1px solid rgba(184,77,122,.1); }
+.nav-drawer__login {
+  display: block; text-align: center; padding: 12px 24px;
+  background: linear-gradient(135deg, #e8a0bf, #b84d7a);
+  color: #fff; border-radius: 8px; font-size: 15px; font-weight: 600;
+  text-decoration: none; box-shadow: 0 4px 12px rgba(184,77,122,.3);
+}
+
+/* Backdrop */
+.nav-backdrop {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,.5); z-index: 1001;
+}
+.nav-backdrop.open { display: block; }
+
+@media(max-width:768px) {
+  .site-navbar .nav-menu, .site-navbar .nav-cta { display: none !important; }
+  .nav-hamburger { display: flex; order: 1; }
+  /* Mobile: hamburger kiri, logo kanan */
+  .site-navbar .nav-logo { order: 3; margin-left: auto; }
+  .site-navbar .nav-inner { justify-content: flex-start; }
+}
