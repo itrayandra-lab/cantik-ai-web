@@ -1343,6 +1343,37 @@ window.addEventListener(&#39;click&#39;, () =&gt; {
         </div>
       </div>
     </div>
+    <style>
+      /* Header lama (transparan) digantikan navbar bersama; style/script-nya tetap aktif. */
+      .header-transparent { display: none !important; }
+      html body { padding-top: 72px !important; }
+    </style>
+
+    <!-- Shared navbar - markup & style sama dengan layouts/header.php (halaman fitur) -->
+    <nav class="site-navbar">
+      <div class="nav-inner">
+        <a href="/" class="nav-logo">
+          <img src="/assets/img/logo-colour-pink.png" alt="Cantik.AI" />
+        </a>
+        <ul class="nav-menu" id="siteNavMenu"></ul>
+        <div class="nav-cta">
+          <a href="https://app.cantik.ai/" class="btn-nav-login">Login</a>
+        </div>
+        <button class="nav-hamburger" id="siteHamburger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="siteDrawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div class="nav-backdrop" id="siteBackdrop"></div>
+    <div class="nav-drawer" id="siteDrawer">
+      <div class="nav-drawer__header">Menu</div>
+      <div class="nav-drawer__items" id="siteDrawerItems"></div>
+      <div class="nav-drawer__footer">
+        <a href="https://app.cantik.ai/" class="nav-drawer__login">Login</a>
+      </div>
+    </div>
     <div class="page-wrapper">
       <div class="global-styles w-embed">
         <style>
