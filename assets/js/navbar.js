@@ -16,7 +16,8 @@
       url: '/feature/ai-for-cosmetic-industry',
       children: [
         { title: 'AI for Cosmetic Industry', url: '/feature/ai-for-cosmetic-industry' },
-        { title: 'AI ERP', url: '/ai-erp' }
+        { title: 'AI ERP', url: '/ai-erp' },
+        { title: 'Skin Analyzer', url: '/skin-analyzer' }
       ]
     }
   ];

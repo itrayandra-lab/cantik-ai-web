@@ -41,6 +41,10 @@ RewriteRule ^feature/([a-z0-9][a-z0-9\-]*)/?$ pages/feature/$1.php [L,QSA]
 # /ai-erp → pages/ai-erp.php
 RewriteRule ^ai-erp/?$ pages/ai-erp.php [L,QSA]
 
+# ── SKIN ANALYZER ──────────────────────────────────────
+# /skin-analyzer → pages/skin-analyzer.php
+RewriteRule ^skin-analyzer/?$ pages/skin-analyzer.php [L,QSA]
+
 # ── HOME ───────────────────────────────────────────────
 RewriteRule ^home/?$ pages/index.html [L]
 
