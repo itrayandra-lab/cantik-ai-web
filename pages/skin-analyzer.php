@@ -494,6 +494,31 @@ $extraHead = '<script type="application/ld+json">'
   background:linear-gradient(90deg,#e8a0bf,var(--accent,#b84d7a));
 }
 
+/* ── Hero panel animation (count-up + bar 0 → target) ── */
+.skan-panel .skan-meter__fill {
+  width:0;
+  transition:width 1.6s cubic-bezier(.22,.8,.3,1);
+  position:relative; overflow:hidden;
+}
+.skan-panel.is-visible .skan-meter__fill { width:calc(var(--v) * 1%); }
+.skan-panel .skan-meter__fill::after {
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(100deg,transparent 20%,rgba(255,255,255,.45) 50%,transparent 80%);
+  transform:translateX(-100%);
+}
+.skan-panel.is-visible .skan-meter__fill::after { animation:skanShimmer 1.6s ease .2s 1 forwards; }
+@keyframes skanShimmer { to { transform:translateX(100%); } }
+.skan-panel .skan-view { transition:border-color .4s, background .4s, transform .4s, box-shadow .4s; }
+.skan-panel .skan-view.is-active {
+  border-color:rgba(232,160,191,.65); background:rgba(232,160,191,.14);
+  transform:translateY(-3px); box-shadow:0 10px 26px rgba(184,77,122,.28);
+}
+.skan-panel__score b, .skan-meter__val--count { font-variant-numeric:tabular-nums; }
+@media(prefers-reduced-motion:reduce) {
+  .skan-panel .skan-meter__fill { transition:none; width:calc(var(--v) * 1%); }
+  .skan-panel.is-visible .skan-meter__fill::after { animation:none; display:none; }
+}
+
 /* ══ Section header rata kiri (varian) ════════════════ */
 .skan-head--left { text-align:left; }
 .skan-head--left .skan-h2, .skan-head--left .skan-sub { margin-left:0; margin-right:0; text-align:left; }
@@ -818,7 +843,7 @@ require_once __DIR__ . '/../layouts/header.php';
         <p class="skan-hero__hint">Coba Skin Analyzer langsung dalam hitungan menit, atau konsultasikan kebutuhan Anda dengan tim kami untuk memahami cara kerja dan penerapannya.</p>
       </div>
 
-      <div class="skan-panel">
+      <div class="skan-panel" id="skanHeroPanel">
         <div class="skan-panel__head">
           <span class="skan-panel__dot" aria-hidden="true"></span>
           <span class="skan-panel__title">Skin Analysis Engine</span>
@@ -827,7 +852,7 @@ require_once __DIR__ . '/../layouts/header.php';
 
         <div class="skan-views">
           <?php foreach ($heroViews as $v): ?>
-            <div class="skan-view">
+            <div class="skan-view" data-view>
               <?= skan_icon($v['i']) ?>
               <p class="skan-view__k"><?= htmlspecialchars($v['k']) ?></p>
             </div>
@@ -837,16 +862,16 @@ require_once __DIR__ . '/../layouts/header.php';
         <div class="skan-panel__div">
           <p class="skan-panel__label">Analysis Preview</p>
           <div class="skan-panel__score">
-            <b><?= (int) $scoreTotal ?></b><span>/ 100 skin score</span>
+            <b data-count-to="<?= (int) $scoreTotal ?>">0</b><span>/ 100 skin score</span>
           </div>
           <?php foreach (array_slice($scores, 0, 3) as $s): ?>
-            <div class="skan-meter" style="--accent:<?= htmlspecialchars($s['c']) ?>;">
+            <div class="skan-meter" style="--accent:<?= htmlspecialchars($s['c']) ?>;--v:<?= (int) $s['v'] ?>;">
               <div class="skan-meter__top">
                 <span class="skan-meter__label"><?= htmlspecialchars($s['t']) ?></span>
-                <span class="skan-meter__val"><?= (int) $s['v'] ?></span>
+                <span class="skan-meter__val skan-meter__val--count" data-count-to="<?= (int) $s['v'] ?>">0</span>
               </div>
               <div class="skan-meter__track">
-                <div class="skan-meter__fill" style="--v:<?= (int) $s['v'] ?>"></div>
+                <div class="skan-meter__fill"></div>
               </div>
             </div>
           <?php endforeach; ?>
@@ -932,12 +957,6 @@ require_once __DIR__ . '/../layouts/header.php';
           <?php endforeach; ?>
         </div>
       </div>
-
-      <div class="skan-actions skan-actions--center">
-        <a class="skan-btn skan-btn--line" href="<?= htmlspecialchars($appUrl) ?>" target="_blank" rel="noopener">
-          View Full Analysis <span aria-hidden="true">&rarr;</span>
-        </a>
-      </div>
     </div>
   </section>
 
@@ -999,12 +1018,6 @@ require_once __DIR__ . '/../layouts/header.php';
           </article>
         <?php endforeach; ?>
       </div>
-
-      <div class="skan-actions skan-actions--center">
-        <a class="skan-btn skan-btn--primary" href="<?= htmlspecialchars($appUrl) ?>" target="_blank" rel="noopener">
-          Explore Your Care Routine <span aria-hidden="true">&rarr;</span>
-        </a>
-      </div>
     </div>
   </section>
 
@@ -1059,12 +1072,6 @@ require_once __DIR__ . '/../layouts/header.php';
           </article>
         <?php endforeach; ?>
       </div>
-
-      <div class="skan-actions skan-actions--center">
-        <a class="skan-btn skan-btn--primary" href="<?= htmlspecialchars($appUrl) ?>" target="_blank" rel="noopener">
-          Get Your Skin Report <span aria-hidden="true">&rarr;</span>
-        </a>
-      </div>
     </div>
   </section>
 
@@ -1118,49 +1125,6 @@ require_once __DIR__ . '/../layouts/header.php';
     </div>
   </section>
 
-  <!-- ══════════ 11 — INTEGRATION ══════════ -->
-  <section class="skan-sec skan-sec--tint skan-sec--edge">
-    <div class="skan-wrap">
-      <div class="skan-head">
-        <p class="skan-eyebrow">Flexible Integration</p>
-        <h2 class="skan-h2">Designed to <em>Fit Your Business.</em></h2>
-        <p class="skan-sub"><?= htmlspecialchars($integrationIntro) ?></p>
-      </div>
-
-      <div class="skan-integrations">
-        <?php foreach ($integrations as $it): ?>
-          <span class="skan-chip"><?= skan_icon($it['i']) ?><?= htmlspecialchars($it['t']) ?></span>
-        <?php endforeach; ?>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════ 12 — BUSINESS FLOW ══════════ -->
-  <section class="skan-sec">
-    <div class="skan-wrap">
-      <div class="skan-head">
-        <p class="skan-eyebrow">Customer Journey</p>
-        <h2 class="skan-h2">From Skin Analysis <em>to Personalized Beauty Experience.</em></h2>
-        <p class="skan-sub"><?= htmlspecialchars($flowIntro) ?></p>
-      </div>
-
-      <div class="skan-bflow">
-        <?php foreach ($flow as $i => $step): ?>
-          <div class="skan-bflow__item">
-            <div class="skan-bflow__node"><b aria-hidden="true"><?= str_pad((string) ($i + 1), 2, '0', STR_PAD_LEFT) ?></b><?= htmlspecialchars($step) ?></div>
-            <div class="skan-bflow__arrow" aria-hidden="true">&darr;</div>
-          </div>
-        <?php endforeach; ?>
-      </div>
-
-      <div class="skan-actions skan-actions--center">
-        <a class="skan-btn skan-btn--primary" href="<?= htmlspecialchars($wa($waMsgBiz)) ?>" target="_blank" rel="noopener">
-          Build Your Skin Analysis Experience <span aria-hidden="true">&rarr;</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
   <!-- ══════════ 13 — MAIN BUSINESS CTA ══════════ -->
   <section class="skan-sec skan-sec--tint skan-sec--edge">
     <div class="skan-wrap">
@@ -1205,5 +1169,66 @@ require_once __DIR__ . '/../layouts/header.php';
   </section>
 
 </div>
+
+<script>
+(function () {
+  var panel = document.getElementById('skanHeroPanel');
+  if (!panel) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    panel.classList.add('is-visible');
+    panel.querySelectorAll('[data-count-to]').forEach(function (el) {
+      el.textContent = el.getAttribute('data-count-to');
+    });
+    return;
+  }
+  var views = panel.querySelectorAll('[data-view]');
+  var counters = panel.querySelectorAll('[data-count-to]');
+  var animated = false;
+  var viewTimer = null;
+  var viewIdx = 0;
+
+  function countUp(el, to, dur) {
+    var start = null;
+    function frame(ts) {
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(eased * to);
+      if (p < 1) requestAnimationFrame(frame);
+      else el.textContent = to;
+    }
+    requestAnimationFrame(frame);
+  }
+
+  function cycleViews() {
+    if (!views.length) return;
+    views.forEach(function (v) { v.classList.remove('is-active'); });
+    views[viewIdx % views.length].classList.add('is-active');
+    viewIdx++;
+  }
+
+  function play() {
+    if (animated) return;
+    animated = true;
+    panel.classList.add('is-visible');
+    counters.forEach(function (el, i) {
+      var to = parseInt(el.getAttribute('data-count-to'), 10) || 0;
+      setTimeout(function () { countUp(el, to, 1600); }, 150 + i * 180);
+    });
+    cycleViews();
+    viewTimer = setInterval(cycleViews, 1400);
+  }
+
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { play(); obs.disconnect(); }
+      });
+    }, { threshold: 0.3 }).observe(panel);
+  } else {
+    play();
+  }
+})();
+</script>
 
 <?php require_once __DIR__ . '/../layouts/footer.php'; ?>
